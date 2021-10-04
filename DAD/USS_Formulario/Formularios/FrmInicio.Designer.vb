@@ -45,7 +45,7 @@ Partial Class FrmInicio
         Me.ClientSize = New System.Drawing.Size(800, 501)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "FrmInicio"
-        Me.Text = "FrmInicio"
+        Me.Text = "Inicio"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

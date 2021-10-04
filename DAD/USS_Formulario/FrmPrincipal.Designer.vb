@@ -24,25 +24,25 @@ Partial Class FrmPrincipal
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrincipal))
         Me.PnIzquierda = New System.Windows.Forms.Panel()
-        Me.PnSuperior = New System.Windows.Forms.Panel()
-        Me.PnPrincipal = New System.Windows.Forms.Panel()
-        Me.PnLogo = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PicLogo = New System.Windows.Forms.PictureBox()
-        Me.BtnInicio = New FontAwesome.Sharp.IconButton()
-        Me.BtnAdmision = New FontAwesome.Sharp.IconButton()
-        Me.BtnEscuela = New FontAwesome.Sharp.IconButton()
-        Me.BtnBiblioteca = New FontAwesome.Sharp.IconButton()
         Me.BtnTransparencia = New FontAwesome.Sharp.IconButton()
-        Me.IconPrincipal = New FontAwesome.Sharp.IconPictureBox()
+        Me.BtnBiblioteca = New FontAwesome.Sharp.IconButton()
+        Me.BtnEscuela = New FontAwesome.Sharp.IconButton()
+        Me.BtnAdmision = New FontAwesome.Sharp.IconButton()
+        Me.BtnInicio = New FontAwesome.Sharp.IconButton()
+        Me.PnLogo = New System.Windows.Forms.Panel()
+        Me.PicLogo = New System.Windows.Forms.PictureBox()
+        Me.PnSuperior = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.IconPrincipal = New FontAwesome.Sharp.IconPictureBox()
+        Me.PnPrincipal = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PnIzquierda.SuspendLayout()
-        Me.PnSuperior.SuspendLayout()
-        Me.PnPrincipal.SuspendLayout()
         Me.PnLogo.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PnSuperior.SuspendLayout()
         CType(Me.IconPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PnPrincipal.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PnIzquierda
@@ -59,128 +59,6 @@ Partial Class FrmPrincipal
         Me.PnIzquierda.Name = "PnIzquierda"
         Me.PnIzquierda.Size = New System.Drawing.Size(200, 640)
         Me.PnIzquierda.TabIndex = 0
-        '
-        'PnSuperior
-        '
-        Me.PnSuperior.BackColor = System.Drawing.Color.Teal
-        Me.PnSuperior.Controls.Add(Me.Label1)
-        Me.PnSuperior.Controls.Add(Me.IconPrincipal)
-        Me.PnSuperior.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PnSuperior.Location = New System.Drawing.Point(200, 0)
-        Me.PnSuperior.Name = "PnSuperior"
-        Me.PnSuperior.Size = New System.Drawing.Size(816, 100)
-        Me.PnSuperior.TabIndex = 1
-        '
-        'PnPrincipal
-        '
-        Me.PnPrincipal.Controls.Add(Me.PictureBox1)
-        Me.PnPrincipal.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PnPrincipal.Location = New System.Drawing.Point(200, 100)
-        Me.PnPrincipal.Name = "PnPrincipal"
-        Me.PnPrincipal.Size = New System.Drawing.Size(816, 540)
-        Me.PnPrincipal.TabIndex = 2
-        '
-        'PnLogo
-        '
-        Me.PnLogo.Controls.Add(Me.PicLogo)
-        Me.PnLogo.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PnLogo.Location = New System.Drawing.Point(0, 0)
-        Me.PnLogo.Name = "PnLogo"
-        Me.PnLogo.Size = New System.Drawing.Size(200, 100)
-        Me.PnLogo.TabIndex = 0
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(816, 540)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
-        'PicLogo
-        '
-        Me.PicLogo.Image = CType(resources.GetObject("PicLogo.Image"), System.Drawing.Image)
-        Me.PicLogo.Location = New System.Drawing.Point(27, 8)
-        Me.PicLogo.Name = "PicLogo"
-        Me.PicLogo.Size = New System.Drawing.Size(143, 85)
-        Me.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PicLogo.TabIndex = 0
-        Me.PicLogo.TabStop = False
-        '
-        'BtnInicio
-        '
-        Me.BtnInicio.BackColor = System.Drawing.Color.Teal
-        Me.BtnInicio.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnInicio.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnInicio.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnInicio.IconChar = FontAwesome.Sharp.IconChar.HouseUser
-        Me.BtnInicio.IconColor = System.Drawing.Color.White
-        Me.BtnInicio.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.BtnInicio.Location = New System.Drawing.Point(0, 100)
-        Me.BtnInicio.Name = "BtnInicio"
-        Me.BtnInicio.Size = New System.Drawing.Size(200, 70)
-        Me.BtnInicio.TabIndex = 1
-        Me.BtnInicio.Text = "INICIO"
-        Me.BtnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BtnInicio.UseVisualStyleBackColor = False
-        '
-        'BtnAdmision
-        '
-        Me.BtnAdmision.BackColor = System.Drawing.Color.Teal
-        Me.BtnAdmision.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnAdmision.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAdmision.ForeColor = System.Drawing.Color.White
-        Me.BtnAdmision.IconChar = FontAwesome.Sharp.IconChar.UserTie
-        Me.BtnAdmision.IconColor = System.Drawing.Color.White
-        Me.BtnAdmision.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.BtnAdmision.Location = New System.Drawing.Point(0, 170)
-        Me.BtnAdmision.Name = "BtnAdmision"
-        Me.BtnAdmision.Size = New System.Drawing.Size(200, 70)
-        Me.BtnAdmision.TabIndex = 2
-        Me.BtnAdmision.Text = "ADMISION"
-        Me.BtnAdmision.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnAdmision.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BtnAdmision.UseVisualStyleBackColor = False
-        '
-        'BtnEscuela
-        '
-        Me.BtnEscuela.BackColor = System.Drawing.Color.Teal
-        Me.BtnEscuela.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnEscuela.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEscuela.ForeColor = System.Drawing.Color.White
-        Me.BtnEscuela.IconChar = FontAwesome.Sharp.IconChar.Star
-        Me.BtnEscuela.IconColor = System.Drawing.Color.White
-        Me.BtnEscuela.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.BtnEscuela.Location = New System.Drawing.Point(0, 240)
-        Me.BtnEscuela.Name = "BtnEscuela"
-        Me.BtnEscuela.Size = New System.Drawing.Size(200, 70)
-        Me.BtnEscuela.TabIndex = 3
-        Me.BtnEscuela.Text = "ESCUELA"
-        Me.BtnEscuela.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEscuela.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BtnEscuela.UseVisualStyleBackColor = False
-        '
-        'BtnBiblioteca
-        '
-        Me.BtnBiblioteca.BackColor = System.Drawing.Color.Teal
-        Me.BtnBiblioteca.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnBiblioteca.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnBiblioteca.ForeColor = System.Drawing.Color.White
-        Me.BtnBiblioteca.IconChar = FontAwesome.Sharp.IconChar.BookOpen
-        Me.BtnBiblioteca.IconColor = System.Drawing.Color.White
-        Me.BtnBiblioteca.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.BtnBiblioteca.Location = New System.Drawing.Point(0, 310)
-        Me.BtnBiblioteca.Name = "BtnBiblioteca"
-        Me.BtnBiblioteca.Size = New System.Drawing.Size(200, 70)
-        Me.BtnBiblioteca.TabIndex = 4
-        Me.BtnBiblioteca.Text = "BIBLIOTECA"
-        Me.BtnBiblioteca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBiblioteca.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BtnBiblioteca.UseVisualStyleBackColor = False
         '
         'BtnTransparencia
         '
@@ -200,6 +78,117 @@ Partial Class FrmPrincipal
         Me.BtnTransparencia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnTransparencia.UseVisualStyleBackColor = False
         '
+        'BtnBiblioteca
+        '
+        Me.BtnBiblioteca.BackColor = System.Drawing.Color.Teal
+        Me.BtnBiblioteca.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnBiblioteca.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBiblioteca.ForeColor = System.Drawing.Color.White
+        Me.BtnBiblioteca.IconChar = FontAwesome.Sharp.IconChar.BookOpen
+        Me.BtnBiblioteca.IconColor = System.Drawing.Color.White
+        Me.BtnBiblioteca.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.BtnBiblioteca.Location = New System.Drawing.Point(0, 310)
+        Me.BtnBiblioteca.Name = "BtnBiblioteca"
+        Me.BtnBiblioteca.Size = New System.Drawing.Size(200, 70)
+        Me.BtnBiblioteca.TabIndex = 4
+        Me.BtnBiblioteca.Text = "BIBLIOTECA"
+        Me.BtnBiblioteca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnBiblioteca.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnBiblioteca.UseVisualStyleBackColor = False
+        '
+        'BtnEscuela
+        '
+        Me.BtnEscuela.BackColor = System.Drawing.Color.Teal
+        Me.BtnEscuela.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnEscuela.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEscuela.ForeColor = System.Drawing.Color.White
+        Me.BtnEscuela.IconChar = FontAwesome.Sharp.IconChar.Star
+        Me.BtnEscuela.IconColor = System.Drawing.Color.White
+        Me.BtnEscuela.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.BtnEscuela.Location = New System.Drawing.Point(0, 240)
+        Me.BtnEscuela.Name = "BtnEscuela"
+        Me.BtnEscuela.Size = New System.Drawing.Size(200, 70)
+        Me.BtnEscuela.TabIndex = 3
+        Me.BtnEscuela.Text = "ESCUELA"
+        Me.BtnEscuela.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnEscuela.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnEscuela.UseVisualStyleBackColor = False
+        '
+        'BtnAdmision
+        '
+        Me.BtnAdmision.BackColor = System.Drawing.Color.Teal
+        Me.BtnAdmision.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnAdmision.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAdmision.ForeColor = System.Drawing.Color.White
+        Me.BtnAdmision.IconChar = FontAwesome.Sharp.IconChar.UserTie
+        Me.BtnAdmision.IconColor = System.Drawing.Color.White
+        Me.BtnAdmision.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.BtnAdmision.Location = New System.Drawing.Point(0, 170)
+        Me.BtnAdmision.Name = "BtnAdmision"
+        Me.BtnAdmision.Size = New System.Drawing.Size(200, 70)
+        Me.BtnAdmision.TabIndex = 2
+        Me.BtnAdmision.Text = "ADMISION"
+        Me.BtnAdmision.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnAdmision.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnAdmision.UseVisualStyleBackColor = False
+        '
+        'BtnInicio
+        '
+        Me.BtnInicio.BackColor = System.Drawing.Color.Teal
+        Me.BtnInicio.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnInicio.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnInicio.ForeColor = System.Drawing.Color.White
+        Me.BtnInicio.IconChar = FontAwesome.Sharp.IconChar.HouseUser
+        Me.BtnInicio.IconColor = System.Drawing.Color.White
+        Me.BtnInicio.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.BtnInicio.Location = New System.Drawing.Point(0, 100)
+        Me.BtnInicio.Name = "BtnInicio"
+        Me.BtnInicio.Size = New System.Drawing.Size(200, 70)
+        Me.BtnInicio.TabIndex = 1
+        Me.BtnInicio.Text = "INICIO"
+        Me.BtnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnInicio.UseVisualStyleBackColor = False
+        '
+        'PnLogo
+        '
+        Me.PnLogo.Controls.Add(Me.PicLogo)
+        Me.PnLogo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PnLogo.Location = New System.Drawing.Point(0, 0)
+        Me.PnLogo.Name = "PnLogo"
+        Me.PnLogo.Size = New System.Drawing.Size(200, 100)
+        Me.PnLogo.TabIndex = 0
+        '
+        'PicLogo
+        '
+        Me.PicLogo.Image = CType(resources.GetObject("PicLogo.Image"), System.Drawing.Image)
+        Me.PicLogo.Location = New System.Drawing.Point(27, 8)
+        Me.PicLogo.Name = "PicLogo"
+        Me.PicLogo.Size = New System.Drawing.Size(143, 85)
+        Me.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PicLogo.TabIndex = 0
+        Me.PicLogo.TabStop = False
+        '
+        'PnSuperior
+        '
+        Me.PnSuperior.BackColor = System.Drawing.Color.Teal
+        Me.PnSuperior.Controls.Add(Me.Label1)
+        Me.PnSuperior.Controls.Add(Me.IconPrincipal)
+        Me.PnSuperior.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PnSuperior.Location = New System.Drawing.Point(200, 0)
+        Me.PnSuperior.Name = "PnSuperior"
+        Me.PnSuperior.Size = New System.Drawing.Size(816, 100)
+        Me.PnSuperior.TabIndex = 1
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(77, 51)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(0, 25)
+        Me.Label1.TabIndex = 1
+        '
         'IconPrincipal
         '
         Me.IconPrincipal.BackColor = System.Drawing.Color.Teal
@@ -214,14 +203,25 @@ Partial Class FrmPrincipal
         Me.IconPrincipal.TabIndex = 0
         Me.IconPrincipal.TabStop = False
         '
-        'Label1
+        'PnPrincipal
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(77, 51)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(0, 25)
-        Me.Label1.TabIndex = 1
+        Me.PnPrincipal.Controls.Add(Me.PictureBox1)
+        Me.PnPrincipal.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PnPrincipal.Location = New System.Drawing.Point(200, 100)
+        Me.PnPrincipal.Name = "PnPrincipal"
+        Me.PnPrincipal.Size = New System.Drawing.Size(816, 540)
+        Me.PnPrincipal.TabIndex = 2
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(816, 540)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'FrmPrincipal
         '
@@ -234,13 +234,13 @@ Partial Class FrmPrincipal
         Me.Name = "FrmPrincipal"
         Me.Text = "FrmPrincipal"
         Me.PnIzquierda.ResumeLayout(False)
+        Me.PnLogo.ResumeLayout(False)
+        CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnSuperior.ResumeLayout(False)
         Me.PnSuperior.PerformLayout()
-        Me.PnPrincipal.ResumeLayout(False)
-        Me.PnLogo.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IconPrincipal, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PnPrincipal.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
