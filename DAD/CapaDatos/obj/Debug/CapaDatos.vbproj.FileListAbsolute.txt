@@ -1,0 +1,14 @@
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaDatos\bin\Debug\CapaDatos.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaDatos\bin\Debug\CapaDatos.pdb
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaDatos\bin\Debug\CapaDatos.xml
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaDatos\bin\Debug\CapaEntidad.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaDatos\bin\Debug\CapaEntidad.pdb
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaDatos\bin\Debug\CapaEntidad.xml
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaDatos\obj\Debug\CapaDatos.vbproj.AssemblyReference.cache
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaDatos\obj\Debug\CapaDatos.Resources.resources
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaDatos\obj\Debug\CapaDatos.vbproj.GenerateResource.cache
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaDatos\obj\Debug\CapaDatos.vbproj.CoreCompileInputs.cache
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaDatos\obj\Debug\CapaDatos.vbproj.CopyComplete
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaDatos\obj\Debug\CapaDatos.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaDatos\obj\Debug\CapaDatos.xml
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaDatos\obj\Debug\CapaDatos.pdb
