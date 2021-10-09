@@ -7,4 +7,8 @@ Public Class CpNegocio
         Return objDatos.ClientList
     End Function
 
+    Public Sub Neg_ClientList(EntCliente As CpEntidad)
+        objDatos.D_ClientList(EntCliente)
+
+    End Sub
 End Class

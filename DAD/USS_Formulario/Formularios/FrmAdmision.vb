@@ -14,4 +14,10 @@ Public Class FrmAdmision
 
 
     End Sub
+
+    Private Sub BTAgregar_Click(sender As Object, e As EventArgs) Handles BTAgregar.Click
+        Dim FormAgregar As New FormAgregar
+        FormAgregar.ShowDialog()
+        ViewClient()
+    End Sub
 End Class

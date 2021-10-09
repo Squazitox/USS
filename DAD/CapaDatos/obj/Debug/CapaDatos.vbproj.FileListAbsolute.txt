@@ -8,7 +8,6 @@ D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaDatos\obj\Debug\CapaDatos
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaDatos\obj\Debug\CapaDatos.Resources.resources
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaDatos\obj\Debug\CapaDatos.vbproj.GenerateResource.cache
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaDatos\obj\Debug\CapaDatos.vbproj.CoreCompileInputs.cache
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaDatos\obj\Debug\CapaDatos.vbproj.CopyComplete
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaDatos\obj\Debug\CapaDatos.dll
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaDatos\obj\Debug\CapaDatos.xml
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaDatos\obj\Debug\CapaDatos.pdb

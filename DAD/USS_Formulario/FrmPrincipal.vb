@@ -61,6 +61,7 @@ Public Class FrmPrincipal
     End Sub
     Private Sub ActivateButton(SenderBtn As Object, customcolor As Color)
         If SenderBtn IsNot Nothing Then
+            ButtonOff()
             'Creacion de los cambios para el boton
             BtnActual = CType(SenderBtn, IconButton)
             BtnActual.BackColor = Color.FromArgb(45, 46, 124)
@@ -111,5 +112,7 @@ Public Class FrmPrincipal
 
     End Sub
 
+    Private Sub FrmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
 End Class

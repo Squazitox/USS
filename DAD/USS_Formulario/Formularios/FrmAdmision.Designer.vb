@@ -25,6 +25,7 @@ Partial Class FrmAdmision
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAdmision))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.BTAgregar = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -49,11 +50,21 @@ Partial Class FrmAdmision
         Me.DataGridView1.Size = New System.Drawing.Size(554, 227)
         Me.DataGridView1.TabIndex = 1
         '
+        'BTAgregar
+        '
+        Me.BTAgregar.Location = New System.Drawing.Point(642, 390)
+        Me.BTAgregar.Name = "BTAgregar"
+        Me.BTAgregar.Size = New System.Drawing.Size(75, 23)
+        Me.BTAgregar.TabIndex = 2
+        Me.BTAgregar.Text = "Agregar"
+        Me.BTAgregar.UseVisualStyleBackColor = True
+        '
         'FrmAdmision
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 501)
+        Me.Controls.Add(Me.BTAgregar)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "FrmAdmision"
@@ -66,4 +77,5 @@ Partial Class FrmAdmision
 
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents BTAgregar As Button
 End Class

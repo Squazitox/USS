@@ -91,6 +91,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clase\Conexion.vb" />
+    <Compile Include="Formularios\FormAgregar.Designer.vb">
+      <DependentUpon>FormAgregar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormAgregar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmAdmision.Designer.vb">
       <DependentUpon>FrmAdmision.vb</DependentUpon>
     </Compile>
@@ -145,6 +151,9 @@
     <Compile Include="Paleta\PaletaRGB.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formularios\FormAgregar.resx">
+      <DependentUpon>FormAgregar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmAdmision.resx">
       <DependentUpon>FrmAdmision.vb</DependentUpon>
     </EmbeddedResource>

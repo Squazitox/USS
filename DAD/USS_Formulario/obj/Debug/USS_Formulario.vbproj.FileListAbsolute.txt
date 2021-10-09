@@ -18,7 +18,6 @@ D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\USS_Formulario\bin\Debug\Skia
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\USS_Formulario\bin\Debug\SkiaSharp.Extended.Iconify.dll
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\USS_Formulario\bin\Debug\SkiaSharp.Extended.Iconify.FontAwesome.dll
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\USS_Formulario\bin\Debug\SkiaSharp.xml
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\USS_Formulario\obj\Debug\USS_Formulario.vbproj.CopyComplete
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\USS_Formulario\obj\Debug\USS_Formulario.exe
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\USS_Formulario\obj\Debug\USS_Formulario.xml
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\USS_Formulario\obj\Debug\USS_Formulario.pdb
@@ -36,3 +35,5 @@ D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\USS_Formulario\bin\Debug\Capa
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\USS_Formulario\bin\Debug\CapaNegocio.xml
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\USS_Formulario\bin\Debug\CapaDatos.pdb
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\USS_Formulario\bin\Debug\CapaDatos.xml
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\USS_Formulario\obj\Debug\USS_Formulario.FormAgregar.resources
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\USS_Formulario\obj\Debug\USS_Formulario.vbproj.CopyComplete
