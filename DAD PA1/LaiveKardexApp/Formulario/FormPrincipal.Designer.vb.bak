@@ -1,0 +1,221 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class FormPrincipal
+    Inherits System.Windows.Forms.Form
+
+    'Form reemplaza a Dispose para limpiar la lista de componentes.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Requerido por el Diseñador de Windows Forms
+    Private components As System.ComponentModel.IContainer
+
+    'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
+    'Se puede modificar usando el Diseñador de Windows Forms.  
+    'No lo modifique con el editor de código.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormPrincipal))
+        Me.PNBase = New System.Windows.Forms.Panel()
+        Me.PBCentral = New System.Windows.Forms.PictureBox()
+        Me.PTitulo = New System.Windows.Forms.Panel()
+        Me.LTitulo = New System.Windows.Forms.Label()
+        Me.PnIzquierdo = New System.Windows.Forms.Panel()
+        Me.PMenu = New System.Windows.Forms.Panel()
+        Me.PSubMenuReportes = New System.Windows.Forms.Panel()
+        Me.PSubMenuInventario = New System.Windows.Forms.Panel()
+        Me.PSubMenuAdmin = New System.Windows.Forms.Panel()
+        Me.PLogo = New System.Windows.Forms.Panel()
+        Me.PBLogo = New System.Windows.Forms.PictureBox()
+        Me.PNBorde = New System.Windows.Forms.Panel()
+        Me.LUsuario = New System.Windows.Forms.Label()
+        Me.BSalir = New System.Windows.Forms.Button()
+        Me.PNBase.SuspendLayout()
+        CType(Me.PBCentral, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PTitulo.SuspendLayout()
+        Me.PnIzquierdo.SuspendLayout()
+        Me.PMenu.SuspendLayout()
+        Me.PLogo.SuspendLayout()
+        CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PNBorde.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'PNBase
+        '
+        Me.PNBase.Controls.Add(Me.PBCentral)
+        Me.PNBase.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PNBase.Location = New System.Drawing.Point(263, 32)
+        Me.PNBase.Name = "PNBase"
+        Me.PNBase.Size = New System.Drawing.Size(650, 505)
+        Me.PNBase.TabIndex = 8
+        '
+        'PBCentral
+        '
+        Me.PBCentral.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PBCentral.Image = CType(resources.GetObject("PBCentral.Image"), System.Drawing.Image)
+        Me.PBCentral.Location = New System.Drawing.Point(0, 0)
+        Me.PBCentral.Name = "PBCentral"
+        Me.PBCentral.Size = New System.Drawing.Size(650, 505)
+        Me.PBCentral.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PBCentral.TabIndex = 0
+        Me.PBCentral.TabStop = False
+        '
+        'PTitulo
+        '
+        Me.PTitulo.Controls.Add(Me.LTitulo)
+        Me.PTitulo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PTitulo.Location = New System.Drawing.Point(263, 0)
+        Me.PTitulo.Name = "PTitulo"
+        Me.PTitulo.Size = New System.Drawing.Size(650, 32)
+        Me.PTitulo.TabIndex = 7
+        '
+        'LTitulo
+        '
+        Me.LTitulo.AutoSize = True
+        Me.LTitulo.Location = New System.Drawing.Point(46, 13)
+        Me.LTitulo.Name = "LTitulo"
+        Me.LTitulo.Size = New System.Drawing.Size(39, 13)
+        Me.LTitulo.TabIndex = 1
+        Me.LTitulo.Text = "Label1"
+        '
+        'PnIzquierdo
+        '
+        Me.PnIzquierdo.Controls.Add(Me.PMenu)
+        Me.PnIzquierdo.Controls.Add(Me.PLogo)
+        Me.PnIzquierdo.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PnIzquierdo.Location = New System.Drawing.Point(0, 0)
+        Me.PnIzquierdo.Name = "PnIzquierdo"
+        Me.PnIzquierdo.Size = New System.Drawing.Size(263, 537)
+        Me.PnIzquierdo.TabIndex = 6
+        '
+        'PMenu
+        '
+        Me.PMenu.AutoScroll = True
+        Me.PMenu.Controls.Add(Me.PSubMenuReportes)
+        Me.PMenu.Controls.Add(Me.PSubMenuInventario)
+        Me.PMenu.Controls.Add(Me.PSubMenuAdmin)
+        Me.PMenu.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PMenu.Location = New System.Drawing.Point(0, 60)
+        Me.PMenu.Name = "PMenu"
+        Me.PMenu.Size = New System.Drawing.Size(260, 477)
+        Me.PMenu.TabIndex = 2
+        '
+        'PSubMenuReportes
+        '
+        Me.PSubMenuReportes.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PSubMenuReportes.Location = New System.Drawing.Point(0, 222)
+        Me.PSubMenuReportes.Name = "PSubMenuReportes"
+        Me.PSubMenuReportes.Size = New System.Drawing.Size(260, 84)
+        Me.PSubMenuReportes.TabIndex = 5
+        '
+        'PSubMenuInventario
+        '
+        Me.PSubMenuInventario.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PSubMenuInventario.Location = New System.Drawing.Point(0, 138)
+        Me.PSubMenuInventario.Name = "PSubMenuInventario"
+        Me.PSubMenuInventario.Size = New System.Drawing.Size(260, 84)
+        Me.PSubMenuInventario.TabIndex = 3
+        '
+        'PSubMenuAdmin
+        '
+        Me.PSubMenuAdmin.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PSubMenuAdmin.Location = New System.Drawing.Point(0, 0)
+        Me.PSubMenuAdmin.Name = "PSubMenuAdmin"
+        Me.PSubMenuAdmin.Size = New System.Drawing.Size(260, 138)
+        Me.PSubMenuAdmin.TabIndex = 1
+        '
+        'PLogo
+        '
+        Me.PLogo.Controls.Add(Me.PBLogo)
+        Me.PLogo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PLogo.Location = New System.Drawing.Point(0, 0)
+        Me.PLogo.Name = "PLogo"
+        Me.PLogo.Size = New System.Drawing.Size(263, 60)
+        Me.PLogo.TabIndex = 1
+        '
+        'PBLogo
+        '
+        Me.PBLogo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PBLogo.Image = CType(resources.GetObject("PBLogo.Image"), System.Drawing.Image)
+        Me.PBLogo.Location = New System.Drawing.Point(0, 0)
+        Me.PBLogo.Name = "PBLogo"
+        Me.PBLogo.Size = New System.Drawing.Size(263, 60)
+        Me.PBLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PBLogo.TabIndex = 0
+        Me.PBLogo.TabStop = False
+        '
+        'PNBorde
+        '
+        Me.PNBorde.Controls.Add(Me.LUsuario)
+        Me.PNBorde.Controls.Add(Me.BSalir)
+        Me.PNBorde.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.PNBorde.Location = New System.Drawing.Point(0, 537)
+        Me.PNBorde.Name = "PNBorde"
+        Me.PNBorde.Size = New System.Drawing.Size(913, 28)
+        Me.PNBorde.TabIndex = 5
+        '
+        'LUsuario
+        '
+        Me.LUsuario.AutoSize = True
+        Me.LUsuario.Location = New System.Drawing.Point(13, 7)
+        Me.LUsuario.Name = "LUsuario"
+        Me.LUsuario.Size = New System.Drawing.Size(39, 13)
+        Me.LUsuario.TabIndex = 1
+        Me.LUsuario.Text = "Label1"
+        '
+        'BSalir
+        '
+        Me.BSalir.Location = New System.Drawing.Point(722, 2)
+        Me.BSalir.Name = "BSalir"
+        Me.BSalir.Size = New System.Drawing.Size(75, 23)
+        Me.BSalir.TabIndex = 0
+        Me.BSalir.Text = "Salir"
+        Me.BSalir.UseVisualStyleBackColor = True
+        '
+        'FormPrincipal
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(913, 565)
+        Me.Controls.Add(Me.PNBase)
+        Me.Controls.Add(Me.PTitulo)
+        Me.Controls.Add(Me.PnIzquierdo)
+        Me.Controls.Add(Me.PNBorde)
+        Me.Name = "FormPrincipal"
+        Me.Text = "FormPrincipal"
+        Me.PNBase.ResumeLayout(False)
+        CType(Me.PBCentral, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PTitulo.ResumeLayout(False)
+        Me.PTitulo.PerformLayout()
+        Me.PnIzquierdo.ResumeLayout(False)
+        Me.PMenu.ResumeLayout(False)
+        Me.PLogo.ResumeLayout(False)
+        CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PNBorde.ResumeLayout(False)
+        Me.PNBorde.PerformLayout()
+        Me.ResumeLayout(False)
+
+    End Sub
+
+    Friend WithEvents PNBase As Panel
+    Friend WithEvents PBCentral As PictureBox
+    Friend WithEvents PTitulo As Panel
+    Friend WithEvents LTitulo As Label
+    Friend WithEvents PnIzquierdo As Panel
+    Friend WithEvents PMenu As Panel
+    Friend WithEvents PSubMenuReportes As Panel
+    Friend WithEvents PSubMenuInventario As Panel
+    Friend WithEvents PSubMenuAdmin As Panel
+    Friend WithEvents PLogo As Panel
+    Friend WithEvents PBLogo As PictureBox
+    Friend WithEvents PNBorde As Panel
+    Friend WithEvents LUsuario As Label
+    Friend WithEvents BSalir As Button
+End Class
