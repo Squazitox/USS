@@ -103,16 +103,58 @@
     <Compile Include="Formulario\FormAdvertencia.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formulario\FormAjusteIngreso.Designer.vb">
+      <DependentUpon>FormAjusteIngreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\FormAjusteIngreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FormAjusteSalida.Designer.vb">
+      <DependentUpon>FormAjusteSalida.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\FormAjusteSalida.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formulario\FormAlerta.Designer.vb">
       <DependentUpon>FormAlerta.vb</DependentUpon>
     </Compile>
     <Compile Include="Formulario\FormAlerta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formulario\FormIngreso.Designer.vb">
+      <DependentUpon>FormIngreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\FormIngreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FormKardex.Designer.vb">
+      <DependentUpon>FormKardex.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\FormKardex.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formulario\FormPrincipal.Designer.vb">
       <DependentUpon>FormPrincipal.vb</DependentUpon>
     </Compile>
     <Compile Include="Formulario\FormPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FormResumen.Designer.vb">
+      <DependentUpon>FormResumen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\FormResumen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FormSalida.Designer.vb">
+      <DependentUpon>FormSalida.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\FormSalida.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FormTraspaso.Designer.vb">
+      <DependentUpon>FormTraspaso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\FormTraspaso.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -137,6 +179,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario\FormAdvertencia.resx">
       <DependentUpon>FormAdvertencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FormAjusteIngreso.resx">
+      <DependentUpon>FormAjusteIngreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FormAjusteSalida.resx">
+      <DependentUpon>FormAjusteSalida.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario\FormAlerta.resx">
       <DependentUpon>FormAlerta.vb</DependentUpon>

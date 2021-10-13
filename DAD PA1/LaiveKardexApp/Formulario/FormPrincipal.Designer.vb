@@ -75,14 +75,15 @@ Partial Class FRPrincipal
         'LUsuario
         '
         Me.LUsuario.AutoSize = True
+        Me.LUsuario.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LUsuario.Location = New System.Drawing.Point(13, 7)
         Me.LUsuario.Name = "LUsuario"
-        Me.LUsuario.Size = New System.Drawing.Size(0, 13)
+        Me.LUsuario.Size = New System.Drawing.Size(0, 15)
         Me.LUsuario.TabIndex = 1
         '
         'BSalir
         '
-        Me.BSalir.Location = New System.Drawing.Point(722, 2)
+        Me.BSalir.Location = New System.Drawing.Point(787, 3)
         Me.BSalir.Name = "BSalir"
         Me.BSalir.Size = New System.Drawing.Size(75, 23)
         Me.BSalir.TabIndex = 0
@@ -127,6 +128,7 @@ Partial Class FRPrincipal
         'IBResumen
         '
         Me.IBResumen.Dock = System.Windows.Forms.DockStyle.Top
+        Me.IBResumen.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IBResumen.IconChar = FontAwesome.Sharp.IconChar.FileSignature
         Me.IBResumen.IconColor = System.Drawing.Color.Black
         Me.IBResumen.IconFont = FontAwesome.Sharp.IconFont.[Auto]
@@ -141,6 +143,7 @@ Partial Class FRPrincipal
         'IBKardex
         '
         Me.IBKardex.Dock = System.Windows.Forms.DockStyle.Top
+        Me.IBKardex.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IBKardex.IconChar = FontAwesome.Sharp.IconChar.FileSignature
         Me.IBKardex.IconColor = System.Drawing.Color.Black
         Me.IBKardex.IconFont = FontAwesome.Sharp.IconFont.[Auto]
@@ -154,7 +157,10 @@ Partial Class FRPrincipal
         '
         'IBReportes
         '
+        Me.IBReportes.BackColor = System.Drawing.Color.ForestGreen
         Me.IBReportes.Dock = System.Windows.Forms.DockStyle.Top
+        Me.IBReportes.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IBReportes.ForeColor = System.Drawing.Color.White
         Me.IBReportes.IconChar = FontAwesome.Sharp.IconChar.FolderPlus
         Me.IBReportes.IconColor = System.Drawing.Color.Black
         Me.IBReportes.IconFont = FontAwesome.Sharp.IconFont.[Auto]
@@ -165,7 +171,7 @@ Partial Class FRPrincipal
         Me.IBReportes.TabIndex = 4
         Me.IBReportes.Text = "Reportes"
         Me.IBReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IBReportes.UseVisualStyleBackColor = True
+        Me.IBReportes.UseVisualStyleBackColor = False
         '
         'PSubMenuInventario
         '
@@ -181,6 +187,7 @@ Partial Class FRPrincipal
         '
         Me.IBSalida.Dock = System.Windows.Forms.DockStyle.Top
         Me.IBSalida.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal
+        Me.IBSalida.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IBSalida.IconChar = FontAwesome.Sharp.IconChar.Dolly
         Me.IBSalida.IconColor = System.Drawing.Color.Black
         Me.IBSalida.IconFont = FontAwesome.Sharp.IconFont.[Auto]
@@ -196,6 +203,7 @@ Partial Class FRPrincipal
         'IBIngreso
         '
         Me.IBIngreso.Dock = System.Windows.Forms.DockStyle.Top
+        Me.IBIngreso.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IBIngreso.IconChar = FontAwesome.Sharp.IconChar.Dolly
         Me.IBIngreso.IconColor = System.Drawing.Color.Black
         Me.IBIngreso.IconFont = FontAwesome.Sharp.IconFont.[Auto]
@@ -210,7 +218,10 @@ Partial Class FRPrincipal
         '
         'IBInventario
         '
+        Me.IBInventario.BackColor = System.Drawing.Color.ForestGreen
         Me.IBInventario.Dock = System.Windows.Forms.DockStyle.Top
+        Me.IBInventario.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IBInventario.ForeColor = System.Drawing.Color.White
         Me.IBInventario.IconChar = FontAwesome.Sharp.IconChar.DollyFlatbed
         Me.IBInventario.IconColor = System.Drawing.Color.Black
         Me.IBInventario.IconFont = FontAwesome.Sharp.IconFont.[Auto]
@@ -221,7 +232,7 @@ Partial Class FRPrincipal
         Me.IBInventario.TabIndex = 2
         Me.IBInventario.Text = "Inventario"
         Me.IBInventario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IBInventario.UseVisualStyleBackColor = True
+        Me.IBInventario.UseVisualStyleBackColor = False
         '
         'PSubMenuAdmin
         '
@@ -237,6 +248,7 @@ Partial Class FRPrincipal
         'IBTraspaso
         '
         Me.IBTraspaso.Dock = System.Windows.Forms.DockStyle.Top
+        Me.IBTraspaso.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IBTraspaso.IconChar = FontAwesome.Sharp.IconChar.FileAlt
         Me.IBTraspaso.IconColor = System.Drawing.Color.Black
         Me.IBTraspaso.IconFont = FontAwesome.Sharp.IconFont.[Auto]
@@ -252,6 +264,7 @@ Partial Class FRPrincipal
         'IBAjusteNeg
         '
         Me.IBAjusteNeg.Dock = System.Windows.Forms.DockStyle.Top
+        Me.IBAjusteNeg.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IBAjusteNeg.IconChar = FontAwesome.Sharp.IconChar.FileAlt
         Me.IBAjusteNeg.IconColor = System.Drawing.Color.Black
         Me.IBAjusteNeg.IconFont = FontAwesome.Sharp.IconFont.[Auto]
@@ -267,6 +280,7 @@ Partial Class FRPrincipal
         'IBAjustePos
         '
         Me.IBAjustePos.Dock = System.Windows.Forms.DockStyle.Top
+        Me.IBAjustePos.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IBAjustePos.IconChar = FontAwesome.Sharp.IconChar.FileAlt
         Me.IBAjustePos.IconColor = System.Drawing.Color.Black
         Me.IBAjustePos.IconFont = FontAwesome.Sharp.IconFont.[Auto]
@@ -281,7 +295,10 @@ Partial Class FRPrincipal
         '
         'IBAdmin
         '
+        Me.IBAdmin.BackColor = System.Drawing.Color.ForestGreen
         Me.IBAdmin.Dock = System.Windows.Forms.DockStyle.Top
+        Me.IBAdmin.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IBAdmin.ForeColor = System.Drawing.Color.White
         Me.IBAdmin.IconChar = FontAwesome.Sharp.IconChar.Clipboard
         Me.IBAdmin.IconColor = System.Drawing.Color.Black
         Me.IBAdmin.IconFont = FontAwesome.Sharp.IconFont.[Auto]
@@ -293,7 +310,7 @@ Partial Class FRPrincipal
         Me.IBAdmin.TabIndex = 0
         Me.IBAdmin.Text = "Administración"
         Me.IBAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IBAdmin.UseVisualStyleBackColor = True
+        Me.IBAdmin.UseVisualStyleBackColor = False
         '
         'PLogo
         '
@@ -328,9 +345,10 @@ Partial Class FRPrincipal
         'LTitulo
         '
         Me.LTitulo.AutoSize = True
+        Me.LTitulo.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LTitulo.Location = New System.Drawing.Point(46, 13)
         Me.LTitulo.Name = "LTitulo"
-        Me.LTitulo.Size = New System.Drawing.Size(0, 13)
+        Me.LTitulo.Size = New System.Drawing.Size(0, 15)
         Me.LTitulo.TabIndex = 1
         '
         'IPTitulo
@@ -370,6 +388,7 @@ Partial Class FRPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(874, 635)
         Me.Controls.Add(Me.PNBase)
         Me.Controls.Add(Me.PTitulo)
