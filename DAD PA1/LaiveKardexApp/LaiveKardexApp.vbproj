@@ -189,8 +189,23 @@
     <EmbeddedResource Include="Formulario\FormAlerta.resx">
       <DependentUpon>FormAlerta.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FormIngreso.resx">
+      <DependentUpon>FormIngreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FormKardex.resx">
+      <DependentUpon>FormKardex.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formulario\FormPrincipal.resx">
       <DependentUpon>FormPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FormResumen.resx">
+      <DependentUpon>FormResumen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FormSalida.resx">
+      <DependentUpon>FormSalida.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FormTraspaso.resx">
+      <DependentUpon>FormTraspaso.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
