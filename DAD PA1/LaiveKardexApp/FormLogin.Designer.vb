@@ -125,6 +125,7 @@ Partial Class FormLogin
         Me.Controls.Add(Me.LUser)
         Me.Controls.Add(Me.PBLogin)
         Me.Controls.Add(Me.LLogin)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FormLogin"
         Me.Text = "Login"
         CType(Me.PBLogin, System.ComponentModel.ISupportInitialize).EndInit()
