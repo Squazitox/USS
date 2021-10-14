@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FRPrincipal
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class FormPrincipal
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,9 @@ Partial Class FRPrincipal
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FRPrincipal))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormPrincipal))
         Me.PNBorde = New System.Windows.Forms.Panel()
         Me.LUsuario = New System.Windows.Forms.Label()
         Me.BSalir = New System.Windows.Forms.Button()
@@ -67,7 +67,7 @@ Partial Class FRPrincipal
         Me.PNBorde.Controls.Add(Me.LUsuario)
         Me.PNBorde.Controls.Add(Me.BSalir)
         Me.PNBorde.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PNBorde.Location = New System.Drawing.Point(0, 607)
+        Me.PNBorde.Location = New System.Drawing.Point(0, 530)
         Me.PNBorde.Name = "PNBorde"
         Me.PNBorde.Size = New System.Drawing.Size(874, 28)
         Me.PNBorde.TabIndex = 1
@@ -97,7 +97,7 @@ Partial Class FRPrincipal
         Me.PnIzquierdo.Dock = System.Windows.Forms.DockStyle.Left
         Me.PnIzquierdo.Location = New System.Drawing.Point(0, 0)
         Me.PnIzquierdo.Name = "PnIzquierdo"
-        Me.PnIzquierdo.Size = New System.Drawing.Size(263, 607)
+        Me.PnIzquierdo.Size = New System.Drawing.Size(263, 530)
         Me.PnIzquierdo.TabIndex = 2
         '
         'PMenu
@@ -112,7 +112,7 @@ Partial Class FRPrincipal
         Me.PMenu.Dock = System.Windows.Forms.DockStyle.Left
         Me.PMenu.Location = New System.Drawing.Point(0, 60)
         Me.PMenu.Name = "PMenu"
-        Me.PMenu.Size = New System.Drawing.Size(260, 547)
+        Me.PMenu.Size = New System.Drawing.Size(260, 470)
         Me.PMenu.TabIndex = 2
         '
         'PSubMenuReportes
@@ -339,28 +339,29 @@ Partial Class FRPrincipal
         Me.PTitulo.Dock = System.Windows.Forms.DockStyle.Top
         Me.PTitulo.Location = New System.Drawing.Point(263, 0)
         Me.PTitulo.Name = "PTitulo"
-        Me.PTitulo.Size = New System.Drawing.Size(611, 32)
+        Me.PTitulo.Size = New System.Drawing.Size(611, 57)
         Me.PTitulo.TabIndex = 3
         '
         'LTitulo
         '
         Me.LTitulo.AutoSize = True
         Me.LTitulo.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LTitulo.Location = New System.Drawing.Point(46, 13)
+        Me.LTitulo.Location = New System.Drawing.Point(65, 20)
         Me.LTitulo.Name = "LTitulo"
         Me.LTitulo.Size = New System.Drawing.Size(0, 15)
         Me.LTitulo.TabIndex = 1
         '
         'IPTitulo
         '
-        Me.IPTitulo.BackColor = System.Drawing.SystemColors.Control
+        Me.IPTitulo.BackColor = System.Drawing.Color.White
         Me.IPTitulo.ForeColor = System.Drawing.SystemColors.ControlText
         Me.IPTitulo.IconChar = FontAwesome.Sharp.IconChar.None
         Me.IPTitulo.IconColor = System.Drawing.SystemColors.ControlText
         Me.IPTitulo.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IPTitulo.Location = New System.Drawing.Point(7, 1)
+        Me.IPTitulo.IconSize = 48
+        Me.IPTitulo.Location = New System.Drawing.Point(8, 3)
         Me.IPTitulo.Name = "IPTitulo"
-        Me.IPTitulo.Size = New System.Drawing.Size(32, 32)
+        Me.IPTitulo.Size = New System.Drawing.Size(51, 48)
         Me.IPTitulo.TabIndex = 0
         Me.IPTitulo.TabStop = False
         '
@@ -368,9 +369,9 @@ Partial Class FRPrincipal
         '
         Me.PNBase.Controls.Add(Me.PBCentral)
         Me.PNBase.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PNBase.Location = New System.Drawing.Point(263, 32)
+        Me.PNBase.Location = New System.Drawing.Point(263, 57)
         Me.PNBase.Name = "PNBase"
-        Me.PNBase.Size = New System.Drawing.Size(611, 575)
+        Me.PNBase.Size = New System.Drawing.Size(611, 473)
         Me.PNBase.TabIndex = 4
         '
         'PBCentral
@@ -379,23 +380,25 @@ Partial Class FRPrincipal
         Me.PBCentral.Image = CType(resources.GetObject("PBCentral.Image"), System.Drawing.Image)
         Me.PBCentral.Location = New System.Drawing.Point(0, 0)
         Me.PBCentral.Name = "PBCentral"
-        Me.PBCentral.Size = New System.Drawing.Size(611, 575)
+        Me.PBCentral.Size = New System.Drawing.Size(611, 473)
         Me.PBCentral.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PBCentral.TabIndex = 0
         Me.PBCentral.TabStop = False
         '
-        'FRPrincipal
+        'FormPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(874, 635)
+        Me.ClientSize = New System.Drawing.Size(874, 558)
         Me.Controls.Add(Me.PNBase)
         Me.Controls.Add(Me.PTitulo)
         Me.Controls.Add(Me.PnIzquierdo)
         Me.Controls.Add(Me.PNBorde)
-        Me.Name = "FRPrincipal"
+        Me.Name = "FormPrincipal"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "LaiveApp"
+        Me.TopMost = True
         Me.PNBorde.ResumeLayout(False)
         Me.PNBorde.PerformLayout()
         Me.PnIzquierdo.ResumeLayout(False)
@@ -444,7 +447,7 @@ Partial Class FRPrincipal
     Friend WithEvents PNBase As Panel
     Friend WithEvents PBCentral As PictureBox
 
-    Private Sub FRPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FormPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         hideSubMenu()
     End Sub
 End Class

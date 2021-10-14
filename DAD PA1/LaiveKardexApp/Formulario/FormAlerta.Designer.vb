@@ -80,7 +80,9 @@ Partial Class FormAlerta
         Me.Controls.Add(Me.BAlertaSi)
         Me.Controls.Add(Me.LTextAlert)
         Me.Controls.Add(Me.LAlert)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FormAlerta"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormAlerta"
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -31,6 +31,7 @@ Partial Class FormLogin
         Me.LPassword = New System.Windows.Forms.Label()
         Me.LUser = New System.Windows.Forms.Label()
         Me.LLostPassword = New System.Windows.Forms.LinkLabel()
+        Me.BLoginCancelar = New System.Windows.Forms.Button()
         CType(Me.PBLogin, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -58,7 +59,7 @@ Partial Class FormLogin
         'BLogin
         '
         Me.BLogin.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BLogin.Location = New System.Drawing.Point(322, 100)
+        Me.BLogin.Location = New System.Drawing.Point(339, 130)
         Me.BLogin.Name = "BLogin"
         Me.BLogin.Size = New System.Drawing.Size(91, 23)
         Me.BLogin.TabIndex = 12
@@ -69,6 +70,7 @@ Partial Class FormLogin
         '
         Me.TBPassword.Location = New System.Drawing.Point(254, 59)
         Me.TBPassword.Name = "TBPassword"
+        Me.TBPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TBPassword.Size = New System.Drawing.Size(159, 20)
         Me.TBPassword.TabIndex = 11
         '
@@ -104,19 +106,30 @@ Partial Class FormLogin
         'LLostPassword
         '
         Me.LLostPassword.AutoSize = True
-        Me.LLostPassword.Location = New System.Drawing.Point(167, 105)
+        Me.LLostPassword.Location = New System.Drawing.Point(283, 91)
         Me.LLostPassword.Name = "LLostPassword"
         Me.LLostPassword.Size = New System.Drawing.Size(130, 13)
         Me.LLostPassword.TabIndex = 13
         Me.LLostPassword.TabStop = True
         Me.LLostPassword.Text = "¿Olvidaste la contraseña?"
         '
+        'BLoginCancelar
+        '
+        Me.BLoginCancelar.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BLoginCancelar.Location = New System.Drawing.Point(203, 130)
+        Me.BLoginCancelar.Name = "BLoginCancelar"
+        Me.BLoginCancelar.Size = New System.Drawing.Size(91, 23)
+        Me.BLoginCancelar.TabIndex = 14
+        Me.BLoginCancelar.Text = "Cerrar"
+        Me.BLoginCancelar.UseVisualStyleBackColor = True
+        '
         'FormLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.ForestGreen
-        Me.ClientSize = New System.Drawing.Size(459, 140)
+        Me.ClientSize = New System.Drawing.Size(459, 165)
+        Me.Controls.Add(Me.BLoginCancelar)
         Me.Controls.Add(Me.LLostPassword)
         Me.Controls.Add(Me.BLogin)
         Me.Controls.Add(Me.TBPassword)
@@ -127,6 +140,7 @@ Partial Class FormLogin
         Me.Controls.Add(Me.LLogin)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FormLogin"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
         CType(Me.PBLogin, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -142,4 +156,5 @@ Partial Class FormLogin
     Friend WithEvents LPassword As Label
     Friend WithEvents LUser As Label
     Friend WithEvents LLostPassword As LinkLabel
+    Friend WithEvents BLoginCancelar As Button
 End Class
