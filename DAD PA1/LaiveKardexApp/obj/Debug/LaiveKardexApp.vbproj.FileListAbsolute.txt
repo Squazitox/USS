@@ -24,4 +24,10 @@ D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\Debug\
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\LaiveKardexApp.FormAdvertencia.resources
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\LaiveKardexApp.FormAlerta.resources
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\LaiveKardexApp.FRPrincipal.resources
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\LaiveKardexApp.vbproj.CopyComplete
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\LaiveKardexApp.FormAjusteIngreso.resources
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\LaiveKardexApp.FormAjusteSalida.resources
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\LaiveKardexApp.FormIngreso.resources
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\LaiveKardexApp.FormKardex.resources
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\LaiveKardexApp.FormResumen.resources
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\LaiveKardexApp.FormSalida.resources
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\LaiveKardexApp.FormTraspaso.resources
