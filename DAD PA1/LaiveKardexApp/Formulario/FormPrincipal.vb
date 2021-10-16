@@ -5,7 +5,7 @@ Public Class FormPrincipal
     Private LeftBorderBtn As Panel
     Private FormHijo As Form
 
-    Private Sub hideSubMenu()
+    Private Sub HideSubMenu()
         PSubMenuAdmin.Visible = False
         PSubMenuInventario.Visible = False
         PSubMenuReportes.Visible = False

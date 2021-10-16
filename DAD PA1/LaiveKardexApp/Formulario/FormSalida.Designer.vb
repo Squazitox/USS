@@ -41,6 +41,7 @@ Partial Class FormSalida
         Me.BSalidaCancelar = New System.Windows.Forms.Button()
         Me.BSalidaGuardar = New System.Windows.Forms.Button()
         Me.BSalidaExportar = New System.Windows.Forms.Button()
+        Me.BSalidaEliminar = New System.Windows.Forms.Button()
         Me.PSalidaFiltros.SuspendLayout()
         Me.PSalidaData.SuspendLayout()
         CType(Me.DGVSalida, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -50,6 +51,7 @@ Partial Class FormSalida
         'PSalidaFiltros
         '
         Me.PSalidaFiltros.BackColor = System.Drawing.Color.ForestGreen
+        Me.PSalidaFiltros.Controls.Add(Me.BSalidaEliminar)
         Me.PSalidaFiltros.Controls.Add(Me.BSalidaIngresar)
         Me.PSalidaFiltros.Controls.Add(Me.DTPSalida)
         Me.PSalidaFiltros.Controls.Add(Me.TBSalidaProveedor)
@@ -78,9 +80,11 @@ Partial Class FormSalida
         '
         'DTPSalida
         '
-        Me.DTPSalida.Location = New System.Drawing.Point(139, 75)
+        Me.DTPSalida.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTPSalida.Location = New System.Drawing.Point(243, 75)
+        Me.DTPSalida.MinDate = New Date(2010, 1, 1, 0, 0, 0, 0)
         Me.DTPSalida.Name = "DTPSalida"
-        Me.DTPSalida.Size = New System.Drawing.Size(200, 20)
+        Me.DTPSalida.Size = New System.Drawing.Size(96, 20)
         Me.DTPSalida.TabIndex = 13
         '
         'TBSalidaProveedor
@@ -237,6 +241,15 @@ Partial Class FormSalida
         Me.BSalidaExportar.Text = "Exportar"
         Me.BSalidaExportar.UseVisualStyleBackColor = True
         '
+        'BSalidaEliminar
+        '
+        Me.BSalidaEliminar.Location = New System.Drawing.Point(597, 68)
+        Me.BSalidaEliminar.Name = "BSalidaEliminar"
+        Me.BSalidaEliminar.Size = New System.Drawing.Size(75, 33)
+        Me.BSalidaEliminar.TabIndex = 16
+        Me.BSalidaEliminar.Text = "Eliminar"
+        Me.BSalidaEliminar.UseVisualStyleBackColor = True
+        '
         'FormSalida
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -275,4 +288,5 @@ Partial Class FormSalida
     Friend WithEvents BSalidaCancelar As Button
     Friend WithEvents BSalidaGuardar As Button
     Friend WithEvents BSalidaExportar As Button
+    Friend WithEvents BSalidaEliminar As Button
 End Class

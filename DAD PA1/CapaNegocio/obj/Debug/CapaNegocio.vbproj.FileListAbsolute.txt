@@ -15,3 +15,20 @@ D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaNegocio\obj\Debug\CapaNeg
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaNegocio\obj\Debug\CapaNegocio.dll
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaNegocio\obj\Debug\CapaNegocio.xml
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaNegocio\obj\Debug\CapaNegocio.pdb
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaNegocio.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaNegocio.pdb
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaNegocio.xml
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaDatos.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaEntidad.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaDatos.pdb
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaDatos.xml
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaEntidad.pdb
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaEntidad.xml
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.vbproj.AssemblyReference.cache
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.Resources.resources
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.vbproj.GenerateResource.cache
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.vbproj.CoreCompileInputs.cache
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.vbproj.CopyComplete
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.xml
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.pdb
