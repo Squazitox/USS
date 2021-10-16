@@ -47,4 +47,10 @@ Public Class FormIngreso
     Private Sub TBIngresoLote_TextChanged(sender As Object, e As EventArgs) Handles TBIngresoLote.TextChanged
 
     End Sub
+
+    Private Sub CBIngresoOrigen_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBIngresoOrigen.SelectedIndexChanged
+
+
+
+    End Sub
 End Class
