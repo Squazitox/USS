@@ -23,6 +23,8 @@ Partial Class FormSalida
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.PSalidaFiltros = New System.Windows.Forms.Panel()
+        Me.CBSalidaProveedor = New System.Windows.Forms.ComboBox()
+        Me.CBSalidaCodigo = New System.Windows.Forms.ComboBox()
         Me.BSalidaEliminar = New System.Windows.Forms.Button()
         Me.BSalidaIngresar = New System.Windows.Forms.Button()
         Me.DTPSalida = New System.Windows.Forms.DateTimePicker()
@@ -39,8 +41,6 @@ Partial Class FormSalida
         Me.BSalidaCancelar = New System.Windows.Forms.Button()
         Me.BSalidaGuardar = New System.Windows.Forms.Button()
         Me.BSalidaExportar = New System.Windows.Forms.Button()
-        Me.CBSalidaCodigo = New System.Windows.Forms.ComboBox()
-        Me.CBSalidaProveedor = New System.Windows.Forms.ComboBox()
         Me.PSalidaFiltros.SuspendLayout()
         Me.PSalidaData.SuspendLayout()
         CType(Me.DGVSalida, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -67,6 +67,22 @@ Partial Class FormSalida
         Me.PSalidaFiltros.Name = "PSalidaFiltros"
         Me.PSalidaFiltros.Size = New System.Drawing.Size(800, 115)
         Me.PSalidaFiltros.TabIndex = 0
+        '
+        'CBSalidaProveedor
+        '
+        Me.CBSalidaProveedor.FormattingEnabled = True
+        Me.CBSalidaProveedor.Location = New System.Drawing.Point(520, 15)
+        Me.CBSalidaProveedor.Name = "CBSalidaProveedor"
+        Me.CBSalidaProveedor.Size = New System.Drawing.Size(242, 21)
+        Me.CBSalidaProveedor.TabIndex = 17
+        '
+        'CBSalidaCodigo
+        '
+        Me.CBSalidaCodigo.FormattingEnabled = True
+        Me.CBSalidaCodigo.Location = New System.Drawing.Point(175, 14)
+        Me.CBSalidaCodigo.Name = "CBSalidaCodigo"
+        Me.CBSalidaCodigo.Size = New System.Drawing.Size(164, 21)
+        Me.CBSalidaCodigo.TabIndex = 1
         '
         'BSalidaEliminar
         '
@@ -222,22 +238,6 @@ Partial Class FormSalida
         Me.BSalidaExportar.Text = "Exportar"
         Me.BSalidaExportar.UseVisualStyleBackColor = True
         '
-        'CBSalidaCodigo
-        '
-        Me.CBSalidaCodigo.FormattingEnabled = True
-        Me.CBSalidaCodigo.Location = New System.Drawing.Point(175, 14)
-        Me.CBSalidaCodigo.Name = "CBSalidaCodigo"
-        Me.CBSalidaCodigo.Size = New System.Drawing.Size(164, 21)
-        Me.CBSalidaCodigo.TabIndex = 1
-        '
-        'CBSalidaProveedor
-        '
-        Me.CBSalidaProveedor.FormattingEnabled = True
-        Me.CBSalidaProveedor.Location = New System.Drawing.Point(520, 15)
-        Me.CBSalidaProveedor.Name = "CBSalidaProveedor"
-        Me.CBSalidaProveedor.Size = New System.Drawing.Size(242, 21)
-        Me.CBSalidaProveedor.TabIndex = 17
-        '
         'FormSalida
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -247,7 +247,7 @@ Partial Class FormSalida
         Me.Controls.Add(Me.PSalidaData)
         Me.Controls.Add(Me.PSalidaFiltros)
         Me.Name = "FormSalida"
-        Me.Text = "FormIngreso"
+        Me.Text = "FormSalida"
         Me.PSalidaFiltros.ResumeLayout(False)
         Me.PSalidaFiltros.PerformLayout()
         Me.PSalidaData.ResumeLayout(False)
