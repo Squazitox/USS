@@ -5,18 +5,21 @@ Public Class FormIngreso
         DGVIngreso.Columns.Add("codigo", "Código de Producto")
         'DGVIngreso.Columns.Add("descripcion", "Descripción del Producto")
         DGVIngreso.Columns.Add("cantidad", "Cantidad de Ingreso")
+        DGVIngreso.Columns.Add("valor", "Valor de Producto")
         DGVIngreso.Columns.Add("lote", "Lote")
         DGVIngreso.Columns.Add("fv", "F.V")
         DGVIngreso.Columns.Add("proveedor", "Proveedor")
         DGVIngreso.Columns.Add("factura", "Nº de Factura")
         DGVIngreso.Columns.Add("origen", "Origen")
 
+
     End Sub
 
     Private Sub BIngresoIngresar_Click(sender As Object, e As EventArgs) Handles BIngresoIngresar.Click
-        DGVIngreso.Rows.Add(TBIngresoCodigo.Text, TBIngresoCantidad.Text, TBIngresoLote.Text, DTPIngreso.Value.Date.ToString("dd/MM/yyyy"), TBIngresoProveedor.Text, TBIngresoFactura.Text, CBIngresoOrigen.Text)
+        DGVIngreso.Rows.Add(TBIngresoCodigo.Text, TBIngresoCantidad.Text, TBIngresoValor.Text, TBIngresoLote.Text, DTPIngreso.Value.Date.ToString("dd/MM/yyyy"), TBIngresoProveedor.Text, TBIngresoFactura.Text, CBIngresoOrigen.Text)
         TBIngresoCodigo.Text = ""
         TBIngresoLote.Text = ""
+        TBIngresoValor.Text = ""
         TBIngresoCantidad.Text = ""
         TBIngresoProveedor.Text = ""
         TBIngresoFactura.Text = ""

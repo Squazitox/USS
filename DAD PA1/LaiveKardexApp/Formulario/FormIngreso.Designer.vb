@@ -45,6 +45,8 @@ Partial Class FormIngreso
         Me.BIngresoCancelar = New System.Windows.Forms.Button()
         Me.BIngresoGuardar = New System.Windows.Forms.Button()
         Me.BIngresoExportar = New System.Windows.Forms.Button()
+        Me.TBIngresoValor = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.PIngresoFiltros.SuspendLayout()
         Me.PIngresoData.SuspendLayout()
         CType(Me.DGVIngreso, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,6 +56,8 @@ Partial Class FormIngreso
         'PIngresoFiltros
         '
         Me.PIngresoFiltros.BackColor = System.Drawing.Color.ForestGreen
+        Me.PIngresoFiltros.Controls.Add(Me.TBIngresoValor)
+        Me.PIngresoFiltros.Controls.Add(Me.Label8)
         Me.PIngresoFiltros.Controls.Add(Me.BIngresoEliminar)
         Me.PIngresoFiltros.Controls.Add(Me.BIngresoIngresar)
         Me.PIngresoFiltros.Controls.Add(Me.CBIngresoOrigen)
@@ -96,8 +100,10 @@ Partial Class FormIngreso
         '
         'CBIngresoOrigen
         '
+        Me.CBIngresoOrigen.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.CBIngresoOrigen.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CBIngresoOrigen.FormattingEnabled = True
-        Me.CBIngresoOrigen.Items.AddRange(New Object() {"Nacional", "Importado"})
+        Me.CBIngresoOrigen.Items.AddRange(New Object() {"CHECOSLOVAQUIA", "ZONAS FRANCAS DEL PERU", "PAISES NO PREC. EN OP. ABAST. COMBUST", "AGUAS INTERNACIONALES", "NO DECLARADOS", "GAZA Y JERICO", "ESCOCIA", "URSS", "VIETNAM (DEL NORTE)", "COMUNIDAD ECONOMICA EUROPEA", "COSTA DE MARFIL", "ZONA DEL CANAL DE PANAMA", "ALEMANIA", "ISLAS NORMANDAS", "CANTON Y ENDERBURRY", "HONDURAS BRITANICAS", "ISALAS JONSTON", "MACEDONIA", "MIDWAY, ISLAS", "ISLAS DE PACIFICO", "REPUBLICA ARABE UNIDA", "WAKE, ISLA", "TERRITORIO AUTONOMO DE PALESTINA.", "TODOS LOS PAISES", "ANDORRA", "EMIRATOS ÁRABES UNIDOS", "AFGANISTÁN", "ANTIGUA Y BARBUDA", "ANGUILA", "ALBANIA", "ARMENIA", "ANTILLAS HOLANDESAS", "ANGOLA", "ANTÁRTIDA", "ARGENTINA", "SAMOA AMERICANA", "AUSTRIA", "AUSTRALIA", "ARUBA", "ISLAS ALAND", "AZERBAIJAN", "BOSNIA Y HERZEGOVINA", "BARBADOS", "BANGLADESH", "BÉLGICA", "BURKINA FASO", "BULGARIA", "BAHREIN", "BURUNDI", "BENIN", "SANTA BARTHELEMY", "ISLAS BERMUDAS", "BRUNEI DARUSSALAM", "BOLIVIA", "BONAIRE", "BRASIL", "BAHAMAS", "BHUTAN", "ISLA DE BOUVET", "BOTSWANA", "BELARUS", "BELICE", "CANADÁ", "COCOS (KEELING) ISLAS", "CONGO LA REPÚBLICA DEMOCRÁTICA DE LA", "REPÚBLICA CENTROAFRICANA", "CONGO", "SUIZA", "COTE IVOIRE", "ISLAS COOK", "CHILE", "CAMERÚN", "CHINA", "COLOMBIA", "COSTA RICA", "SERBIA Y MONTENEGRO", "CUBA", "CABO VERDE", "CURAZAO", "ISLA DE NAVIDAD", "CHIPRE", "REPUBLICA CHECA", "ALEMANIA", "DJIBOUTI", "DINAMARCA", "DOMINICA", "REPÚBLICA DOMINICANA", "ARGELIA", "ECUADOR", "ESTONIA", "EGIPTO", "SAHARA OCCIDENTAL", "ERITREA", "ESPAÑA", "ETIOPÍA", "FINLANDIA", "FIJI", "ISLAS MALVINAS (MALVINAS)", "MICRONESIA, ESTADOS FEDERADOS DE", "ISLAS FAROE", "FRANCIA", "FRANCIA, METROPOLITANO", "GABÓN", "REINO UNIDO", "GRANADA", "GEORGIA", "GUIANA FRANCESA", "GUERNSEY", "GHANA", "GIBRALTAR", "TIERRA VERDE", "GAMBIA", "GUINEA", "GUADALUPE", "GUINEA ECUATORIAL", "GRECIA", "GEORGIA DEL SUR Y LAS ISLAS SANDWICH DEL", "GUATEMALA", "GUAM", "GUINEA-BISSAU", "GUAYANA", "HONG KONG", "ISLA DEL OÍDO Y LAS ISLAS MDDALLD", "HONDURAS", "CROACIA", "HAITÍ", "HUNGRÍA", "INDONESIA", "IRLANDA", "ISRAEL", "ISLA DEL HOMBRE", "INDIA", "TERRITORIO BRITÁNICO DEL OCÉANO ÍNDICO", "IRAK", "IRÁN (REPÚBLICA ISLÁMICA DE", "ISLANDIA", "ITALIA", "JERSEY", "JAMAICA", "JORDÁN", "JAPÓN", "KENIA", "KYRGYZSTAN", "CAMBOYA", "KIRIBATI", "COMORES", "SAINT KITTS Y NEVIS", "COREA, REP. DE LAS PERSONAS DEMOCRATICAS", "COREA, REPÚBLICA DE", "KUWAIT", "ISLAS CAIMÁN", "KAZAJSTÁN", "REPÚBLICA DEMOCRÁTICA POPULAR DE LAO", "LÍBANO", "SANTA LUCÍA", "LIECHTENSTEIN", "SRI LANKA", "LIBERIA", "LESOTO", "LITUANIA", "LUXEMBURGO", "LETONIA", "LIBIA", "MARRUECOS", "MÓNACO", "MOLDAVIA, REPÚBLICA DE", "MONTENEGRO", "SAN MARTIN (PARTE FRANCESA)", "MADAGASCAR", "ISLAS MARSHALL", "MACEDONIA, LA ANTIGUA REPÚBLICA YUGOSLAV", "MALI", "MYANMAR", "MONGOLIA", "MACAO", "ISLAS MARIANAS DEL NORTE", "MARTINICA", "MAURITANIA", "MONTSERRAT", "MALTA", "MAURICIO", "MALDIVAS", "MALAWI", "MEXICO", "MALASIA", "MOZAMBIQUE", "NAMIBIA", "NUEVA CALEDONIA", "NÍGER", "ISLA NORFOLK", "NIGERIA", "NICARAGUA", "PAÍSES BAJOS", "NORUEGA", "NEPAL", "NAURU", "ZONA NEUTRAL", "NIUE", "NUEVA ZELANDA", "OMÁN", "PANAMÁ", "PERÚ", "POLINESIA FRANCÉS", "PAPÚA NUEVA GUINEA", "FILIPINAS", "PAKISTÁN", "POLONIA", "SAN PIERRE Y MIQUELON", "PITCAIRN", "PUERTO RICO", "PALESTINA, ESTADO DE", "PORTUGAL", "PALAU", "PARAGUAY", "KATAR", "REUNIÓN", "RUMANIA", "SERBIA", "FEDERACIÓN RUSA", "RUANDA", "ARABIA SAUDITA", "ISLAS SALOMÓN", "SEYCHELLES", "SUDÁN", "SUECIA", "SINGAPUR", "SANTA HELENA, ASCENSIÓN Y TRISTÁN DA CUN", "ESLOVENIA", "SVALBARD Y JAN MAYEN", "ESLOVAQUIA", "SIERRA LEONA", "SAN MARINO", "SENEGAL", "SOMALIA", "SURINAME", "SUDÁN DEL SUR", "SANTO TOMÉ Y PRÍNCIPE", "EL SALVADOR", "SINT MAARTEN (PARTE HOLANDESA)", "REPÚBLICA ÁRABE SIRIA", "SWAZILANDIA", "ISLAS TURCAS Y CAICOS", "CHAD", "TERRITORIOS FRANCESES DEL SUR", "TOGO", "TAILANDIA", "TAYIKISTAN", "TOKAELU", "TIMOR-LESTE", "TURKMENISTÁN", "TÚNEZ", "TONGA", "TIMOR ORIENTAL", "TURQUIA", "TRINIDAD Y TOBAGO", "TUVALU", "TAIWAN, PROVINCIA DE CHINA", "TANZANIA, REPÚBLICA DE LOS ESTADOS UNIDO", "UCRANIA", "UGANDA", "ISLAS MENORES DE LOS ESTADOS UNIDOS", "ESTADOS UNIDOS", "URUGUAY", "UZBEKISTÁN", "SANTA SEDE (ESTADO DE LA CIUDAD DEL VATI", "SAN VICENTE Y LAS GRANADINAS", "VENEZUELA", "ISLAS VÍRGENES BRITÁNICAS", "ISLAS VÍRGENES, EE. UU.", "VIET NAM", "VANUATU", "WALLIS Y FUTUNA", "SAMOA", "PUEBA", "INSTALACIONES EN AGUA INTERNACIONAL", "YEMEN", "MAYOTTE", "YUGOSLAVIA", "SUDÁFRICA", "ZAMBIA", "ZAIRE", "ZIMBABUE"})
         Me.CBIngresoOrigen.Location = New System.Drawing.Point(490, 73)
         Me.CBIngresoOrigen.Name = "CBIngresoOrigen"
         Me.CBIngresoOrigen.Size = New System.Drawing.Size(121, 21)
@@ -283,6 +289,24 @@ Partial Class FormIngreso
         Me.BIngresoExportar.Text = "Exportar"
         Me.BIngresoExportar.UseVisualStyleBackColor = True
         '
+        'TBIngresoValor
+        '
+        Me.TBIngresoValor.Location = New System.Drawing.Point(491, 105)
+        Me.TBIngresoValor.Name = "TBIngresoValor"
+        Me.TBIngresoValor.Size = New System.Drawing.Size(100, 20)
+        Me.TBIngresoValor.TabIndex = 18
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!)
+        Me.Label8.ForeColor = System.Drawing.Color.White
+        Me.Label8.Location = New System.Drawing.Point(396, 108)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(50, 19)
+        Me.Label8.TabIndex = 17
+        Me.Label8.Text = "Valor "
+        '
         'FormIngreso
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -325,4 +349,6 @@ Partial Class FormIngreso
     Friend WithEvents BIngresoGuardar As Button
     Friend WithEvents BIngresoExportar As Button
     Friend WithEvents BIngresoEliminar As Button
+    Friend WithEvents TBIngresoValor As TextBox
+    Friend WithEvents Label8 As Label
 End Class
