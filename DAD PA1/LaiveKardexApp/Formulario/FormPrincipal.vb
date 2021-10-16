@@ -28,7 +28,7 @@ Public Class FormPrincipal
 
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
         LeftBorderBtn = New Panel With {
-            .Size = New Size(8, 75)
+            .Size = New Size(3, 42)
         }
         PnIzquierdo.Controls.Add(LeftBorderBtn)
 
@@ -38,29 +38,29 @@ Public Class FormPrincipal
             ButtonOff()
             'Creacion de los cambios para el boton
             BtnActual = CType(SenderBtn, IconButton)
-            BtnActual.BackColor = Color.FromArgb(45, 46, 124)
-            BtnActual.ForeColor = customcolor
-            BtnActual.IconColor = customcolor
+            BtnActual.BackColor = Color.FromArgb(245, 222, 0)
+            BtnActual.ForeColor = Color.FromArgb(245, 63, 0)
+            BtnActual.IconColor = Color.FromArgb(245, 63, 0)
             BtnActual.TextAlign = ContentAlignment.MiddleCenter
             'BtnActual.ImageAlign = ContentAlignment.MiddleCenter
             BtnActual.TextImageRelation = TextImageRelation.TextBeforeImage
             'Cambios para el Borde y el icono principal
             LeftBorderBtn.BackColor = customcolor
-            LeftBorderBtn.Visible = True
+            LeftBorderBtn.Visible = False
             LeftBorderBtn.BringToFront()
             LeftBorderBtn.Location = New Point(0, BtnActual.Location.Y)
             IPTitulo.IconChar = BtnActual.IconChar
-            IPTitulo.IconColor = customcolor
-            'LTitulo.ForeColor = Color.FromArgb(45, 46, 124)
+            IPTitulo.IconColor = Color.ForestGreen
+            LTitulo.ForeColor = Color.ForestGreen
         End If
     End Sub
 
     Private Sub ButtonOff()
         If BtnActual IsNot Nothing Then
             'Codigo para la desactivacion de los cambio
-            BtnActual.BackColor = Color.Teal
-            BtnActual.ForeColor = Color.White
-            BtnActual.IconColor = Color.White
+            BtnActual.BackColor = Color.White
+            BtnActual.ForeColor = Color.Black
+            BtnActual.IconColor = Color.Black
             BtnActual.TextAlign = ContentAlignment.MiddleLeft
             BtnActual.ImageAlign = ContentAlignment.MiddleCenter
             BtnActual.TextImageRelation = TextImageRelation.ImageBeforeText
@@ -78,6 +78,7 @@ Public Class FormPrincipal
         Hijo.TopLevel = False
         Hijo.FormBorderStyle = FormBorderStyle.None
         Hijo.Dock = DockStyle.Fill
+
 
         PNBase.Controls.Add(Hijo)
         PNBase.Tag = Hijo

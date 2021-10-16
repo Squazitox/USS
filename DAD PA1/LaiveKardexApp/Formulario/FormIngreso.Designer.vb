@@ -42,7 +42,6 @@ Partial Class FormIngreso
         Me.PIngresoData = New System.Windows.Forms.Panel()
         Me.DGVIngreso = New System.Windows.Forms.DataGridView()
         Me.PIngresoBotones = New System.Windows.Forms.Panel()
-        Me.BIngresoImprimir = New FontAwesome.Sharp.IconButton()
         Me.BIngresoCancelar = New System.Windows.Forms.Button()
         Me.BIngresoGuardar = New System.Windows.Forms.Button()
         Me.BIngresoExportar = New System.Windows.Forms.Button()
@@ -248,7 +247,6 @@ Partial Class FormIngreso
         'PIngresoBotones
         '
         Me.PIngresoBotones.BackColor = System.Drawing.Color.ForestGreen
-        Me.PIngresoBotones.Controls.Add(Me.BIngresoImprimir)
         Me.PIngresoBotones.Controls.Add(Me.BIngresoCancelar)
         Me.PIngresoBotones.Controls.Add(Me.BIngresoGuardar)
         Me.PIngresoBotones.Controls.Add(Me.BIngresoExportar)
@@ -257,18 +255,6 @@ Partial Class FormIngreso
         Me.PIngresoBotones.Name = "PIngresoBotones"
         Me.PIngresoBotones.Size = New System.Drawing.Size(800, 64)
         Me.PIngresoBotones.TabIndex = 2
-        '
-        'BIngresoImprimir
-        '
-        Me.BIngresoImprimir.IconChar = FontAwesome.Sharp.IconChar.Print
-        Me.BIngresoImprimir.IconColor = System.Drawing.Color.Black
-        Me.BIngresoImprimir.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.BIngresoImprimir.IconSize = 20
-        Me.BIngresoImprimir.Location = New System.Drawing.Point(109, 11)
-        Me.BIngresoImprimir.Name = "BIngresoImprimir"
-        Me.BIngresoImprimir.Size = New System.Drawing.Size(39, 32)
-        Me.BIngresoImprimir.TabIndex = 3
-        Me.BIngresoImprimir.UseVisualStyleBackColor = True
         '
         'BIngresoCancelar
         '
@@ -335,7 +321,6 @@ Partial Class FormIngreso
     Friend WithEvents PIngresoData As Panel
     Friend WithEvents DGVIngreso As DataGridView
     Friend WithEvents PIngresoBotones As Panel
-    Friend WithEvents BIngresoImprimir As FontAwesome.Sharp.IconButton
     Friend WithEvents BIngresoCancelar As Button
     Friend WithEvents BIngresoGuardar As Button
     Friend WithEvents BIngresoExportar As Button

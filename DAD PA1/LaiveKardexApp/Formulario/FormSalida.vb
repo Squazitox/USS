@@ -6,7 +6,7 @@
         DGVSalida.Columns.Add("cantidad", "Cantidad de Salida")
         DGVSalida.Columns.Add("lote", "Lote")
         DGVSalida.Columns.Add("fv", "F.V")
-        DGVSalida.Columns.Add("planta", "planta Destino")
+        DGVSalida.Columns.Add("planta", "Planta Destino")
 
     End Sub
 
@@ -30,7 +30,8 @@
     End Sub
 
     Private Sub BIngresoCancelar_Click(sender As Object, e As EventArgs) Handles BSalidaCancelar.Click
-        End
+        DGVSalida.Rows.Clear()
+
     End Sub
     Private Sub BIngresoExportar_Click(sender As Object, e As EventArgs) Handles BSalidaExportar.Click
         ExportarExcel(DGVSalida)

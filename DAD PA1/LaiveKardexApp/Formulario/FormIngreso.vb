@@ -34,7 +34,7 @@ Public Class FormIngreso
     End Sub
 
     Private Sub BIngresoCancelar_Click(sender As Object, e As EventArgs) Handles BIngresoCancelar.Click
-        End
+        DGVIngreso.Rows.Clear()
     End Sub
     Private Sub BIngresoExportar_Click(sender As Object, e As EventArgs) Handles BIngresoExportar.Click
         ExportarExcel(DGVIngreso)

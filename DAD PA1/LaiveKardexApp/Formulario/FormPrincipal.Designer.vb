@@ -69,7 +69,7 @@ Partial Class FormPrincipal
         Me.PNBorde.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PNBorde.Location = New System.Drawing.Point(0, 530)
         Me.PNBorde.Name = "PNBorde"
-        Me.PNBorde.Size = New System.Drawing.Size(874, 28)
+        Me.PNBorde.Size = New System.Drawing.Size(1098, 28)
         Me.PNBorde.TabIndex = 1
         '
         'LUsuario
@@ -83,7 +83,7 @@ Partial Class FormPrincipal
         '
         'BSalir
         '
-        Me.BSalir.Location = New System.Drawing.Point(787, 3)
+        Me.BSalir.Location = New System.Drawing.Point(994, 3)
         Me.BSalir.Name = "BSalir"
         Me.BSalir.Size = New System.Drawing.Size(75, 23)
         Me.BSalir.TabIndex = 0
@@ -339,7 +339,7 @@ Partial Class FormPrincipal
         Me.PTitulo.Dock = System.Windows.Forms.DockStyle.Top
         Me.PTitulo.Location = New System.Drawing.Point(263, 0)
         Me.PTitulo.Name = "PTitulo"
-        Me.PTitulo.Size = New System.Drawing.Size(611, 57)
+        Me.PTitulo.Size = New System.Drawing.Size(835, 57)
         Me.PTitulo.TabIndex = 3
         '
         'LTitulo
@@ -371,7 +371,7 @@ Partial Class FormPrincipal
         Me.PNBase.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PNBase.Location = New System.Drawing.Point(263, 57)
         Me.PNBase.Name = "PNBase"
-        Me.PNBase.Size = New System.Drawing.Size(611, 473)
+        Me.PNBase.Size = New System.Drawing.Size(835, 473)
         Me.PNBase.TabIndex = 4
         '
         'PBCentral
@@ -380,7 +380,7 @@ Partial Class FormPrincipal
         Me.PBCentral.Image = CType(resources.GetObject("PBCentral.Image"), System.Drawing.Image)
         Me.PBCentral.Location = New System.Drawing.Point(0, 0)
         Me.PBCentral.Name = "PBCentral"
-        Me.PBCentral.Size = New System.Drawing.Size(611, 473)
+        Me.PBCentral.Size = New System.Drawing.Size(835, 473)
         Me.PBCentral.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PBCentral.TabIndex = 0
         Me.PBCentral.TabStop = False
@@ -390,7 +390,7 @@ Partial Class FormPrincipal
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(874, 558)
+        Me.ClientSize = New System.Drawing.Size(1098, 558)
         Me.Controls.Add(Me.PNBase)
         Me.Controls.Add(Me.PTitulo)
         Me.Controls.Add(Me.PnIzquierdo)
