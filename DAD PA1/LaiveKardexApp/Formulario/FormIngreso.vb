@@ -3,7 +3,7 @@ Public Class FormIngreso
 
     Private Sub FormIngreso_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DGVIngreso.Columns.Add("codigo", "Código de Producto")
-        'DGVIngreso.Columns.Add("descripcion", "Descripción del Producto")
+        DGVIngreso.Columns.Add("descripcion", "Descripción del Producto")
         DGVIngreso.Columns.Add("cantidad", "Cantidad de Ingreso")
         DGVIngreso.Columns.Add("valor", "Valor de Producto")
         DGVIngreso.Columns.Add("lote", "Lote")
@@ -16,12 +16,13 @@ Public Class FormIngreso
     End Sub
 
     Private Sub BIngresoIngresar_Click(sender As Object, e As EventArgs) Handles BIngresoIngresar.Click
-        DGVIngreso.Rows.Add(TBIngresoCodigo.Text, TBIngresoCantidad.Text, TBIngresoValor.Text, TBIngresoLote.Text, DTPIngreso.Value.Date.ToString("dd/MM/yyyy"), TBIngresoProveedor.Text, TBIngresoFactura.Text, CBIngresoOrigen.Text)
-        TBIngresoCodigo.Text = ""
+        DGVIngreso.Rows.Add(CBIngresoCodigo.Text, TBIngresoDescrip.Text, TBIngresoCantidad.Text, TBIngresoValor.Text, TBIngresoLote.Text, DTPIngreso.Value.Date.ToString("dd/MM/yyyy"), CBIngresoProveedor.Text, TBIngresoFactura.Text, CBIngresoOrigen.Text)
+        CBIngresoCodigo.Text = ""
         TBIngresoLote.Text = ""
         TBIngresoValor.Text = ""
         TBIngresoCantidad.Text = ""
-        TBIngresoProveedor.Text = ""
+        TBIngresoDescrip.Text = ""
+        CBIngresoProveedor.Text = ""
         TBIngresoFactura.Text = ""
 
     End Sub
@@ -41,5 +42,9 @@ Public Class FormIngreso
     End Sub
     Private Sub BIngresoExportar_Click(sender As Object, e As EventArgs) Handles BIngresoExportar.Click
         ExportarExcel(DGVIngreso)
+    End Sub
+
+    Private Sub TBIngresoLote_TextChanged(sender As Object, e As EventArgs) Handles TBIngresoLote.TextChanged
+
     End Sub
 End Class

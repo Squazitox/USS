@@ -11,10 +11,10 @@
     End Sub
 
     Private Sub BSalidaIngresar_Click(sender As Object, e As EventArgs) Handles BSalidaIngresar.Click
-        DGVSalida.Rows.Add(TBSalidaCodigo.Text, TBSalidaCantidad.Text, TBSalidaLote.Text, DTPSalida.Value.Date.ToString("dd/MM/yyyy"), TBSalidaProveedor.Text)
-        TBSalidaCodigo.Text = ""
+        DGVSalida.Rows.Add(CBSalidaCodigo.Text, TBSalidaCantidad.Text, TBSalidaLote.Text, DTPSalida.Value.Date.ToString("dd/MM/yyyy"), CBSalidaProveedor.Text)
+        CBSalidaCodigo.Text = ""
         TBSalidaLote.Text = ""
-        TBSalidaProveedor.Text = ""
+        CBSalidaProveedor.Text = ""
         TBSalidaCantidad.Text = ""
 
     End Sub

@@ -26,10 +26,8 @@ Partial Class FormSalida
         Me.BSalidaEliminar = New System.Windows.Forms.Button()
         Me.BSalidaIngresar = New System.Windows.Forms.Button()
         Me.DTPSalida = New System.Windows.Forms.DateTimePicker()
-        Me.TBSalidaProveedor = New System.Windows.Forms.TextBox()
         Me.TBSalidaLote = New System.Windows.Forms.TextBox()
         Me.TBSalidaCantidad = New System.Windows.Forms.TextBox()
-        Me.TBSalidaCodigo = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -41,6 +39,8 @@ Partial Class FormSalida
         Me.BSalidaCancelar = New System.Windows.Forms.Button()
         Me.BSalidaGuardar = New System.Windows.Forms.Button()
         Me.BSalidaExportar = New System.Windows.Forms.Button()
+        Me.CBSalidaCodigo = New System.Windows.Forms.ComboBox()
+        Me.CBSalidaProveedor = New System.Windows.Forms.ComboBox()
         Me.PSalidaFiltros.SuspendLayout()
         Me.PSalidaData.SuspendLayout()
         CType(Me.DGVSalida, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -50,13 +50,13 @@ Partial Class FormSalida
         'PSalidaFiltros
         '
         Me.PSalidaFiltros.BackColor = System.Drawing.Color.ForestGreen
+        Me.PSalidaFiltros.Controls.Add(Me.CBSalidaProveedor)
+        Me.PSalidaFiltros.Controls.Add(Me.CBSalidaCodigo)
         Me.PSalidaFiltros.Controls.Add(Me.BSalidaEliminar)
         Me.PSalidaFiltros.Controls.Add(Me.BSalidaIngresar)
         Me.PSalidaFiltros.Controls.Add(Me.DTPSalida)
-        Me.PSalidaFiltros.Controls.Add(Me.TBSalidaProveedor)
         Me.PSalidaFiltros.Controls.Add(Me.TBSalidaLote)
         Me.PSalidaFiltros.Controls.Add(Me.TBSalidaCantidad)
-        Me.PSalidaFiltros.Controls.Add(Me.TBSalidaCodigo)
         Me.PSalidaFiltros.Controls.Add(Me.Label5)
         Me.PSalidaFiltros.Controls.Add(Me.Label4)
         Me.PSalidaFiltros.Controls.Add(Me.Label3)
@@ -95,13 +95,6 @@ Partial Class FormSalida
         Me.DTPSalida.Size = New System.Drawing.Size(96, 20)
         Me.DTPSalida.TabIndex = 13
         '
-        'TBSalidaProveedor
-        '
-        Me.TBSalidaProveedor.Location = New System.Drawing.Point(520, 12)
-        Me.TBSalidaProveedor.Name = "TBSalidaProveedor"
-        Me.TBSalidaProveedor.Size = New System.Drawing.Size(242, 20)
-        Me.TBSalidaProveedor.TabIndex = 11
-        '
         'TBSalidaLote
         '
         Me.TBSalidaLote.Location = New System.Drawing.Point(520, 38)
@@ -115,13 +108,6 @@ Partial Class FormSalida
         Me.TBSalidaCantidad.Name = "TBSalidaCantidad"
         Me.TBSalidaCantidad.Size = New System.Drawing.Size(164, 20)
         Me.TBSalidaCantidad.TabIndex = 8
-        '
-        'TBSalidaCodigo
-        '
-        Me.TBSalidaCodigo.Location = New System.Drawing.Point(175, 14)
-        Me.TBSalidaCodigo.Name = "TBSalidaCodigo"
-        Me.TBSalidaCodigo.Size = New System.Drawing.Size(164, 20)
-        Me.TBSalidaCodigo.TabIndex = 7
         '
         'Label5
         '
@@ -152,9 +138,9 @@ Partial Class FormSalida
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(435, 41)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(40, 19)
+        Me.Label3.Size = New System.Drawing.Size(44, 19)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Lote"
+        Me.Label3.Text = "Lote:"
         '
         'Label2
         '
@@ -163,9 +149,9 @@ Partial Class FormSalida
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(12, 43)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(136, 19)
+        Me.Label2.Size = New System.Drawing.Size(83, 19)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Cantidad en UMV"
+        Me.Label2.Text = "Cantidad:"
         '
         'Label1
         '
@@ -236,6 +222,22 @@ Partial Class FormSalida
         Me.BSalidaExportar.Text = "Exportar"
         Me.BSalidaExportar.UseVisualStyleBackColor = True
         '
+        'CBSalidaCodigo
+        '
+        Me.CBSalidaCodigo.FormattingEnabled = True
+        Me.CBSalidaCodigo.Location = New System.Drawing.Point(175, 14)
+        Me.CBSalidaCodigo.Name = "CBSalidaCodigo"
+        Me.CBSalidaCodigo.Size = New System.Drawing.Size(164, 21)
+        Me.CBSalidaCodigo.TabIndex = 1
+        '
+        'CBSalidaProveedor
+        '
+        Me.CBSalidaProveedor.FormattingEnabled = True
+        Me.CBSalidaProveedor.Location = New System.Drawing.Point(520, 15)
+        Me.CBSalidaProveedor.Name = "CBSalidaProveedor"
+        Me.CBSalidaProveedor.Size = New System.Drawing.Size(242, 21)
+        Me.CBSalidaProveedor.TabIndex = 17
+        '
         'FormSalida
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -258,10 +260,8 @@ Partial Class FormSalida
     Friend WithEvents PSalidaFiltros As Panel
     Friend WithEvents BSalidaIngresar As Button
     Friend WithEvents DTPSalida As DateTimePicker
-    Friend WithEvents TBSalidaProveedor As TextBox
     Friend WithEvents TBSalidaLote As TextBox
     Friend WithEvents TBSalidaCantidad As TextBox
-    Friend WithEvents TBSalidaCodigo As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
@@ -274,4 +274,6 @@ Partial Class FormSalida
     Friend WithEvents BSalidaGuardar As Button
     Friend WithEvents BSalidaExportar As Button
     Friend WithEvents BSalidaEliminar As Button
+    Friend WithEvents CBSalidaProveedor As ComboBox
+    Friend WithEvents CBSalidaCodigo As ComboBox
 End Class
