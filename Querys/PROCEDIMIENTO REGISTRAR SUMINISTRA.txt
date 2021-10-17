@@ -1,0 +1,29 @@
+--PROCEDIMIENTO DE SUMINISTRO
+CREATE PROCEDURE SP_RegistraSuministra
+@codSuministra varchar(10),
+@codProveedor varchar(10),
+@codProducto UNIQUEIDENTIFIER,
+@lote varchar(10),
+@cantidad int,
+@numFactura varchar(10),
+@paisOrigen varchar(10),
+@precio_compra float
+
+AS
+	DECLARE @totalReg int
+	DECLARE @enlazado varchar(8)
+	SELECT @totalReg = COUNT(*) FROM tbSuministra
+	SET @enlazado = @codSuministra +CAST(@totalReg AS varchar(6))
+
+	IF EXISTS(SELECT *FROM tbSuministra WHERE tbSuministra.idSuministra = @enlazado)
+	BEGIN
+		PRINT 'Id ya registrado por favor haga modificacion en letras...';
+	END
+	ELSE
+	BEGIN
+		INSERT INTO  tbSuministra VALUES(@enlazado,@codProveedor, @codProducto, @lote, @cantidad, @numFactura, @paisOrigen, @precio_compra)
+		PRINT 'Los datos fueron registrados  en la tabla [SUMINISTRA] con exito...!'
+	END
+	
+
+GO

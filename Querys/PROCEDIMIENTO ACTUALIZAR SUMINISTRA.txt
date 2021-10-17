@@ -1,0 +1,21 @@
+CREATE PROCEDURE sp_ActualizarSuministra
+@codSuministra varchar(10),
+@codProveedor varchar(10),
+@codProducto UNIQUEIDENTIFIER,
+@lote varchar(10),
+@cantidad int,
+@numFactura varchar(10),
+@paisOrigen varchar(10),
+@precio_compra float
+AS
+	BEGIN
+		UPDATE tbSuministra set tbSuministra.cantidad=@cantidad, tbSuministra.idProducto=@codProducto, 
+		tbSuministra.lote=@lote, tbSuministra.idProveedor=@codProveedor, tbSuministra.numFactura= @numFactura,
+		tbSuministra.paisOrigen = @paisOrigen, tbSuministra.precio_compra = @precio_compra
+		WHERE tbSuministra.idSuministra = @codSuministra
+		
+		PRINT 'Los datos fueron ACTUALIZADOS  en la tabla [SUMINISTRA] con exito...!'
+	END
+	
+
+GO

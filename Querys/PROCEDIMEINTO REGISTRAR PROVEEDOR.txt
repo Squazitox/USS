@@ -1,0 +1,26 @@
+CREATE PROCEDURE SP_RegistraProveedor
+@codProveedor varchar(10),
+@codPais varchar(10),
+@codigoPostal varchar(20),
+@rucProveedor varchar(13),
+@fonoProveedor varchar(12),
+@emailProveedor varchar(50),
+@direccion varchar(50)
+AS
+	DECLARE @totalReg int
+	DECLARE @enlazado varchar(8)
+	SELECT @totalReg = COUNT(*) FROM tbProveedor
+	SET @enlazado = @codProveedor +CAST(@totalReg AS varchar(6))
+	
+
+	IF EXISTS(SELECT *FROM tbProveedor WHERE tbProveedor.idProveedor= @enlazado)
+	BEGIN
+		PRINT 'Id ya registrado por favor haga modificacion en letras...';
+	END
+	ELSE
+	BEGIN
+		INSERT INTO  tbProveedor VALUES(@enlazado,@codPais,@codigoPostal,@rucProveedor,
+		@fonoProveedor,@emailProveedor,@direccion)
+		PRINT 'Los datos  fueron registrados  en la tabla [PROVEEDOR] con exito...!'
+	END
+GO

@@ -1,0 +1,6 @@
+CREATE PROCEDURE dbo.EliminarTrabajador
+@idTrabajador as varchar(8)
+as
+begin
+DELETE from tbTrabajador where idTrabajador = @idTrabajador 
+end

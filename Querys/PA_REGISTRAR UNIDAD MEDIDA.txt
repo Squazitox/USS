@@ -1,0 +1,21 @@
+CREATE PROCEDURE SP_RegistraUnidadMedida
+@idUnidad varchar(10),
+@unidadMedida varchar(15) 
+
+AS
+	DECLARE @totalReg int
+	DECLARE @enlazado varchar(10)
+	SELECT @totalReg = COUNT(*) FROM tbUnidadMedida
+	SET @enlazado = @idUnidad +CAST(@totalReg AS varchar(6))
+	
+
+	IF EXISTS(SELECT *FROM tbUnidadMedida WHERE tbUnidadMedida.idUnidadMedida= @enlazado)
+	BEGIN
+		PRINT 'Id ya registrado por favor haga modificacion en letras...';
+	END
+	ELSE
+	BEGIN
+		INSERT INTO  tbPais VALUES(@enlazado,@unidadMedida)
+		PRINT 'Los datos  fueron registrados  en la tabla [UnidadMedida] con exito...!'
+	END
+GO

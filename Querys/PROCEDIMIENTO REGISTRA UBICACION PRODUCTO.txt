@@ -1,0 +1,21 @@
+CREATE PROCEDURE sp_RegistrarTUbicacionProducto
+@codUbicacion varchar(10),
+@seccion varchar(25)
+AS
+	DECLARE @totalReg int
+	DECLARE @enlazado varchar(8)
+	SELECT @totalReg = COUNT(*) FROM tbUbicacion
+	SET @enlazado = @codUbicacion +CAST(@totalReg AS varchar(6))
+
+	IF EXISTS(SELECT *FROM tbUbicacion WHERE tbUbicacion.idUbicacion = @enlazado)
+	BEGIN
+		PRINT 'Id ya registrado por favor haga modificacion en letras...';
+	END
+	ELSE
+	BEGIN
+		INSERT INTO  tbUbicacion VALUES(@enlazado,@seccion)
+		PRINT 'Los datos fueron registrados  en la tabla [UBICACION] con exito...!'
+	END
+
+
+GO
