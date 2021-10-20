@@ -6,9 +6,6 @@ BEGIN
 	DROP DATABASE BD_EmpreLaive
 END
 
-
-
-
 CREATE DATABASE BD_EmpreLaive
 
 USE BD_EmpreLaive
@@ -442,6 +439,8 @@ CREATE TABLE tbProveedor(idProveedor varchar(10) PRIMARY KEY,
 		--PRINT 'La tabla [tbProveedor] fue creada con exito...!'
 END
 GO
+
+select * from tbProveedor
 
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
@@ -886,7 +885,7 @@ GO
 -------------------------------------------------------------------
 -------------------------------------------------------------------
 --						PROCEDIMIENTOS
---PAIS
+
 
 
 CREATE PROCEDURE SP_RegistraPais
@@ -945,21 +944,21 @@ AS
 	END
 	ELSE
 	BEGIN
-		INSERT INTO  tbProveedor VALUES(@enlazado,@razonSocial, @codPais,@codigoPostal,@rucProveedor,
+		INSERT INTO  tbProveedor VALUES(@enlazado,@codPais,@razonSocial,@codigoPostal,@rucProveedor,
 		@fonoProveedor,@emailProveedor,@direccion)
 		PRINT 'Los datos  fueron registrados  en la tabla [PROVEEDOR] con exito...!'
 	END
 GO
 
-EXECUTE SP_RegistraProveedor 'PRO001','RP0','91600','JCR INGENIERIA INDUSTRIAL','2062154856', '598-25115121', 'INFO@JCR.COM.UY', 'MATEO CORTE 4941 - CP 11400 MONTEVIDEO'
+EXECUTE SP_RegistraProveedor 'PRO','RP0','JCR INGENIERIA INDUSTRIAL','91600','2062154856', '598-25115121', 'INFO@JCR.COM.UY', 'MATEO CORTE 4941 - CP 11400 MONTEVIDEO'
 
-EXECUTE SP_RegistraProveedor 'PRO002','RP1','69900-000','TROX DO BRASIL DIFUSAO DE','2012452545', '55-413316-8418', 'OI_CRISTINA@TROXBRASIL.COM.BR', 'RUA CYRO COREIA PEREIRA, 300-CIC'
-EXECUTE SP_RegistraProveedor 'PRO003','RP2','110911','UNION CARGO INTERNACIONAL','2032565482', '(57) 1 4215832', 'GCOMERCIAL@UNIONCARGO.NET', 'CR 106 23 D-50 P-3 DISTRITO CAPITAL'
-EXECUTE SP_RegistraProveedor 'PRO004','RP3','33126','UNION SOUTH INTERNATIONAL','524526548', '305 539-1057', 'INFO@JCR.COM.UY', '1948 NW 82ND AVE, DORAL, FL'
-EXECUTE SP_RegistraProveedor 'PRO005','RP4','91600','COSBERT SA','2545254858', '59825182965', 'LUCIA.GOMEZ@LATAM.INTERFOOD.COM', 'RUTA 8, KM 17.500 EDIFICIO BIOTEC PLAZAX'
-EXECUTE SP_RegistraProveedor 'PRO006','RP0','56130','VERBEAI INGREDIENTS & PAI','0033299912485', '598-25115121', 'PHILIPPE.LERAV@VINPAI.FR', '6 PARC DACTIVITÉS DE LA FOUÉE'
-EXECUTE SP_RegistraProveedor 'PRO007','RP1','370 03','VISCOFAN CZ S.R.O.','10266589455', '34 948 198 444', 'LUIS@QUIMSAPERU.COM', 'XFCP+F2 ?ESKÉ BUD?JOVICE, CHEQUIA'
-EXECUTE SP_RegistraProveedor 'PRO008','RP2','69900-000','VISCOFAN DO BRASIL SOC. C','202565455552', '(11) 5180-7400', 'LUIS@QUIMSAPERU.COM', 'AV. ROQUE PETRONI JUNIERO,  - 1 ANDAR'
+EXECUTE SP_RegistraProveedor 'PRO','RP1','TROX DO BRASIL DIFUSAO DE','69900-000','2012452545', '55-413316-8418', 'OI_CRISTINA@TROXBRASIL.COM.BR', 'RUA CYRO COREIA PEREIRA, 300-CIC'
+EXECUTE SP_RegistraProveedor 'PRO','RP2','UNION CARGO INTERNACIONAL','110911','2032565482', '(57) 1 4215832', 'GCOMERCIAL@UNIONCARGO.NET', 'CR 106 23 D-50 P-3 DISTRITO CAPITAL'
+EXECUTE SP_RegistraProveedor 'PRO','RP3','UNION SOUTH INTERNATIONAL','33126','524526548', '305 539-1057', 'INFO@JCR.COM.UY', '1948 NW 82ND AVE, DORAL, FL'
+EXECUTE SP_RegistraProveedor 'PRO','RP4','COSBERT SA','91600','2545254858', '59825182965', 'LUCIA.GOMEZ@LATAM.INTERFOOD.COM', 'RUTA 8, KM 17.500 EDIFICIO BIOTEC PLAZAX'
+EXECUTE SP_RegistraProveedor 'PRO','RP0','VERBEAI INGREDIENTS & PAI','56130','0033299912485', '598-25115121', 'PHILIPPE.LERAV@VINPAI.FR', '6 PARC DACTIVITÉS DE LA FOUÉE'
+EXECUTE SP_RegistraProveedor 'PRO','RP1','VISCOFAN CZ S.R.O.','370 03','10266589455', '34 948 198 444', 'LUIS@QUIMSAPERU.COM', 'XFCP+F2 ?ESKÉ BUD?JOVICE, CHEQUIA'
+EXECUTE SP_RegistraProveedor 'PRO','RP2','VISCOFAN DO BRASIL SOC. C','69900-000','202565455552', '(11) 5180-7400', 'LUIS@QUIMSAPERU.COM', 'AV. ROQUE PETRONI JUNIERO,  - 1 ANDAR'
 
 
 
@@ -1196,7 +1195,43 @@ EXECUTE SP_RegistraProducto 'RP', 'RTP1', 'RU0', 'RU0','YOGURT GLORIA', 20.9,'BE
 ----------------------------------------------------------------------------------------
 
 
-CREATE PROCEDURE SP_RegistraSuministra
+
+
+
+
+
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+--PROCEDIMIENTO REGISTRO DE PROFESION
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+CREATE PROCEDURE SP_RegistraProfesion
+@Cod varchar(2),
+@Profesion varchar(25),
+@estadoProfesion bit
+AS
+	DECLARE @totalReg int
+	DECLARE @enlazado varchar(8)
+	SELECT @totalReg = COUNT(*) FROM tbProfesion
+	SET @enlazado = @Cod +CAST(@totalReg AS varchar(6))
+
+	IF EXISTS(SELECT *FROM tbProfesion WHERE idProfesion = @enlazado)
+	BEGIN
+		PRINT 'Id ya registrado por favor haga modificacion en letras...';
+	END
+	ELSE
+	BEGIN
+		INSERT INTO  tbProfesion VALUES(@enlazado,@Profesion,@estadoProfesion)-- MEDICO,ENFERMERO
+		PRINT 'Los datos fueron registrados con exito...!'
+	END
+GO
+
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+ EXECUTE SP_RegistraProfesion 'RP','farmaceutico','1'
+ EXECUTE SP_RegistraProfesion 'RP','TECNICO INFORMATICA','1'
+
+ CREATE PROCEDURE SP_RegistraSuministra
 @codSuministra varchar(10),
 @codProveedor varchar(10),
 @codProducto varchar(10),
@@ -1228,35 +1263,204 @@ AS
 	
 
 GO
-EXECUTE SP_RegistraSuministra 'RS', 'PRO0010','RP', '635121', '4', '123456', 'RP4', 25.7
+EXECUTE SP_RegistraSuministra 'RS', 'PRO1','RP', '635121', '4', '123456', 'RP4', 25.7
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+--LOGEARSE
 
 
+CREATE PROCEDURE SP_Logearse 
+@usuario varchar(40),
+@password varchar(40)
+AS
+	BEGIN
+		select* from tbUsuario WHERE tbUsuario.NombreUsuario=@usuario AND tbUsuario.passwordUsuario=@password
+	END
 
+GO
+--REGISTRAR TIPO DE USUARIO
+CREATE PROCEDURE SP_RegistrarTipoUsuario
+@codIdTipoUsuario varchar(10),
+@nombreTipoUsuario varchar(40),
+@descripcionTipoUsuario varchar(50)
 
-----------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------
---PROCEDIMIENTO REGISTRO DE PROFESION
-----------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------
-CREATE PROCEDURE SP_RegistraProfesion
-@Cod varchar(2),
-@Profesion varchar(25),
-@estadoProfesion bit
 AS
 	DECLARE @totalReg int
-	DECLARE @enlazado varchar(8)
-	SELECT @totalReg = COUNT(*) FROM tbProfesion
-	SET @enlazado = @Cod +CAST(@totalReg AS varchar(6))
+	DECLARE @enlazado varchar(10)
+	SELECT @totalReg = COUNT(*) FROM tbTipoUsuario
+	SET @enlazado = @codIdTipoUsuario +CAST(@totalReg AS varchar(6))
+	
 
-	IF EXISTS(SELECT *FROM tbProfesion WHERE idProfesion = @enlazado)
+	IF EXISTS(SELECT *FROM tbTipoUsuario WHERE tbTipoUsuario.idTipoUsuario= @enlazado)
 	BEGIN
 		PRINT 'Id ya registrado por favor haga modificacion en letras...';
 	END
 	ELSE
 	BEGIN
-		INSERT INTO  tbProfesion VALUES(@enlazado,@Profesion,@estadoProfesion)-- MEDICO,ENFERMERO
-		PRINT 'Los datos fueron registrados con exito...!'
+		INSERT INTO  tbTipoUsuario VALUES(@enlazado,@nombreTipoUsuario,@descripcionTipoUsuario )
+		PRINT 'Los datos  fueron registrados  en la tabla [TIPO USUARIO] con exito...!'
 	END
 GO
 
- EXECUTE SP_RegistraProfesion 'RP','farmaceutico','1'
+--REGISTRAR USUARIO
+CREATE PROCEDURE SP_RegistrarUsuario
+@CodUsuario varchar(10),
+@nombreUsuario varchar(40),
+@idTipoUsuario varchar(10),
+@passwordUsuario varchar(40),
+@idTrabajador varchar(10),
+@estadoUsuario bit
+
+AS
+	DECLARE @totalReg int
+	DECLARE @enlazado varchar(10)
+	SELECT @totalReg = COUNT(*) FROM tbUsuario
+	SET @enlazado = @CodUsuario +CAST(@totalReg AS varchar(6))
+	
+
+	IF EXISTS(SELECT *FROM tbUsuario WHERE tbUsuario.idUsuario= @enlazado)
+	BEGIN
+		PRINT 'Id ya registrado por favor haga modificacion en letras...';
+	END
+	ELSE
+	BEGIN
+		INSERT INTO  tbUsuario VALUES(@enlazado,@nombreUsuario,@idTipoUsuario,@passwordUsuario,@idTrabajador, @estadoUsuario)
+		PRINT 'Los datos  fueron registrados  en la tabla [USUARIO] con exito...!'
+	END
+GO
+
+CREATE PROCEDURE sp_RegistrarPersona
+@codPersona varchar(10),
+@idPais varchar(10),
+@perApellidos varchar(50),
+@perNombres varchar(50),
+@perFechaNac date,
+@perDni varchar(8),
+@perEstado bit,
+@perTelefono varchar(40),
+@perCorreo varchar(40),
+@perDireccion varchar(40),
+@perSexo bit
+AS
+	DECLARE @totalReg int
+	DECLARE @enlazado varchar(10)
+	SELECT @totalReg = COUNT(*) FROM tbPersona
+	SET @enlazado = @codPersona +CAST(@totalReg AS varchar(6))
+	
+
+	IF EXISTS(SELECT *FROM tbPersona WHERE tbPersona.idPersona= @enlazado)
+	BEGIN
+		PRINT 'Id ya registrado por favor haga modificacion en letras...';
+	END
+	ELSE
+	BEGIN
+		INSERT INTO  tbPersona VALUES(@enlazado,@idPais,@perApellidos,@perNombres, @perFechaNac,
+		@perDni,@perEstado,@perTelefono, @perCorreo,@perDireccion, @perSexo )
+		PRINT 'Los datos  fueron registrados  en la tabla [USUARIO] con exito...!'
+	END
+
+
+GO
+--PROCEDIMIENTO TURNO
+CREATE PROCEDURE sp_RegistrarTurno
+@codTurno varchar(10),
+@turno varchar(15)
+AS
+	DECLARE @totalReg int
+	DECLARE @enlazado varchar(10)
+	SELECT @totalReg = COUNT(*) FROM tbTurno
+	SET @enlazado = @codTurno +CAST(@totalReg AS varchar(6))
+	
+
+	IF EXISTS(SELECT *FROM tbTurno WHERE tbTurno.idTurno= @enlazado)
+	BEGIN
+		PRINT 'Id ya registrado por favor haga modificacion en letras...';
+	END
+	ELSE
+	BEGIN
+		INSERT INTO  tbTurno VALUES(@enlazado,@turno)
+		PRINT 'Los datos  fueron registrados  en la tabla [ROLES] con exito...!'
+	END
+
+
+GO
+
+--PROCEDIMIENTO ROLES
+CREATE PROCEDURE sp_RegistrarRoles
+@codRoles varchar(10),
+@nombreRol varchar(30)
+AS
+	DECLARE @totalReg int
+	DECLARE @enlazado varchar(10)
+	SELECT @totalReg = COUNT(*) FROM tbRoles
+	SET @enlazado = @codRoles +CAST(@totalReg AS varchar(6))
+	
+
+	IF EXISTS(SELECT *FROM tbRoles WHERE tbRoles.idRoles= @enlazado)
+	BEGIN
+		PRINT 'Id ya registrado por favor haga modificacion en letras...';
+	END
+	ELSE
+	BEGIN
+		INSERT INTO  tbRoles VALUES(@enlazado,@nombreRol)
+		PRINT 'Los datos  fueron registrados  en la tabla [ROLES] con exito...!'
+	END
+
+GO
+
+
+
+--PROCEDIMIENTO REGISTRAR CARGO TRABAJADOR
+CREATE PROCEDURE sp_RegistrarCargoTrabajador
+@codCargoTrabajador varchar(10),
+@cargoTrabajador varchar(25)
+AS
+	DECLARE @totalReg int
+	DECLARE @enlazado varchar(10)
+	SELECT @totalReg = COUNT(*) FROM tbCargoTrabajador
+	SET @enlazado = @codCargoTrabajador +CAST(@totalReg AS varchar(6))
+	
+
+	IF EXISTS(SELECT *FROM tbCargoTrabajador WHERE tbCargoTrabajador.idCargoTrabajador= @enlazado)
+	BEGIN
+		PRINT 'Id ya registrado por favor haga modificacion en letras...';
+	END
+	ELSE
+	BEGIN
+		INSERT INTO  tbCargoTrabajador VALUES(@enlazado,@cargoTrabajador)
+		PRINT 'Los datos  fueron registrados  en la tabla [CARGO TRABAJADOR] con exito...!'
+	END
+
+
+GO
+
+
+--PROCEDIMIENTO REGISTRAR TRABAJADOR
+CREATE PROCEDURE sp_RegistrarTrabajador
+@codTrabajador varchar(10),
+@idPersona varchar(10),--ya esta
+@idCargoTrabajador varchar(10),--ya esta
+@idProfesion varchar(10),--ya esta
+@idRoles varchar(10),--ya esta
+@idTurno varchar(10),--ya esta
+@fechaInicio date
+AS
+	DECLARE @totalReg int
+	DECLARE @enlazado varchar(10)
+	SELECT @totalReg = COUNT(*) FROM tbTrabajador
+	SET @enlazado = @codTrabajador +CAST(@totalReg AS varchar(6))
+	
+
+	IF EXISTS(SELECT *FROM tbTrabajador WHERE tbTrabajador.idTrabajador= @enlazado)
+	BEGIN
+		PRINT 'Id ya registrado por favor haga modificacion en letras...';
+	END
+	ELSE
+	BEGIN
+		INSERT INTO  tbTrabajador VALUES(@enlazado,@idPersona,@idCargoTrabajador,@idProfesion, @idRoles, @idTurno, @fechaInicio  )
+		PRINT 'Los datos  fueron registrados  en la tabla [TRABAJADOR] con exito...!'
+	END
+
+
+GO
