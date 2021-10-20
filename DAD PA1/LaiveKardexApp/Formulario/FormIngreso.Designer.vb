@@ -23,6 +23,8 @@ Partial Class FormIngreso
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.PIngresoFiltros = New System.Windows.Forms.Panel()
+        Me.TBIngresoPosicion = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.CBIngresoProveedor = New System.Windows.Forms.ComboBox()
         Me.CBIngresoCodigo = New System.Windows.Forms.ComboBox()
         Me.TBIngresoValor = New System.Windows.Forms.TextBox()
@@ -49,8 +51,6 @@ Partial Class FormIngreso
         Me.BIngresoCancelar = New System.Windows.Forms.Button()
         Me.BIngresoGuardar = New System.Windows.Forms.Button()
         Me.BIngresoExportar = New System.Windows.Forms.Button()
-        Me.TBIngresoPosicion = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.PIngresoFiltros.SuspendLayout()
         Me.PIngresoData.SuspendLayout()
         CType(Me.DGVIngreso, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -88,11 +88,29 @@ Partial Class FormIngreso
         Me.PIngresoFiltros.Size = New System.Drawing.Size(800, 146)
         Me.PIngresoFiltros.TabIndex = 0
         '
+        'TBIngresoPosicion
+        '
+        Me.TBIngresoPosicion.Location = New System.Drawing.Point(504, 113)
+        Me.TBIngresoPosicion.Name = "TBIngresoPosicion"
+        Me.TBIngresoPosicion.Size = New System.Drawing.Size(55, 20)
+        Me.TBIngresoPosicion.TabIndex = 22
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!)
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(423, 114)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(73, 19)
+        Me.Label10.TabIndex = 21
+        Me.Label10.Text = "Posición:"
+        '
         'CBIngresoProveedor
         '
         Me.CBIngresoProveedor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.CBIngresoProveedor.FormattingEnabled = True
-        Me.CBIngresoProveedor.Location = New System.Drawing.Point(503, 12)
+        Me.CBIngresoProveedor.Location = New System.Drawing.Point(504, 10)
         Me.CBIngresoProveedor.Name = "CBIngresoProveedor"
         Me.CBIngresoProveedor.Size = New System.Drawing.Size(216, 21)
         Me.CBIngresoProveedor.TabIndex = 20
@@ -109,7 +127,7 @@ Partial Class FormIngreso
         '
         'TBIngresoValor
         '
-        Me.TBIngresoValor.Location = New System.Drawing.Point(713, 65)
+        Me.TBIngresoValor.Location = New System.Drawing.Point(504, 87)
         Me.TBIngresoValor.Name = "TBIngresoValor"
         Me.TBIngresoValor.Size = New System.Drawing.Size(55, 20)
         Me.TBIngresoValor.TabIndex = 18
@@ -119,7 +137,7 @@ Partial Class FormIngreso
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!)
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(657, 65)
+        Me.Label8.Location = New System.Drawing.Point(442, 87)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(54, 19)
         Me.Label8.TabIndex = 17
@@ -127,7 +145,7 @@ Partial Class FormIngreso
         '
         'BIngresoEliminar
         '
-        Me.BIngresoEliminar.Location = New System.Drawing.Point(632, 100)
+        Me.BIngresoEliminar.Location = New System.Drawing.Point(713, 48)
         Me.BIngresoEliminar.Name = "BIngresoEliminar"
         Me.BIngresoEliminar.Size = New System.Drawing.Size(75, 33)
         Me.BIngresoEliminar.TabIndex = 16
@@ -149,7 +167,7 @@ Partial Class FormIngreso
         Me.CBIngresoOrigen.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.CBIngresoOrigen.FormattingEnabled = True
         Me.CBIngresoOrigen.Items.AddRange(New Object() {"CHECOSLOVAQUIA", "ZONAS FRANCAS DEL PERU", "PAISES NO PREC. EN OP. ABAST. COMBUST", "AGUAS INTERNACIONALES", "NO DECLARADOS", "GAZA Y JERICO", "ESCOCIA", "URSS", "VIETNAM (DEL NORTE)", "COMUNIDAD ECONOMICA EUROPEA", "COSTA DE MARFIL", "ZONA DEL CANAL DE PANAMA", "ALEMANIA", "ISLAS NORMANDAS", "CANTON Y ENDERBURRY", "HONDURAS BRITANICAS", "ISALAS JONSTON", "MACEDONIA", "MIDWAY, ISLAS", "ISLAS DE PACIFICO", "REPUBLICA ARABE UNIDA", "WAKE, ISLA", "TERRITORIO AUTONOMO DE PALESTINA.", "TODOS LOS PAISES", "ANDORRA", "EMIRATOS ÁRABES UNIDOS", "AFGANISTÁN", "ANTIGUA Y BARBUDA", "ANGUILA", "ALBANIA", "ARMENIA", "ANTILLAS HOLANDESAS", "ANGOLA", "ANTÁRTIDA", "ARGENTINA", "SAMOA AMERICANA", "AUSTRIA", "AUSTRALIA", "ARUBA", "ISLAS ALAND", "AZERBAIJAN", "BOSNIA Y HERZEGOVINA", "BARBADOS", "BANGLADESH", "BÉLGICA", "BURKINA FASO", "BULGARIA", "BAHREIN", "BURUNDI", "BENIN", "SANTA BARTHELEMY", "ISLAS BERMUDAS", "BRUNEI DARUSSALAM", "BOLIVIA", "BONAIRE", "BRASIL", "BAHAMAS", "BHUTAN", "ISLA DE BOUVET", "BOTSWANA", "BELARUS", "BELICE", "CANADÁ", "COCOS (KEELING) ISLAS", "CONGO LA REPÚBLICA DEMOCRÁTICA DE LA", "REPÚBLICA CENTROAFRICANA", "CONGO", "SUIZA", "COTE IVOIRE", "ISLAS COOK", "CHILE", "CAMERÚN", "CHINA", "COLOMBIA", "COSTA RICA", "SERBIA Y MONTENEGRO", "CUBA", "CABO VERDE", "CURAZAO", "ISLA DE NAVIDAD", "CHIPRE", "REPUBLICA CHECA", "ALEMANIA", "DJIBOUTI", "DINAMARCA", "DOMINICA", "REPÚBLICA DOMINICANA", "ARGELIA", "ECUADOR", "ESTONIA", "EGIPTO", "SAHARA OCCIDENTAL", "ERITREA", "ESPAÑA", "ETIOPÍA", "FINLANDIA", "FIJI", "ISLAS MALVINAS (MALVINAS)", "MICRONESIA, ESTADOS FEDERADOS DE", "ISLAS FAROE", "FRANCIA", "FRANCIA, METROPOLITANO", "GABÓN", "REINO UNIDO", "GRANADA", "GEORGIA", "GUIANA FRANCESA", "GUERNSEY", "GHANA", "GIBRALTAR", "TIERRA VERDE", "GAMBIA", "GUINEA", "GUADALUPE", "GUINEA ECUATORIAL", "GRECIA", "GEORGIA DEL SUR Y LAS ISLAS SANDWICH DEL", "GUATEMALA", "GUAM", "GUINEA-BISSAU", "GUAYANA", "HONG KONG", "ISLA DEL OÍDO Y LAS ISLAS MDDALLD", "HONDURAS", "CROACIA", "HAITÍ", "HUNGRÍA", "INDONESIA", "IRLANDA", "ISRAEL", "ISLA DEL HOMBRE", "INDIA", "TERRITORIO BRITÁNICO DEL OCÉANO ÍNDICO", "IRAK", "IRÁN (REPÚBLICA ISLÁMICA DE", "ISLANDIA", "ITALIA", "JERSEY", "JAMAICA", "JORDÁN", "JAPÓN", "KENIA", "KYRGYZSTAN", "CAMBOYA", "KIRIBATI", "COMORES", "SAINT KITTS Y NEVIS", "COREA, REP. DE LAS PERSONAS DEMOCRATICAS", "COREA, REPÚBLICA DE", "KUWAIT", "ISLAS CAIMÁN", "KAZAJSTÁN", "REPÚBLICA DEMOCRÁTICA POPULAR DE LAO", "LÍBANO", "SANTA LUCÍA", "LIECHTENSTEIN", "SRI LANKA", "LIBERIA", "LESOTO", "LITUANIA", "LUXEMBURGO", "LETONIA", "LIBIA", "MARRUECOS", "MÓNACO", "MOLDAVIA, REPÚBLICA DE", "MONTENEGRO", "SAN MARTIN (PARTE FRANCESA)", "MADAGASCAR", "ISLAS MARSHALL", "MACEDONIA, LA ANTIGUA REPÚBLICA YUGOSLAV", "MALI", "MYANMAR", "MONGOLIA", "MACAO", "ISLAS MARIANAS DEL NORTE", "MARTINICA", "MAURITANIA", "MONTSERRAT", "MALTA", "MAURICIO", "MALDIVAS", "MALAWI", "MEXICO", "MALASIA", "MOZAMBIQUE", "NAMIBIA", "NUEVA CALEDONIA", "NÍGER", "ISLA NORFOLK", "NIGERIA", "NICARAGUA", "PAÍSES BAJOS", "NORUEGA", "NEPAL", "NAURU", "ZONA NEUTRAL", "NIUE", "NUEVA ZELANDA", "OMÁN", "PANAMÁ", "PERÚ", "POLINESIA FRANCÉS", "PAPÚA NUEVA GUINEA", "FILIPINAS", "PAKISTÁN", "POLONIA", "SAN PIERRE Y MIQUELON", "PITCAIRN", "PUERTO RICO", "PALESTINA, ESTADO DE", "PORTUGAL", "PALAU", "PARAGUAY", "KATAR", "REUNIÓN", "RUMANIA", "SERBIA", "FEDERACIÓN RUSA", "RUANDA", "ARABIA SAUDITA", "ISLAS SALOMÓN", "SEYCHELLES", "SUDÁN", "SUECIA", "SINGAPUR", "SANTA HELENA, ASCENSIÓN Y TRISTÁN DA CUN", "ESLOVENIA", "SVALBARD Y JAN MAYEN", "ESLOVAQUIA", "SIERRA LEONA", "SAN MARINO", "SENEGAL", "SOMALIA", "SURINAME", "SUDÁN DEL SUR", "SANTO TOMÉ Y PRÍNCIPE", "EL SALVADOR", "SINT MAARTEN (PARTE HOLANDESA)", "REPÚBLICA ÁRABE SIRIA", "SWAZILANDIA", "ISLAS TURCAS Y CAICOS", "CHAD", "TERRITORIOS FRANCESES DEL SUR", "TOGO", "TAILANDIA", "TAYIKISTAN", "TOKAELU", "TIMOR-LESTE", "TURKMENISTÁN", "TÚNEZ", "TONGA", "TIMOR ORIENTAL", "TURQUIA", "TRINIDAD Y TOBAGO", "TUVALU", "TAIWAN, PROVINCIA DE CHINA", "TANZANIA, REPÚBLICA DE LOS ESTADOS UNIDO", "UCRANIA", "UGANDA", "ISLAS MENORES DE LOS ESTADOS UNIDOS", "ESTADOS UNIDOS", "URUGUAY", "UZBEKISTÁN", "SANTA SEDE (ESTADO DE LA CIUDAD DEL VATI", "SAN VICENTE Y LAS GRANADINAS", "VENEZUELA", "ISLAS VÍRGENES BRITÁNICAS", "ISLAS VÍRGENES, EE. UU.", "VIET NAM", "VANUATU", "WALLIS Y FUTUNA", "SAMOA", "PUEBA", "INSTALACIONES EN AGUA INTERNACIONAL", "YEMEN", "MAYOTTE", "YUGOSLAVIA", "SUDÁFRICA", "ZAMBIA", "ZAIRE", "ZIMBABUE"})
-        Me.CBIngresoOrigen.Location = New System.Drawing.Point(597, 35)
+        Me.CBIngresoOrigen.Location = New System.Drawing.Point(504, 35)
         Me.CBIngresoOrigen.Name = "CBIngresoOrigen"
         Me.CBIngresoOrigen.Size = New System.Drawing.Size(121, 21)
         Me.CBIngresoOrigen.TabIndex = 14
@@ -166,7 +184,7 @@ Partial Class FormIngreso
         '
         'TBIngresoFactura
         '
-        Me.TBIngresoFactura.Location = New System.Drawing.Point(492, 62)
+        Me.TBIngresoFactura.Location = New System.Drawing.Point(504, 61)
         Me.TBIngresoFactura.Name = "TBIngresoFactura"
         Me.TBIngresoFactura.Size = New System.Drawing.Size(147, 20)
         Me.TBIngresoFactura.TabIndex = 12
@@ -198,7 +216,7 @@ Partial Class FormIngreso
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!)
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(521, 36)
+        Me.Label7.Location = New System.Drawing.Point(434, 36)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(62, 19)
         Me.Label7.TabIndex = 6
@@ -209,7 +227,7 @@ Partial Class FormIngreso
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!)
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(397, 62)
+        Me.Label6.Location = New System.Drawing.Point(403, 62)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(93, 19)
         Me.Label6.TabIndex = 5
@@ -340,24 +358,6 @@ Partial Class FormIngreso
         Me.BIngresoExportar.TabIndex = 0
         Me.BIngresoExportar.Text = "Exportar"
         Me.BIngresoExportar.UseVisualStyleBackColor = True
-        '
-        'TBIngresoPosicion
-        '
-        Me.TBIngresoPosicion.Location = New System.Drawing.Point(492, 100)
-        Me.TBIngresoPosicion.Name = "TBIngresoPosicion"
-        Me.TBIngresoPosicion.Size = New System.Drawing.Size(55, 20)
-        Me.TBIngresoPosicion.TabIndex = 22
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!)
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(397, 100)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(73, 19)
-        Me.Label10.TabIndex = 21
-        Me.Label10.Text = "Posición:"
         '
         'FormIngreso
         '

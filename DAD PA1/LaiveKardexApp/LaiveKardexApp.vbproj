@@ -275,6 +275,16 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaEntidad\CapaEntidad.vbproj">
+      <Project>{45b3357d-9bec-4a44-9b79-d92ea07d5834}</Project>
+      <Name>CapaEntidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaNegocio\CapaNegocio.vbproj">
+      <Project>{5f537992-7de4-4464-9bec-4aac1301253e}</Project>
+      <Name>CapaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="packages\SkiaSharp.1.60.0\build\net45\SkiaSharp.targets" Condition="Exists('packages\SkiaSharp.1.60.0\build\net45\SkiaSharp.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
