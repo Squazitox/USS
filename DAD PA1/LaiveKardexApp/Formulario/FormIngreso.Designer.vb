@@ -49,6 +49,8 @@ Partial Class FormIngreso
         Me.BIngresoCancelar = New System.Windows.Forms.Button()
         Me.BIngresoGuardar = New System.Windows.Forms.Button()
         Me.BIngresoExportar = New System.Windows.Forms.Button()
+        Me.TBIngresoPosicion = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.PIngresoFiltros.SuspendLayout()
         Me.PIngresoData.SuspendLayout()
         CType(Me.DGVIngreso, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,6 +60,8 @@ Partial Class FormIngreso
         'PIngresoFiltros
         '
         Me.PIngresoFiltros.BackColor = System.Drawing.Color.ForestGreen
+        Me.PIngresoFiltros.Controls.Add(Me.TBIngresoPosicion)
+        Me.PIngresoFiltros.Controls.Add(Me.Label10)
         Me.PIngresoFiltros.Controls.Add(Me.CBIngresoProveedor)
         Me.PIngresoFiltros.Controls.Add(Me.CBIngresoCodigo)
         Me.PIngresoFiltros.Controls.Add(Me.TBIngresoValor)
@@ -337,6 +341,24 @@ Partial Class FormIngreso
         Me.BIngresoExportar.Text = "Exportar"
         Me.BIngresoExportar.UseVisualStyleBackColor = True
         '
+        'TBIngresoPosicion
+        '
+        Me.TBIngresoPosicion.Location = New System.Drawing.Point(492, 100)
+        Me.TBIngresoPosicion.Name = "TBIngresoPosicion"
+        Me.TBIngresoPosicion.Size = New System.Drawing.Size(55, 20)
+        Me.TBIngresoPosicion.TabIndex = 22
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!)
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(397, 100)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(73, 19)
+        Me.Label10.TabIndex = 21
+        Me.Label10.Text = "Posición:"
+        '
         'FormIngreso
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -383,4 +405,6 @@ Partial Class FormIngreso
     Friend WithEvents CBIngresoCodigo As ComboBox
     Friend WithEvents TBIngresoDescrip As TextBox
     Friend WithEvents Label9 As Label
+    Friend WithEvents TBIngresoPosicion As TextBox
+    Friend WithEvents Label10 As Label
 End Class

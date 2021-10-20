@@ -41,6 +41,8 @@ Partial Class FormSalida
         Me.BSalidaCancelar = New System.Windows.Forms.Button()
         Me.BSalidaGuardar = New System.Windows.Forms.Button()
         Me.BSalidaExportar = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.CBSalidaPosicion = New System.Windows.Forms.ComboBox()
         Me.PSalidaFiltros.SuspendLayout()
         Me.PSalidaData.SuspendLayout()
         CType(Me.DGVSalida, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -50,6 +52,8 @@ Partial Class FormSalida
         'PSalidaFiltros
         '
         Me.PSalidaFiltros.BackColor = System.Drawing.Color.ForestGreen
+        Me.PSalidaFiltros.Controls.Add(Me.CBSalidaPosicion)
+        Me.PSalidaFiltros.Controls.Add(Me.Label6)
         Me.PSalidaFiltros.Controls.Add(Me.CBSalidaProveedor)
         Me.PSalidaFiltros.Controls.Add(Me.CBSalidaCodigo)
         Me.PSalidaFiltros.Controls.Add(Me.BSalidaEliminar)
@@ -238,6 +242,25 @@ Partial Class FormSalida
         Me.BSalidaExportar.Text = "Exportar"
         Me.BSalidaExportar.UseVisualStyleBackColor = True
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(435, 75)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(73, 19)
+        Me.Label6.TabIndex = 18
+        Me.Label6.Text = "Posicion:"
+        '
+        'CBSalidaPosicion
+        '
+        Me.CBSalidaPosicion.FormattingEnabled = True
+        Me.CBSalidaPosicion.Location = New System.Drawing.Point(514, 74)
+        Me.CBSalidaPosicion.Name = "CBSalidaPosicion"
+        Me.CBSalidaPosicion.Size = New System.Drawing.Size(73, 21)
+        Me.CBSalidaPosicion.TabIndex = 19
+        '
         'FormSalida
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -276,4 +299,6 @@ Partial Class FormSalida
     Friend WithEvents BSalidaEliminar As Button
     Friend WithEvents CBSalidaProveedor As ComboBox
     Friend WithEvents CBSalidaCodigo As ComboBox
+    Friend WithEvents CBSalidaPosicion As ComboBox
+    Friend WithEvents Label6 As Label
 End Class
