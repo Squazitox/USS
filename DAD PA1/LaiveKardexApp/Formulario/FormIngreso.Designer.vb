@@ -49,8 +49,8 @@ Partial Class FormIngreso
         Me.BIngresoCancelar = New System.Windows.Forms.Button()
         Me.BIngresoGuardar = New System.Windows.Forms.Button()
         Me.BIngresoExportar = New System.Windows.Forms.Button()
-        Me.TBIngresoPosicion = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.PIngresoFiltros.SuspendLayout()
         Me.PIngresoData.SuspendLayout()
         CType(Me.DGVIngreso, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -60,7 +60,7 @@ Partial Class FormIngreso
         'PIngresoFiltros
         '
         Me.PIngresoFiltros.BackColor = System.Drawing.Color.ForestGreen
-        Me.PIngresoFiltros.Controls.Add(Me.TBIngresoPosicion)
+        Me.PIngresoFiltros.Controls.Add(Me.TextBox1)
         Me.PIngresoFiltros.Controls.Add(Me.Label10)
         Me.PIngresoFiltros.Controls.Add(Me.CBIngresoProveedor)
         Me.PIngresoFiltros.Controls.Add(Me.CBIngresoCodigo)
@@ -92,9 +92,9 @@ Partial Class FormIngreso
         '
         Me.CBIngresoProveedor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.CBIngresoProveedor.FormattingEnabled = True
-        Me.CBIngresoProveedor.Location = New System.Drawing.Point(503, 12)
+        Me.CBIngresoProveedor.Location = New System.Drawing.Point(511, 10)
         Me.CBIngresoProveedor.Name = "CBIngresoProveedor"
-        Me.CBIngresoProveedor.Size = New System.Drawing.Size(216, 21)
+        Me.CBIngresoProveedor.Size = New System.Drawing.Size(196, 21)
         Me.CBIngresoProveedor.TabIndex = 20
         '
         'CBIngresoCodigo
@@ -102,14 +102,14 @@ Partial Class FormIngreso
         Me.CBIngresoCodigo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.CBIngresoCodigo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CBIngresoCodigo.FormattingEnabled = True
-        Me.CBIngresoCodigo.Location = New System.Drawing.Point(136, 8)
+        Me.CBIngresoCodigo.Location = New System.Drawing.Point(117, 7)
         Me.CBIngresoCodigo.Name = "CBIngresoCodigo"
         Me.CBIngresoCodigo.Size = New System.Drawing.Size(164, 21)
         Me.CBIngresoCodigo.TabIndex = 19
         '
         'TBIngresoValor
         '
-        Me.TBIngresoValor.Location = New System.Drawing.Point(713, 65)
+        Me.TBIngresoValor.Location = New System.Drawing.Point(511, 120)
         Me.TBIngresoValor.Name = "TBIngresoValor"
         Me.TBIngresoValor.Size = New System.Drawing.Size(55, 20)
         Me.TBIngresoValor.TabIndex = 18
@@ -117,17 +117,17 @@ Partial Class FormIngreso
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(657, 65)
+        Me.Label8.Location = New System.Drawing.Point(408, 120)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(54, 19)
+        Me.Label8.Size = New System.Drawing.Size(49, 17)
         Me.Label8.TabIndex = 17
         Me.Label8.Text = "Valor :"
         '
         'BIngresoEliminar
         '
-        Me.BIngresoEliminar.Location = New System.Drawing.Point(632, 100)
+        Me.BIngresoEliminar.Location = New System.Drawing.Point(713, 55)
         Me.BIngresoEliminar.Name = "BIngresoEliminar"
         Me.BIngresoEliminar.Size = New System.Drawing.Size(75, 33)
         Me.BIngresoEliminar.TabIndex = 16
@@ -136,7 +136,7 @@ Partial Class FormIngreso
         '
         'BIngresoIngresar
         '
-        Me.BIngresoIngresar.Location = New System.Drawing.Point(713, 100)
+        Me.BIngresoIngresar.Location = New System.Drawing.Point(713, 102)
         Me.BIngresoIngresar.Name = "BIngresoIngresar"
         Me.BIngresoIngresar.Size = New System.Drawing.Size(75, 33)
         Me.BIngresoIngresar.TabIndex = 15
@@ -146,18 +146,18 @@ Partial Class FormIngreso
         'CBIngresoOrigen
         '
         Me.CBIngresoOrigen.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.CBIngresoOrigen.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.CBIngresoOrigen.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CBIngresoOrigen.FormattingEnabled = True
         Me.CBIngresoOrigen.Items.AddRange(New Object() {"CHECOSLOVAQUIA", "ZONAS FRANCAS DEL PERU", "PAISES NO PREC. EN OP. ABAST. COMBUST", "AGUAS INTERNACIONALES", "NO DECLARADOS", "GAZA Y JERICO", "ESCOCIA", "URSS", "VIETNAM (DEL NORTE)", "COMUNIDAD ECONOMICA EUROPEA", "COSTA DE MARFIL", "ZONA DEL CANAL DE PANAMA", "ALEMANIA", "ISLAS NORMANDAS", "CANTON Y ENDERBURRY", "HONDURAS BRITANICAS", "ISALAS JONSTON", "MACEDONIA", "MIDWAY, ISLAS", "ISLAS DE PACIFICO", "REPUBLICA ARABE UNIDA", "WAKE, ISLA", "TERRITORIO AUTONOMO DE PALESTINA.", "TODOS LOS PAISES", "ANDORRA", "EMIRATOS ÁRABES UNIDOS", "AFGANISTÁN", "ANTIGUA Y BARBUDA", "ANGUILA", "ALBANIA", "ARMENIA", "ANTILLAS HOLANDESAS", "ANGOLA", "ANTÁRTIDA", "ARGENTINA", "SAMOA AMERICANA", "AUSTRIA", "AUSTRALIA", "ARUBA", "ISLAS ALAND", "AZERBAIJAN", "BOSNIA Y HERZEGOVINA", "BARBADOS", "BANGLADESH", "BÉLGICA", "BURKINA FASO", "BULGARIA", "BAHREIN", "BURUNDI", "BENIN", "SANTA BARTHELEMY", "ISLAS BERMUDAS", "BRUNEI DARUSSALAM", "BOLIVIA", "BONAIRE", "BRASIL", "BAHAMAS", "BHUTAN", "ISLA DE BOUVET", "BOTSWANA", "BELARUS", "BELICE", "CANADÁ", "COCOS (KEELING) ISLAS", "CONGO LA REPÚBLICA DEMOCRÁTICA DE LA", "REPÚBLICA CENTROAFRICANA", "CONGO", "SUIZA", "COTE IVOIRE", "ISLAS COOK", "CHILE", "CAMERÚN", "CHINA", "COLOMBIA", "COSTA RICA", "SERBIA Y MONTENEGRO", "CUBA", "CABO VERDE", "CURAZAO", "ISLA DE NAVIDAD", "CHIPRE", "REPUBLICA CHECA", "ALEMANIA", "DJIBOUTI", "DINAMARCA", "DOMINICA", "REPÚBLICA DOMINICANA", "ARGELIA", "ECUADOR", "ESTONIA", "EGIPTO", "SAHARA OCCIDENTAL", "ERITREA", "ESPAÑA", "ETIOPÍA", "FINLANDIA", "FIJI", "ISLAS MALVINAS (MALVINAS)", "MICRONESIA, ESTADOS FEDERADOS DE", "ISLAS FAROE", "FRANCIA", "FRANCIA, METROPOLITANO", "GABÓN", "REINO UNIDO", "GRANADA", "GEORGIA", "GUIANA FRANCESA", "GUERNSEY", "GHANA", "GIBRALTAR", "TIERRA VERDE", "GAMBIA", "GUINEA", "GUADALUPE", "GUINEA ECUATORIAL", "GRECIA", "GEORGIA DEL SUR Y LAS ISLAS SANDWICH DEL", "GUATEMALA", "GUAM", "GUINEA-BISSAU", "GUAYANA", "HONG KONG", "ISLA DEL OÍDO Y LAS ISLAS MDDALLD", "HONDURAS", "CROACIA", "HAITÍ", "HUNGRÍA", "INDONESIA", "IRLANDA", "ISRAEL", "ISLA DEL HOMBRE", "INDIA", "TERRITORIO BRITÁNICO DEL OCÉANO ÍNDICO", "IRAK", "IRÁN (REPÚBLICA ISLÁMICA DE", "ISLANDIA", "ITALIA", "JERSEY", "JAMAICA", "JORDÁN", "JAPÓN", "KENIA", "KYRGYZSTAN", "CAMBOYA", "KIRIBATI", "COMORES", "SAINT KITTS Y NEVIS", "COREA, REP. DE LAS PERSONAS DEMOCRATICAS", "COREA, REPÚBLICA DE", "KUWAIT", "ISLAS CAIMÁN", "KAZAJSTÁN", "REPÚBLICA DEMOCRÁTICA POPULAR DE LAO", "LÍBANO", "SANTA LUCÍA", "LIECHTENSTEIN", "SRI LANKA", "LIBERIA", "LESOTO", "LITUANIA", "LUXEMBURGO", "LETONIA", "LIBIA", "MARRUECOS", "MÓNACO", "MOLDAVIA, REPÚBLICA DE", "MONTENEGRO", "SAN MARTIN (PARTE FRANCESA)", "MADAGASCAR", "ISLAS MARSHALL", "MACEDONIA, LA ANTIGUA REPÚBLICA YUGOSLAV", "MALI", "MYANMAR", "MONGOLIA", "MACAO", "ISLAS MARIANAS DEL NORTE", "MARTINICA", "MAURITANIA", "MONTSERRAT", "MALTA", "MAURICIO", "MALDIVAS", "MALAWI", "MEXICO", "MALASIA", "MOZAMBIQUE", "NAMIBIA", "NUEVA CALEDONIA", "NÍGER", "ISLA NORFOLK", "NIGERIA", "NICARAGUA", "PAÍSES BAJOS", "NORUEGA", "NEPAL", "NAURU", "ZONA NEUTRAL", "NIUE", "NUEVA ZELANDA", "OMÁN", "PANAMÁ", "PERÚ", "POLINESIA FRANCÉS", "PAPÚA NUEVA GUINEA", "FILIPINAS", "PAKISTÁN", "POLONIA", "SAN PIERRE Y MIQUELON", "PITCAIRN", "PUERTO RICO", "PALESTINA, ESTADO DE", "PORTUGAL", "PALAU", "PARAGUAY", "KATAR", "REUNIÓN", "RUMANIA", "SERBIA", "FEDERACIÓN RUSA", "RUANDA", "ARABIA SAUDITA", "ISLAS SALOMÓN", "SEYCHELLES", "SUDÁN", "SUECIA", "SINGAPUR", "SANTA HELENA, ASCENSIÓN Y TRISTÁN DA CUN", "ESLOVENIA", "SVALBARD Y JAN MAYEN", "ESLOVAQUIA", "SIERRA LEONA", "SAN MARINO", "SENEGAL", "SOMALIA", "SURINAME", "SUDÁN DEL SUR", "SANTO TOMÉ Y PRÍNCIPE", "EL SALVADOR", "SINT MAARTEN (PARTE HOLANDESA)", "REPÚBLICA ÁRABE SIRIA", "SWAZILANDIA", "ISLAS TURCAS Y CAICOS", "CHAD", "TERRITORIOS FRANCESES DEL SUR", "TOGO", "TAILANDIA", "TAYIKISTAN", "TOKAELU", "TIMOR-LESTE", "TURKMENISTÁN", "TÚNEZ", "TONGA", "TIMOR ORIENTAL", "TURQUIA", "TRINIDAD Y TOBAGO", "TUVALU", "TAIWAN, PROVINCIA DE CHINA", "TANZANIA, REPÚBLICA DE LOS ESTADOS UNIDO", "UCRANIA", "UGANDA", "ISLAS MENORES DE LOS ESTADOS UNIDOS", "ESTADOS UNIDOS", "URUGUAY", "UZBEKISTÁN", "SANTA SEDE (ESTADO DE LA CIUDAD DEL VATI", "SAN VICENTE Y LAS GRANADINAS", "VENEZUELA", "ISLAS VÍRGENES BRITÁNICAS", "ISLAS VÍRGENES, EE. UU.", "VIET NAM", "VANUATU", "WALLIS Y FUTUNA", "SAMOA", "PUEBA", "INSTALACIONES EN AGUA INTERNACIONAL", "YEMEN", "MAYOTTE", "YUGOSLAVIA", "SUDÁFRICA", "ZAMBIA", "ZAIRE", "ZIMBABUE"})
-        Me.CBIngresoOrigen.Location = New System.Drawing.Point(597, 35)
+        Me.CBIngresoOrigen.Location = New System.Drawing.Point(511, 35)
         Me.CBIngresoOrigen.Name = "CBIngresoOrigen"
-        Me.CBIngresoOrigen.Size = New System.Drawing.Size(121, 21)
+        Me.CBIngresoOrigen.Size = New System.Drawing.Size(153, 21)
         Me.CBIngresoOrigen.TabIndex = 14
         '
         'DTPIngreso
         '
         Me.DTPIngreso.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTPIngreso.Location = New System.Drawing.Point(168, 118)
+        Me.DTPIngreso.Location = New System.Drawing.Point(117, 120)
         Me.DTPIngreso.MaxDate = New Date(2030, 12, 31, 0, 0, 0, 0)
         Me.DTPIngreso.MinDate = New Date(2019, 1, 1, 0, 0, 0, 0)
         Me.DTPIngreso.Name = "DTPIngreso"
@@ -166,9 +166,9 @@ Partial Class FormIngreso
         '
         'TBIngresoFactura
         '
-        Me.TBIngresoFactura.Location = New System.Drawing.Point(492, 62)
+        Me.TBIngresoFactura.Location = New System.Drawing.Point(511, 62)
         Me.TBIngresoFactura.Name = "TBIngresoFactura"
-        Me.TBIngresoFactura.Size = New System.Drawing.Size(147, 20)
+        Me.TBIngresoFactura.Size = New System.Drawing.Size(153, 20)
         Me.TBIngresoFactura.TabIndex = 12
         '
         'TBIngresoLote
@@ -183,7 +183,7 @@ Partial Class FormIngreso
         Me.TBIngresoDescrip.Location = New System.Drawing.Point(117, 34)
         Me.TBIngresoDescrip.Name = "TBIngresoDescrip"
         Me.TBIngresoDescrip.ReadOnly = True
-        Me.TBIngresoDescrip.Size = New System.Drawing.Size(283, 20)
+        Me.TBIngresoDescrip.Size = New System.Drawing.Size(253, 20)
         Me.TBIngresoDescrip.TabIndex = 8
         '
         'TBIngresoCantidad
@@ -196,55 +196,55 @@ Partial Class FormIngreso
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(521, 36)
+        Me.Label7.Location = New System.Drawing.Point(408, 39)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(62, 19)
+        Me.Label7.Size = New System.Drawing.Size(55, 17)
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "Origen:"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(397, 62)
+        Me.Label6.Location = New System.Drawing.Point(408, 66)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(93, 19)
+        Me.Label6.Size = New System.Drawing.Size(79, 17)
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "Nº Factura:"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(408, 11)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(88, 19)
+        Me.Label5.Size = New System.Drawing.Size(78, 17)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Proveedor:"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(12, 118)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(113, 19)
+        Me.Label4.Size = New System.Drawing.Size(101, 17)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "F. Vencimiento"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(12, 90)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(44, 19)
+        Me.Label3.Size = New System.Drawing.Size(40, 17)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Lote:"
         '
@@ -253,33 +253,33 @@ Partial Class FormIngreso
         Me.Label9.AllowDrop = True
         Me.Label9.AutoSize = True
         Me.Label9.Enabled = False
-        Me.Label9.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(12, 35)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(99, 19)
+        Me.Label9.Size = New System.Drawing.Size(86, 17)
         Me.Label9.TabIndex = 1
         Me.Label9.Text = "Descripcion:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(12, 63)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(83, 19)
+        Me.Label2.Size = New System.Drawing.Size(68, 17)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Cantidad:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(12, 7)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(117, 19)
+        Me.Label1.Size = New System.Drawing.Size(102, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Cod. Producto:"
         '
@@ -341,23 +341,23 @@ Partial Class FormIngreso
         Me.BIngresoExportar.Text = "Exportar"
         Me.BIngresoExportar.UseVisualStyleBackColor = True
         '
-        'TBIngresoPosicion
-        '
-        Me.TBIngresoPosicion.Location = New System.Drawing.Point(492, 100)
-        Me.TBIngresoPosicion.Name = "TBIngresoPosicion"
-        Me.TBIngresoPosicion.Size = New System.Drawing.Size(55, 20)
-        Me.TBIngresoPosicion.TabIndex = 22
-        '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!)
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(397, 100)
+        Me.Label10.Location = New System.Drawing.Point(408, 91)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(73, 19)
+        Me.Label10.Size = New System.Drawing.Size(74, 17)
         Me.Label10.TabIndex = 21
-        Me.Label10.Text = "Posición:"
+        Me.Label10.Text = "Ubicación:"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(511, 88)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(153, 20)
+        Me.TextBox1.TabIndex = 22
         '
         'FormIngreso
         '
@@ -405,6 +405,6 @@ Partial Class FormIngreso
     Friend WithEvents CBIngresoCodigo As ComboBox
     Friend WithEvents TBIngresoDescrip As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents TBIngresoPosicion As TextBox
+    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label10 As Label
 End Class

@@ -26,8 +26,8 @@ Partial Class FormLogin
         Me.LLogin = New System.Windows.Forms.Label()
         Me.PBLogin = New System.Windows.Forms.PictureBox()
         Me.BLogin = New System.Windows.Forms.Button()
-        Me.TBPassword = New System.Windows.Forms.TextBox()
-        Me.TBUser = New System.Windows.Forms.TextBox()
+        Me.txtpass = New System.Windows.Forms.TextBox()
+        Me.txtusuario = New System.Windows.Forms.TextBox()
         Me.LPassword = New System.Windows.Forms.Label()
         Me.LUser = New System.Windows.Forms.Label()
         Me.LLostPassword = New System.Windows.Forms.LinkLabel()
@@ -38,11 +38,11 @@ Partial Class FormLogin
         'LLogin
         '
         Me.LLogin.AutoSize = True
-        Me.LLogin.Font = New System.Drawing.Font("Mont Demo Heavy", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LLogin.ForeColor = System.Drawing.Color.White
         Me.LLogin.Location = New System.Drawing.Point(12, 9)
         Me.LLogin.Name = "LLogin"
-        Me.LLogin.Size = New System.Drawing.Size(128, 28)
+        Me.LLogin.Size = New System.Drawing.Size(109, 25)
         Me.LLogin.TabIndex = 1
         Me.LLogin.Text = "Bienvenido"
         '
@@ -58,7 +58,7 @@ Partial Class FormLogin
         '
         'BLogin
         '
-        Me.BLogin.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BLogin.Location = New System.Drawing.Point(339, 130)
         Me.BLogin.Name = "BLogin"
         Me.BLogin.Size = New System.Drawing.Size(91, 23)
@@ -66,40 +66,40 @@ Partial Class FormLogin
         Me.BLogin.Text = "iniciar Sesión"
         Me.BLogin.UseVisualStyleBackColor = True
         '
-        'TBPassword
+        'txtpass
         '
-        Me.TBPassword.Location = New System.Drawing.Point(254, 59)
-        Me.TBPassword.Name = "TBPassword"
-        Me.TBPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TBPassword.Size = New System.Drawing.Size(159, 20)
-        Me.TBPassword.TabIndex = 11
+        Me.txtpass.Location = New System.Drawing.Point(254, 59)
+        Me.txtpass.Name = "txtpass"
+        Me.txtpass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtpass.Size = New System.Drawing.Size(159, 20)
+        Me.txtpass.TabIndex = 11
         '
-        'TBUser
+        'txtusuario
         '
-        Me.TBUser.Location = New System.Drawing.Point(254, 26)
-        Me.TBUser.Name = "TBUser"
-        Me.TBUser.Size = New System.Drawing.Size(159, 20)
-        Me.TBUser.TabIndex = 10
+        Me.txtusuario.Location = New System.Drawing.Point(254, 26)
+        Me.txtusuario.Name = "txtusuario"
+        Me.txtusuario.Size = New System.Drawing.Size(159, 20)
+        Me.txtusuario.TabIndex = 10
         '
         'LPassword
         '
         Me.LPassword.AutoSize = True
-        Me.LPassword.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LPassword.ForeColor = System.Drawing.Color.White
         Me.LPassword.Location = New System.Drawing.Point(153, 59)
         Me.LPassword.Name = "LPassword"
-        Me.LPassword.Size = New System.Drawing.Size(99, 19)
+        Me.LPassword.Size = New System.Drawing.Size(85, 17)
         Me.LPassword.TabIndex = 9
         Me.LPassword.Text = "Contraseña:"
         '
         'LUser
         '
         Me.LUser.AutoSize = True
-        Me.LUser.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LUser.ForeColor = System.Drawing.Color.White
         Me.LUser.Location = New System.Drawing.Point(153, 26)
         Me.LUser.Name = "LUser"
-        Me.LUser.Size = New System.Drawing.Size(68, 19)
+        Me.LUser.Size = New System.Drawing.Size(61, 17)
         Me.LUser.TabIndex = 8
         Me.LUser.Text = "Usuario:"
         '
@@ -115,7 +115,7 @@ Partial Class FormLogin
         '
         'BLoginCancelar
         '
-        Me.BLoginCancelar.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BLoginCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BLoginCancelar.Location = New System.Drawing.Point(203, 130)
         Me.BLoginCancelar.Name = "BLoginCancelar"
         Me.BLoginCancelar.Size = New System.Drawing.Size(91, 23)
@@ -132,8 +132,8 @@ Partial Class FormLogin
         Me.Controls.Add(Me.BLoginCancelar)
         Me.Controls.Add(Me.LLostPassword)
         Me.Controls.Add(Me.BLogin)
-        Me.Controls.Add(Me.TBPassword)
-        Me.Controls.Add(Me.TBUser)
+        Me.Controls.Add(Me.txtpass)
+        Me.Controls.Add(Me.txtusuario)
         Me.Controls.Add(Me.LPassword)
         Me.Controls.Add(Me.LUser)
         Me.Controls.Add(Me.PBLogin)
@@ -151,8 +151,8 @@ Partial Class FormLogin
     Friend WithEvents LLogin As Label
     Friend WithEvents PBLogin As PictureBox
     Friend WithEvents BLogin As Button
-    Friend WithEvents TBPassword As TextBox
-    Friend WithEvents TBUser As TextBox
+    Friend WithEvents txtpass As TextBox
+    Friend WithEvents txtusuario As TextBox
     Friend WithEvents LPassword As Label
     Friend WithEvents LUser As Label
     Friend WithEvents LLostPassword As LinkLabel
