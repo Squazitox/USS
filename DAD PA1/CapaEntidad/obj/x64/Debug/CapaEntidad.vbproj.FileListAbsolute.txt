@@ -7,3 +7,4 @@ D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\obj\x64\Debug
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\obj\x64\Debug\CapaEntidad.dll
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\obj\x64\Debug\CapaEntidad.xml
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\obj\x64\Debug\CapaEntidad.pdb
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\obj\x64\Debug\CapaEntidad.vbproj.AssemblyReference.cache
