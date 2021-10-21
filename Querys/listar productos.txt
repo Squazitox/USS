@@ -1,0 +1,8 @@
+CREATE PROCEDURE sp_ListarProducto
+AS
+	BEGIN TRANSACTION
+		BEGIN
+			SELECT * from tbProducto
+		END
+	COMMIT
+GO
