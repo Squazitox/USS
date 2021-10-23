@@ -25,9 +25,8 @@ BEGIN
 	idDespacha varchar(10) NOT NULL,
 	descripcion varchar(50) NOT NULL,
 	stock int NOT NULL,
-	precioCompra float NOT NULL,
-	precioVenta float NOT NULL,
-	cantidad int NOT NULL
+	ingresototal float NOT NULL,
+	salidatotal float NOT NULL,
 	)
 END
 GO
@@ -86,12 +85,14 @@ BEGIN
 		idSuministra varchar(10) NOT NULL PRIMARY KEY,
 		idProveedor varchar(10) NOT NULL,
 		idProducto varchar(10) NOT NULL,
+		idUbicacion varchar(10) NOT NULL,
 		lote varchar(10) NOT NULL,
 		cantidad int NOT NULL,
 		numFactura varchar(10) NOT NULL,
 		paisOrigen varchar(10) NOT NULL,
-		precio_compra float NOT NULL
-	
+		precio_compra float NOT NULL,
+		caducidad date NOT NULL	
+		
 	)
 
 END
@@ -110,9 +111,11 @@ BEGIN
 		idDespacha varchar(10) NOT NULL PRIMARY KEY,
 		idTrabajador varchar(10) NOT NULL,
 		idProducto varchar(10) NOT NULL,
+		idUbicacion varchar(10) NOT NULL,
 		idArea varchar(10) NOT NULL,
 		cantidad int NOT NULL,
-		lote varchar(10) NOT NULL
+		lote varchar(10) NOT NULL,
+		caducidad date NOT NULL	
 	)
 
 END
@@ -368,13 +371,8 @@ BEGIN
 	CREATE TABLE tbProducto(
 	idProducto varchar(10) PRIMARY KEY,
 	idTipoProducto varchar(10) NOT NULL,
-	idUbicacion varchar(10) NOT NULL,
 	idUnidadMedida varchar(10) NOT NULL,
-	nombreProducto varchar(100) NOT NULL,--
-	precioCompra float NOT NULL,
 	descripcion varchar(350),
-	stock int NOT NULL,
-	caducidad date NOT NULL
 	)
 END
 -------------------------------------------------------------------------------------------
@@ -448,7 +446,7 @@ select * from tbProveedor
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
 
---RELACION TABLA TRABAJADOR CON LA TABLA CARDO DEL TRABAJADOR
+--RELACION TABLA TRABAJADOR CON LA TABLA CARGO DEL TRABAJADOR
 IF OBJECT_ID('FK_tbTrabajador_tbCargoTrabajador') IS NOT NULL
 BEGIN
 	ALTER TABLE tbTrabajador
@@ -618,21 +616,53 @@ ADD CONSTRAINT FK_Producto_tbTipoProducto
 FOREIGN KEY (idTipoProducto) REFERENCES tbTipoProducto(idTipoProducto)
 END
 GO
+--NUEVAS FK MANUEL VM
 
---tbUbicacion(PK) tbProducto(FK)
-IF OBJECT_ID('FK_Producto_tbUbicacion') IS NOT NULL
+--tbUbicacion(PK) tbDespachaFK)
+IF OBJECT_ID('FK_Despacha_tbUbicacion') IS NOT NULL
 BEGIN
-	ALTER TABLE tbProducto
-	DROP CONSTRAINT FK_Producto_tbUbicacion
-	PRINT 'La relacion [FK_Producto_tbUbicacion] fue eliminada'
+	ALTER TABLE tbDespacha
+	DROP CONSTRAINT FK_Desapcha_tbUbicacion
+	PRINT 'La relacion [FK_Despacha_tbUbicacion] fue eliminada'
 END
 ELSE
 BEGIN
-ALTER TABLE tbProducto
-ADD CONSTRAINT FK_Producto_tbUbicacion
+ALTER TABLE tbDespacha
+ADD CONSTRAINT FK_Despacha_tbUbicacion
 FOREIGN KEY (idUbicacion) REFERENCES tbUbicacion(idUbicacion)
 END
 GO
+
+--tbUbicacion(PK) tbSuministraFK)
+IF OBJECT_ID('FK_Suministra_tbUbicacion') IS NOT NULL
+BEGIN
+	ALTER TABLE tbSuministra
+	DROP CONSTRAINT FK_Suministra_tbUbicacion
+	PRINT 'La relacion [FK_Suministra_tbUbicacion] fue eliminada'
+END
+ELSE
+BEGIN
+ALTER TABLE tbSuministra
+ADD CONSTRAINT FK_Suministra_tbUbicacion
+FOREIGN KEY (idUbicacion) REFERENCES tbUbicacion(idUbicacion)
+END
+GO
+
+--tbUbicacion(PK) tbProducto(FK)
+--IF OBJECT_ID('FK_Producto_tbUbicacion') IS NOT NULL
+--BEGIN
+--	ALTER TABLE tbProducto
+--	DROP CONSTRAINT FK_Producto_tbUbicacion
+--	PRINT 'La relacion [FK_Producto_tbUbicacion] fue eliminada'
+--END
+--ELSE
+--BEGIN
+--ALTER TABLE tbProducto
+--ADD CONSTRAINT FK_Producto_tbUbicacion
+--FOREIGN KEY (idUbicacion) REFERENCES tbUbicacion(idUbicacion)
+--END
+--GO
+
 
 --tbProducto(PK) tbPedidoProducto(FK)
 IF OBJECT_ID('FK_PedidoProducto_tbProducto') IS NOT NULL
@@ -911,9 +941,9 @@ AS
 GO
 EXECUTE SP_RegistraPais 'RP','PERÚ'
 EXECUTE SP_RegistraPais 'RP','CHILE'
-EXECUTE SP_RegistraPais 'RP','BOLIVIA'
-EXECUTE SP_RegistraPais 'RP','VENEZUELA'
-EXECUTE SP_RegistraPais 'RP','ARGENTINA'
+EXECUTE SP_RegistraPais 'RP','ESTADOS UNIDOS'
+EXECUTE SP_RegistraPais 'RP','HOLANDA'
+EXECUTE SP_RegistraPais 'RP','ALEMANIA'
 
 
 -------------------------------------------------------------------
@@ -951,7 +981,6 @@ AS
 GO
 
 EXECUTE SP_RegistraProveedor 'PRO','RP0','JCR INGENIERIA INDUSTRIAL','91600','2062154856', '598-25115121', 'INFO@JCR.COM.UY', 'MATEO CORTE 4941 - CP 11400 MONTEVIDEO'
-
 EXECUTE SP_RegistraProveedor 'PRO','RP1','TROX DO BRASIL DIFUSAO DE','69900-000','2012452545', '55-413316-8418', 'OI_CRISTINA@TROXBRASIL.COM.BR', 'RUA CYRO COREIA PEREIRA, 300-CIC'
 EXECUTE SP_RegistraProveedor 'PRO','RP2','UNION CARGO INTERNACIONAL','110911','2032565482', '(57) 1 4215832', 'GCOMERCIAL@UNIONCARGO.NET', 'CR 106 23 D-50 P-3 DISTRITO CAPITAL'
 EXECUTE SP_RegistraProveedor 'PRO','RP3','UNION SOUTH INTERNATIONAL','33126','524526548', '305 539-1057', 'INFO@JCR.COM.UY', '1948 NW 82ND AVE, DORAL, FL'
@@ -971,6 +1000,7 @@ AS
 	SELECT * FROM tbArea WHERE tbArea.idArea = @codArea
 
 GO
+
 -------------------------------------------------------------------
 -------------------------------------------------------------------
 --PROCEDIMIENTO MOSTRAR PRODUCTOS
@@ -983,13 +1013,16 @@ AS
 GO
 
 --PROCEDIMIENTO REGISTRAR DESPACHA
+--Agregando Campos nuevos - Manuel VM
 CREATE PROCEDURE sp_RegistrarDespacha
 @codDespacha varchar(10),
 @idTrabajador varchar(10),
 @idProducto varchar(10),
+@idUbicacion varchar(10),
 @idArea varchar(10),
 @cantidad int,
-@lote varchar(10)
+@lote varchar(10),
+@caducidad date
 
 AS
 	DECLARE @totalReg int
@@ -1003,11 +1036,17 @@ AS
 	END
 	ELSE
 	BEGIN
-		INSERT INTO  tbDespacha VALUES(@enlazado,@idTrabajador,@idProducto,@idArea,
-		@cantidad,@lote)
+		--Se corrigio las variables - Manuel VM
+		INSERT INTO  tbDespacha VALUES(@enlazado,@idTrabajador,@idProducto,@idUbicacion,@idArea,
+		@cantidad,@lote,@caducidad)
 
-		UPDATE tbProducto set tbProducto.stock = tbProducto.stock - @cantidad 
-		WHERE tbProducto.idProducto=@idProducto
+		--UPDATE tbProducto set tbProducto.stock = tbProducto.stock - @cantidad
+		--modificacion de actualizaciones - Manuel VM
+		UPDATE tbKardex set tbKardex .stock = tbKardex.stock - @cantidad 
+		WHERE tbKardex .idProducto=@idProducto
+		
+		UPDATE tbKardex set tbKardex .salidatotal = tbKardex.salidatotal + @cantidad 
+		WHERE tbKardex .idProducto=@idProducto
 
 		PRINT 'Los datos fueron registrados  en la tabla [DESPACHO] con exito...!'
 	END
@@ -1023,24 +1062,36 @@ GO
 
 
 --PROCEDIMIENTO ACTUALIZAR LA TABLA SUMINISTRO 
+--Agregando Campos nuevos - Manuel VM
 CREATE PROCEDURE sp_ActualizarSuministra
 @codSuministra varchar(10),
 @codProveedor varchar(10),
 @codProducto varchar(10),
+@idUbicacion varchar(10),
 @lote varchar(10),
 @cantidad int,
 @numFactura varchar(10),
 @paisOrigen varchar(10),
-@precio_compra float
+@precio_compra float,
+@caducidad date
 AS
 	BEGIN
+		--UPDATE tbSuministra 
+		--set tbSuministra.cantidad=@cantidad, tbSuministra.idProducto=@codProducto, 
+		--tbSuministra.lote=@lote, tbSuministra.idProveedor=@codProveedor, tbSuministra.numFactura= @numFactura,
+		--tbSuministra.paisOrigen = @paisOrigen, tbSuministra.precio_compra = @precio_compra
+		--WHERE tbSuministra.idSuministra = @codSuministra
+
 		UPDATE tbSuministra 
-		set tbSuministra.cantidad=@cantidad, tbSuministra.idProducto=@codProducto, 
-		tbSuministra.lote=@lote, tbSuministra.idProveedor=@codProveedor, tbSuministra.numFactura= @numFactura,
-		tbSuministra.paisOrigen = @paisOrigen, tbSuministra.precio_compra = @precio_compra
+		set tbSuministra.cantidad=@cantidad, tbSuministra.idProducto=@codProducto, tbSuministra.idUbicacion = @idUbicacion,
+		tbSuministra.lote = @lote, tbSuministra.idProveedor=@codProveedor, tbSuministra.numFactura= @numFactura,
+		tbSuministra.paisOrigen = @paisOrigen, tbSuministra.precio_compra = @precio_compra, tbSuministra.caducidad = @caducidad
 		WHERE tbSuministra.idSuministra = @codSuministra
 
-		UPDATE tbProducto set tbProducto.stock = tbProducto.stock + @cantidad WHERE tbProducto.idProducto=@codProducto
+		--UPDATE tbProducto set tbProducto.stock = tbProducto.stock + @cantidad WHERE tbProducto.idProducto=@codProducto
+		UPDATE tbKardex set tbKardex.stock = tbKardex.stock + @cantidad WHERE tbKardex.idProducto=@codProducto
+
+		UPDATE tbKardex set tbKardex.ingresototal = tbKardex.ingresototal + @cantidad WHERE tbKardex.idProducto=@codProducto
 		
 		PRINT 'Los datos fueron ACTUALIZADOS  en la tabla [SUMINISTRA] con exito...!'
 	END
@@ -1080,9 +1131,15 @@ AS
 	
 
 GO
-EXECUTE  sp_RegistrarTipoProducto 'RTP','EMBUTIDOS'
-EXECUTE  sp_RegistrarTipoProducto 'RTP','LACTEOS'
-
+EXECUTE  sp_RegistrarTipoProducto 'RTP','AZUCARES'
+EXECUTE  sp_RegistrarTipoProducto 'RTP','CARNES'
+EXECUTE  sp_RegistrarTipoProducto 'RTP','COLORANTES'
+EXECUTE  sp_RegistrarTipoProducto 'RTP','CULTIVOS'
+EXECUTE  sp_RegistrarTipoProducto 'RTP','GRASAS'
+EXECUTE  sp_RegistrarTipoProducto 'RTP','CONCENTRADO'
+EXECUTE  sp_RegistrarTipoProducto 'RTP','LECHES'
+EXECUTE  sp_RegistrarTipoProducto 'RTP','ESPECIAS'
+EXECUTE  sp_RegistrarTipoProducto 'RTP','ESTABILIZANTES'
 --------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------
@@ -1112,7 +1169,27 @@ AS
 		PRINT 'Los datos fueron registrados con exito...!'
 	END
 GO
-EXECUTE SP_RegistraUbicacionProducto 'RUP', 'UBI. LACTEOS'
+EXECUTE SP_RegistraUbicacionProducto 'POS', 'NIVEL(1,1)'
+EXECUTE SP_RegistraUbicacionProducto 'POS', 'NIVEL(1,2)'
+EXECUTE SP_RegistraUbicacionProducto 'POS', 'NIVEL(1,3)'
+EXECUTE SP_RegistraUbicacionProducto 'POS', 'NIVEL(1,4)'
+EXECUTE SP_RegistraUbicacionProducto 'POS', 'NIVEL(2,1)'
+EXECUTE SP_RegistraUbicacionProducto 'POS', 'NIVEL(2,2)'
+EXECUTE SP_RegistraUbicacionProducto 'POS', 'NIVEL(2,3)'
+EXECUTE SP_RegistraUbicacionProducto 'POS', 'NIVEL(2,4)'
+EXECUTE SP_RegistraUbicacionProducto 'POS', 'NIVEL(3,1)'
+EXECUTE SP_RegistraUbicacionProducto 'POS', 'NIVEL(3,2)'
+EXECUTE SP_RegistraUbicacionProducto 'POS', 'NIVEL(4,1)'
+EXECUTE SP_RegistraUbicacionProducto 'POS', 'NIVEL(4,2)'
+EXECUTE SP_RegistraUbicacionProducto 'POS', 'NIVEL(4,3)'
+EXECUTE SP_RegistraUbicacionProducto 'POS', 'NIVEL(4,4)'
+EXECUTE SP_RegistraUbicacionProducto 'POS', 'NIVEL(5,1)'
+EXECUTE SP_RegistraUbicacionProducto 'POS', 'NIVEL(5,2)'
+EXECUTE SP_RegistraUbicacionProducto 'POS', 'NIVEL(5,3)'
+EXECUTE SP_RegistraUbicacionProducto 'POS', 'NIVEL(6,4)'
+EXECUTE SP_RegistraUbicacionProducto 'POS', 'NIVEL(7,1)'
+EXECUTE SP_RegistraUbicacionProducto 'POS', 'NIVEL(8,2)'
+
 --------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------
@@ -1142,7 +1219,12 @@ AS
 		PRINT 'Los datos fueron registrados con exito...!'
 	END
 GO
-EXECUTE SP_RegistraUnidadMedida 'RUM', 'KILOS'
+EXECUTE SP_RegistraUnidadMedida 'UM', 'KILOS'
+EXECUTE SP_RegistraUnidadMedida 'UM', 'CAJAS'
+EXECUTE SP_RegistraUnidadMedida 'UM', 'SACOS'
+EXECUTE SP_RegistraUnidadMedida 'UM', 'PAQUETES'
+EXECUTE SP_RegistraUnidadMedida 'UM', 'UNIDADES'
+EXECUTE SP_RegistraUnidadMedida 'UM', 'BARRIL'
 --------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------
 
@@ -1151,13 +1233,13 @@ EXECUTE SP_RegistraUnidadMedida 'RUM', 'KILOS'
 CREATE PROCEDURE SP_RegistraProducto
 @codProducto  varchar(10),
 @idTipoProducto varchar(10),
-@idUbicacion varchar(10),
+--@idUbicacion varchar(10),
 @idUnidadMedida varchar(10),
-@nombreProducto varchar(100),
-@precioCompra float,
-@descripcion varchar(350),
-@stock int,
-@caducidad date
+--@nombreProducto varchar(100),
+--@precioCompra float,
+@descripcion varchar(350)
+--@stock int,
+--@caducidad date
 
 AS
 	
@@ -1173,32 +1255,47 @@ AS
 	END
 	ELSE
 	BEGIN
-		INSERT INTO tbProducto VALUES(@codProducto,@idTipoProducto, @idUbicacion,@idUnidadMedida,@nombreProducto,@precioCompra,@descripcion,
-	@stock, @caducidad)
+	--	INSERT INTO tbProducto VALUES(@codProducto,@idTipoProducto, @idUbicacion,@idUnidadMedida,@nombreProducto,@precioCompra,@descripcion,
+	--@stock, @caducidad)
+
+		INSERT INTO tbProducto VALUES(@enlazado,@idTipoProducto,@idUnidadMedida,@descripcion)
 		PRINT 'Los datos fueron registrados la tabla PRODUCTO con exito...!'
 	END
 	
 
 GO
+SELECT * FROM tbTipoProducto
+SELECT * FROM tbProducto
+SELECT * FROM tbUnidadMedida
 
+DELETE FROM tbProducto
 
-EXECUTE SP_RegistraProducto 'RP', 'RTP1', 'RU0', 'RU0','YOGURT GLORIA', 20.9,'BEBIDA NUTRITIVA CON FRESAS NATURALES',10, '07/04/2020'
+EXECUTE SP_RegistraProducto 'PRO', 'RTP5', 'UM5', 'CONCENTRADO DE MANZANA'
+EXECUTE SP_RegistraProducto 'PRO', 'RTP1', 'UM0', 'RECORTE 60/40 (CRUDOS)'
+EXECUTE SP_RegistraProducto 'PRO', 'RTP7', 'UM2', 'SAL DE MINA SIN YODO'
+EXECUTE SP_RegistraProducto 'PRO', 'RTP5', 'UM5', 'SABOR NARANJA SC725055'
+EXECUTE SP_RegistraProducto 'PRO', 'RTP4', 'UM5', 'ACEITE DE SOYA'
+EXECUTE SP_RegistraProducto 'PRO', 'RTP0', 'UM2', 'AZUCAR BLANCA'
+EXECUTE SP_RegistraProducto 'PRO', 'RTP5', 'UM5', 'CONCENTRADO DE MANGO'
+EXECUTE SP_RegistraProducto 'PRO', 'RTP6', 'UM2', 'LECHE EN POLVO DESCREMADA LH'
+EXECUTE SP_RegistraProducto 'PRO', 'RTP6', 'UM2', 'LECHE EN POLVO DESCREMADA MH'
+EXECUTE SP_RegistraProducto 'PRO', 'RTP6', 'UM2', 'LECHE ENTERA EN POLVO MH'
+EXECUTE SP_RegistraProducto 'PRO', 'RTP7', 'UM2', 'OREGANO MOLIDO'
+EXECUTE SP_RegistraProducto 'PRO', 'RTP7', 'UM2', 'PIMIENTA NEGRA ENTERA'
+EXECUTE SP_RegistraProducto 'PRO', 'RTP5', 'UM5', 'PULPA DE MORA'
+EXECUTE SP_RegistraProducto 'PRO', 'RTP5', 'UM5', 'PULPA DE LUCUMA'
+EXECUTE SP_RegistraProducto 'PRO', 'RTP2', 'UM1', 'GELATINA 230 BLOOM'
+EXECUTE SP_RegistraProducto 'PRO', 'RTP8', 'UM2', 'ESTABILIZANTE BASE DE HELADO'
+EXECUTE SP_RegistraProducto 'PRO', 'RTP2', 'UM5', 'ESENCIA MORA NATURAL'
 ------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
 
 
 
-----------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------
---PROCEDIMIENTO DE REGISTRO  SUMINISTRO
-----------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------
 
+EXECUTE SP_RegistraProfesion 'RP', 'ING. sistemas',1
 
-
-
-
-
+select * from tbProfesion
 
 ----------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------
@@ -1228,18 +1325,30 @@ GO
 
 ----------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------
- EXECUTE SP_RegistraProfesion 'RP','farmaceutico','1'
- EXECUTE SP_RegistraProfesion 'RP','TECNICO INFORMATICA','1'
+ EXECUTE SP_RegistraProfesion 'RP','INGENIERO INDUSTRIAL','1'
+ EXECUTE SP_RegistraProfesion 'RP','NEGOCIOS INTERNACIONALES','1'
+ EXECUTE SP_RegistraProfesion 'RP','ADMINISTRADOR DE EMPRESAS','1'
+ EXECUTE SP_RegistraProfesion 'RP','TECNICO EN ADMINISTRACION DE EMPRESAS','1'
+ EXECUTE SP_RegistraProfesion 'RP','TECNICO EN COMPUTACIÓN','1'
+  EXECUTE SP_RegistraProfesion 'RP','INGENIERO SISTEMAS','1'
 
+
+ ----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+--PROCEDIMIENTO DE REGISTRO  SUMINISTRO
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
  CREATE PROCEDURE SP_RegistraSuministra
 @codSuministra varchar(10),
 @codProveedor varchar(10),
 @codProducto varchar(10),
+@idUbicacion varchar(10),
 @lote varchar(10),
 @cantidad int,
 @numFactura varchar(10),
 @paisOrigen varchar(10),
-@precio_compra float
+@precio_compra float,
+@caducidad date
 
 AS
 	DECLARE @totalReg int
@@ -1253,11 +1362,16 @@ AS
 	END
 	ELSE
 	BEGIN
-		INSERT INTO  tbSuministra VALUES(@enlazado,@codProveedor, @codProducto, @lote, @cantidad, @numFactura, @paisOrigen, @precio_compra);
+		INSERT INTO  tbSuministra VALUES(@enlazado,@codProveedor, @codProducto, @idUbicacion, @lote, @cantidad, @numFactura, @paisOrigen, @precio_compra,@caducidad);
 
-		UPDATE tbProducto 
-		set tbProducto.stock = tbProducto.stock + @cantidad
-		WHERE tbProducto.idProducto = @codProducto
+		UPDATE tbKardex
+		set tbKardex.stock = tbKardex.stock + @cantidad
+		WHERE tbKardex.idProducto = @codProducto
+
+		UPDATE tbKardex
+		set tbKardex.ingresototal = tbKardex.ingresototal + @cantidad
+		WHERE tbKardex.idProducto = @codProducto
+
 		PRINT 'Los datos fueron registrados  en la tabla [SUMINISTRA] con exito...!'
 	END
 	
@@ -1274,11 +1388,21 @@ CREATE PROCEDURE SP_Logearse
 @usuario varchar(40),
 @password varchar(40)
 AS
-	BEGIN
-		select* from tbUsuario WHERE tbUsuario.NombreUsuario=@usuario AND tbUsuario.passwordUsuario=@password
-	END
+	BEGIN TRANSACTION 
+		BEGIN
+			select* from tbUsuario WHERE tbUsuario.NombreUsuario=@usuario AND tbUsuario.passwordUsuario=@password
+		END
+
+	COMMIT
 
 GO
+
+
+EXECUTE SP_RegistrarTipoUsuario 'USR', 'GERENCIAL','solo reportes'
+EXECUTE SP_RegistrarTipoUsuario 'USR', 'ADMINISTRATIVO','control total'
+EXECUTE SP_RegistrarTipoUsuario 'USR', 'OPERARIO','solo inventario'
+select * from tbTipoUsuario
+
 --REGISTRAR TIPO DE USUARIO
 CREATE PROCEDURE SP_RegistrarTipoUsuario
 @codIdTipoUsuario varchar(10),
@@ -1302,6 +1426,8 @@ AS
 		PRINT 'Los datos  fueron registrados  en la tabla [TIPO USUARIO] con exito...!'
 	END
 GO
+
+
 
 --REGISTRAR USUARIO
 CREATE PROCEDURE SP_RegistrarUsuario
@@ -1329,6 +1455,25 @@ AS
 		PRINT 'Los datos  fueron registrados  en la tabla [USUARIO] con exito...!'
 	END
 GO
+
+EXECUTE SP_RegistrarUsuario 'RU', 'BLOJA','USR1','123456','TRA0',1
+EXECUTE SP_RegistrarUsuario 'RU', 'ECHUQUE','USR1','123456','TRA1',1
+EXECUTE SP_RegistrarUsuario 'RU', 'MVIVANCO','USR1','123456','TRA2',1
+EXECUTE SP_RegistrarUsuario 'RU', 'JSOTO','USR0','123456','TRA3',1
+EXECUTE SP_RegistrarUsuario 'RU', 'GCUBA','USR2','123456','TRA4',1
+
+select * from tbUsuario
+select * from tbTrabajador
+
+EXECUTE sp_RegistrarPersona 'PER', 'RP0','HERNA LOJA','BRYAM ALEXANDER','01/05/1997', '1234567', 1, '2625312','BRY@hotmail.com','av. las brisas 123',1
+EXECUTE sp_RegistrarPersona 'PER', 'RP0','CHUQUE DÍAZ','ELBIR DILUVID','01/05/1997', '1234567', 1, '2625312','ELB@hotmail.com','av. las brisas 123',1
+EXECUTE sp_RegistrarPersona 'PER', 'RP0','VIVANCO MORENO','MANUEL SANTIAGO','01/05/1997', '1234567', 1, '2625312','MAN@hotmail.com','av. las brisas 123',1
+EXECUTE sp_RegistrarPersona 'PER', 'RP0','SOTO VALLE','JORGE','01/05/1997', '1234567', 1, '2625312','JOR@hotmail.com','av. las brisas 123',1
+EXECUTE sp_RegistrarPersona 'PER', 'RP0','CUBA RUIZ','GUILLERMO','01/05/1997', '1234567', 1, '2625312','GUI@hotmail.com','av. las brisas 123',1
+
+
+
+select * from tbPersona
 
 CREATE PROCEDURE sp_RegistrarPersona
 @codPersona varchar(10),
@@ -1362,6 +1507,13 @@ AS
 
 
 GO
+
+EXECUTE sp_RegistrarTurno 'RT','MAÑANA'
+EXECUTE sp_RegistrarTurno 'RT','TARDE'
+EXECUTE sp_RegistrarTurno 'RT','NOCHE'
+
+select * from tbTurno
+
 --PROCEDIMIENTO TURNO
 CREATE PROCEDURE sp_RegistrarTurno
 @codTurno varchar(10),
@@ -1385,6 +1537,13 @@ AS
 
 
 GO
+
+EXECUTE sp_RegistrarRoles 'RR','CONTROL TOTAL'
+EXECUTE sp_RegistrarRoles 'RR','REPORTES'
+EXECUTE sp_RegistrarRoles 'RR','INVENTARIOS'
+
+select * from tbRoles
+
 
 --PROCEDIMIENTO ROLES
 CREATE PROCEDURE sp_RegistrarRoles
@@ -1410,6 +1569,12 @@ AS
 GO
 
 
+EXECUTE sp_RegistrarCargoTrabajador 'RCT', 'SUPERVISOR'
+EXECUTE sp_RegistrarCargoTrabajador 'RCT', 'KARDISTA'
+EXECUTE sp_RegistrarCargoTrabajador 'RCT', 'ENCARGADO'
+EXECUTE sp_RegistrarCargoTrabajador 'RCT', 'SUPERINTENDENTE'
+
+select * from tbCargoTrabajador
 
 --PROCEDIMIENTO REGISTRAR CARGO TRABAJADOR
 CREATE PROCEDURE sp_RegistrarCargoTrabajador
@@ -1435,6 +1600,15 @@ AS
 
 GO
 
+EXECUTE sp_RegistrarTrabajador 'TRA', 'PER0','RCT0','RP5','RR0', 'RT0', '01/05/2017'
+EXECUTE sp_RegistrarTrabajador 'TRA', 'PER1','RCT0','RP5','RR0', 'RT0', '01/05/2017'
+EXECUTE sp_RegistrarTrabajador 'TRA', 'PER2','RCT0','RP5','RR0', 'RT0', '01/05/2017'
+EXECUTE sp_RegistrarTrabajador 'TRA', 'PER3','RCT1','RP2','RR1', 'RT0', '01/05/2017'
+EXECUTE sp_RegistrarTrabajador 'TRA', 'PER4','RCT3','RP3','RR2', 'RT2', '01/05/2017'
+
+select * from tbTrabajador
+select * from tbRoles
+select * from tbCargoTrabajador
 
 --PROCEDIMIENTO REGISTRAR TRABAJADOR
 CREATE PROCEDURE sp_RegistrarTrabajador
@@ -1463,4 +1637,24 @@ AS
 	END
 
 
+GO
+
+CREATE PROCEDURE sp_ListarProductoCod
+@codProducto varchar(10)
+AS
+	BEGIN TRANSACTION 
+		BEGIN
+			SELECT * FROM tbProducto WHERE tbProducto.idProducto = @codProducto
+		END
+	COMMIT
+GO
+
+
+CREATE PROCEDURE sp_ListarProducto
+AS
+	BEGIN TRANSACTION
+		BEGIN
+			SELECT * from tbProducto
+		END
+	COMMIT
 GO

@@ -29,3 +29,13 @@ D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\x64\De
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\x64\Debug\LaiveKardexApp.xml
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\x64\Debug\LaiveKardexApp.pdb
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\x64\Debug\LaiveKardexApp.vbproj.AssemblyReference.cache
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\x64\Debug\CapaEntidad.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\x64\Debug\CapaNegocio.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\x64\Debug\CapaDatos.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\x64\Debug\CapaEntidad.pdb
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\x64\Debug\CapaEntidad.xml
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\x64\Debug\CapaNegocio.pdb
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\x64\Debug\CapaNegocio.xml
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\x64\Debug\CapaDatos.pdb
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\x64\Debug\CapaDatos.xml
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\x64\Debug\LaiveKardexApp.vbproj.CopyComplete

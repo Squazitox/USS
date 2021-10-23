@@ -167,6 +167,12 @@
     <Compile Include="Formulario\FormAlerta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formulario\FormCreaMaterial.Designer.vb">
+      <DependentUpon>FormCreaMaterial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\FormCreaMaterial.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formulario\FormIngreso.Designer.vb">
       <DependentUpon>FormIngreso.vb</DependentUpon>
     </Compile>
@@ -236,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario\FormAlerta.resx">
       <DependentUpon>FormAlerta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FormCreaMaterial.resx">
+      <DependentUpon>FormCreaMaterial.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario\FormIngreso.resx">
       <DependentUpon>FormIngreso.vb</DependentUpon>
