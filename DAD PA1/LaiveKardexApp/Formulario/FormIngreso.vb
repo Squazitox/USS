@@ -19,6 +19,7 @@ Public Class FormIngreso
         dgproductos.Columns.Add("factura", "Nº de Factura")
         dgproductos.Columns.Add("origen", "Origen")
         dgproductos.Columns.Add("Ubicacion", "Ubicacion")
+        dgproductos.Columns.Add("fc", "Creado el")
 
 
         'Mostrara datos en cbprodcuto
@@ -62,7 +63,7 @@ Public Class FormIngreso
 
 
 
-        dgproductos.Rows.Add(cbcodproducto.SelectedValue, TBIngresoCantidad.Text, TBIngresoValor.Text, TBIngresoLote.Text, DTPIngreso.Value, cbproveedor.SelectedValue, TBIngresoFactura.Text, cbpais.SelectedValue, cbubicacion.SelectedValue)
+        dgproductos.Rows.Add(cbcodproducto.SelectedValue, TBIngresoCantidad.Text, TBIngresoValor.Text, TBIngresoLote.Text, DTPIngreso.Value, cbproveedor.SelectedValue, TBIngresoFactura.Text, cbpais.SelectedValue, cbubicacion.SelectedValue, DTCreacion.Value)
         cbcodproducto.Text = ""
         TBIngresoLote.Text = ""
         TBIngresoValor.Text = ""
@@ -116,7 +117,7 @@ Public Class FormIngreso
                 objEntidad.paisOrigen = Convert.ToString(fila.Cells("origen").Value)
                 objEntidad.precio_compra = Convert.ToDouble(fila.Cells("valor").Value)
                 objEntidad.caducidad = Convert.ToDateTime(fila.Cells("fv").Value)
-
+                objEntidad.FechaCreacion = Convert.ToDateTime(fila.Cells("fc").Value)
                 objEntidad.idUbicacion = Convert.ToString(fila.Cells("Ubicacion").Value)
 
                 verificacion = objNegocio.Neg_RegistrarSuministra(objEntidad)
@@ -136,7 +137,7 @@ Public Class FormIngreso
             MessageBox.Show("Error de Ingreso")
 
         End If
-
+        dgproductos.Rows.Clear()
 
     End Sub
 

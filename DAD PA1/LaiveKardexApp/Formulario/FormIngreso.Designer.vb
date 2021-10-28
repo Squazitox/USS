@@ -50,6 +50,7 @@ Partial Class FormIngreso
         Me.BIngresoCancelar = New System.Windows.Forms.Button()
         Me.BIngresoGuardar = New System.Windows.Forms.Button()
         Me.BIngresoExportar = New System.Windows.Forms.Button()
+        Me.DTCreacion = New System.Windows.Forms.DateTimePicker()
         Me.PIngresoFiltros.SuspendLayout()
         Me.PIngresoData.SuspendLayout()
         CType(Me.dgproductos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -59,6 +60,7 @@ Partial Class FormIngreso
         'PIngresoFiltros
         '
         Me.PIngresoFiltros.BackColor = System.Drawing.Color.ForestGreen
+        Me.PIngresoFiltros.Controls.Add(Me.DTCreacion)
         Me.PIngresoFiltros.Controls.Add(Me.cbubicacion)
         Me.PIngresoFiltros.Controls.Add(Me.Button1)
         Me.PIngresoFiltros.Controls.Add(Me.Label10)
@@ -348,6 +350,16 @@ Partial Class FormIngreso
         Me.BIngresoExportar.Text = "Exportar"
         Me.BIngresoExportar.UseVisualStyleBackColor = True
         '
+        'DTCreacion
+        '
+        Me.DTCreacion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTCreacion.Location = New System.Drawing.Point(15, 36)
+        Me.DTCreacion.MinDate = New Date(2021, 10, 1, 0, 0, 0, 0)
+        Me.DTCreacion.Name = "DTCreacion"
+        Me.DTCreacion.Size = New System.Drawing.Size(78, 20)
+        Me.DTCreacion.TabIndex = 25
+        Me.DTCreacion.Visible = False
+        '
         'FormIngreso
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -395,4 +407,5 @@ Partial Class FormIngreso
     Friend WithEvents Label10 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents cbubicacion As ComboBox
+    Friend WithEvents DTCreacion As DateTimePicker
 End Class

@@ -15,23 +15,6 @@ D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaNegocio\obj\Debug\CapaNeg
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaNegocio\obj\Debug\CapaNegocio.dll
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaNegocio\obj\Debug\CapaNegocio.xml
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaNegocio\obj\Debug\CapaNegocio.pdb
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaNegocio.dll
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaNegocio.pdb
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaNegocio.xml
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaDatos.dll
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaEntidad.dll
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaDatos.pdb
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaDatos.xml
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaEntidad.pdb
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaEntidad.xml
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.vbproj.AssemblyReference.cache
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.Resources.resources
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.vbproj.GenerateResource.cache
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.vbproj.CoreCompileInputs.cache
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.vbproj.CopyComplete
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.dll
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.xml
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.pdb
 D:\02 - UNIVERSIDAD SEÑOR DE SIPAN\007.- CLASES 2021-2\1. TALLER DE LENGUAJES DE PROGRAMACIÓN\PROYECTO\DAD PA1\DAD PA1\CapaNegocio\bin\Debug\CapaNegocio.dll
 D:\02 - UNIVERSIDAD SEÑOR DE SIPAN\007.- CLASES 2021-2\1. TALLER DE LENGUAJES DE PROGRAMACIÓN\PROYECTO\DAD PA1\DAD PA1\CapaNegocio\bin\Debug\CapaNegocio.pdb
 D:\02 - UNIVERSIDAD SEÑOR DE SIPAN\007.- CLASES 2021-2\1. TALLER DE LENGUAJES DE PROGRAMACIÓN\PROYECTO\DAD PA1\DAD PA1\CapaNegocio\bin\Debug\CapaNegocio.xml
@@ -66,3 +49,25 @@ C:\Users\NB145\Documents\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.vb
 C:\Users\NB145\Documents\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.dll
 C:\Users\NB145\Documents\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.xml
 C:\Users\NB145\Documents\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.pdb
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.Resources.resources
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.vbproj.GenerateResource.cache
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.vbproj.CoreCompileInputs.cache
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaNegocio.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaNegocio.pdb
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaNegocio.xml
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaDatos.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaEntidad.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaDatos.pdb
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaDatos.xml
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaEntidad.pdb
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\CapaEntidad.xml
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.vbproj.AssemblyReference.cache
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.xml
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.pdb
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.vbproj.CopyComplete

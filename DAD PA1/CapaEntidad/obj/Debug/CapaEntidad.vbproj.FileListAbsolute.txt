@@ -8,16 +8,6 @@ D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaEntidad\obj\Debug\CapaEnt
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaEntidad\obj\Debug\CapaEntidad.xml
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaEntidad\obj\Debug\CapaEntidad.pdb
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD\CapaEntidad\obj\Debug\CapaEntidad.vbproj.AssemblyReference.cache
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\bin\Debug\CapaEntidad.dll
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\bin\Debug\CapaEntidad.pdb
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\bin\Debug\CapaEntidad.xml
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\obj\Debug\CapaEntidad.vbproj.AssemblyReference.cache
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\obj\Debug\CapaEntidad.Resources.resources
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\obj\Debug\CapaEntidad.vbproj.GenerateResource.cache
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\obj\Debug\CapaEntidad.vbproj.CoreCompileInputs.cache
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\obj\Debug\CapaEntidad.dll
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\obj\Debug\CapaEntidad.xml
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\obj\Debug\CapaEntidad.pdb
 D:\02 - UNIVERSIDAD SEÑOR DE SIPAN\007.- CLASES 2021-2\1. TALLER DE LENGUAJES DE PROGRAMACIÓN\PROYECTO\DAD PA1\DAD PA1\CapaEntidad\bin\Debug\CapaEntidad.dll
 D:\02 - UNIVERSIDAD SEÑOR DE SIPAN\007.- CLASES 2021-2\1. TALLER DE LENGUAJES DE PROGRAMACIÓN\PROYECTO\DAD PA1\DAD PA1\CapaEntidad\bin\Debug\CapaEntidad.pdb
 D:\02 - UNIVERSIDAD SEÑOR DE SIPAN\007.- CLASES 2021-2\1. TALLER DE LENGUAJES DE PROGRAMACIÓN\PROYECTO\DAD PA1\DAD PA1\CapaEntidad\bin\Debug\CapaEntidad.xml
@@ -38,3 +28,18 @@ C:\Users\NB145\Documents\GitHub\USS\DAD PA1\CapaEntidad\obj\Debug\CapaEntidad.vb
 C:\Users\NB145\Documents\GitHub\USS\DAD PA1\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\Users\NB145\Documents\GitHub\USS\DAD PA1\CapaEntidad\obj\Debug\CapaEntidad.xml
 C:\Users\NB145\Documents\GitHub\USS\DAD PA1\CapaEntidad\obj\Debug\CapaEntidad.pdb
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\obj\Debug\CapaEntidad.Resources.resources
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\obj\Debug\CapaEntidad.vbproj.GenerateResource.cache
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\obj\Debug\CapaEntidad.vbproj.CoreCompileInputs.cache
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\bin\Debug\CapaEntidad.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\bin\Debug\CapaEntidad.pdb
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\bin\Debug\CapaEntidad.xml
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\obj\Debug\CapaEntidad.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\obj\Debug\CapaEntidad.xml
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\obj\Debug\CapaEntidad.pdb
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\obj\Debug\CapaEntidad.vbproj.AssemblyReference.cache

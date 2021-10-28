@@ -22,112 +22,119 @@ Partial Class FormKardex
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.PKArdexFiltro = New System.Windows.Forms.Panel()
-        Me.PKArdexData = New System.Windows.Forms.Panel()
-        Me.PKArdexBotones = New System.Windows.Forms.Panel()
-        Me.DPTKardexFecha = New System.Windows.Forms.DateTimePicker()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.DPTKardexTo = New System.Windows.Forms.DateTimePicker()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.DPTKardexFrom = New System.Windows.Forms.DateTimePicker()
         Me.TBKardexLote = New System.Windows.Forms.TextBox()
         Me.TBKardexProducto = New System.Windows.Forms.TextBox()
-        Me.TBKardexCodigo = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.BKardexImprimir = New FontAwesome.Sharp.IconButton()
+        Me.PKArdexData = New System.Windows.Forms.Panel()
+        Me.PKArdexBotones = New System.Windows.Forms.Panel()
         Me.BKardexCancelar = New System.Windows.Forms.Button()
-        Me.BKardexGuardar = New System.Windows.Forms.Button()
+        Me.BKardexConsultar = New System.Windows.Forms.Button()
         Me.BKardexExportar = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.ReporteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PKArdexFiltro.SuspendLayout()
         Me.PKArdexData.SuspendLayout()
         Me.PKArdexBotones.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ReporteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PKArdexFiltro
         '
         Me.PKArdexFiltro.BackColor = System.Drawing.Color.ForestGreen
-        Me.PKArdexFiltro.Controls.Add(Me.DPTKardexFecha)
+        Me.PKArdexFiltro.Controls.Add(Me.Label1)
+        Me.PKArdexFiltro.Controls.Add(Me.DPTKardexTo)
+        Me.PKArdexFiltro.Controls.Add(Me.Label5)
+        Me.PKArdexFiltro.Controls.Add(Me.DPTKardexFrom)
         Me.PKArdexFiltro.Controls.Add(Me.TBKardexLote)
         Me.PKArdexFiltro.Controls.Add(Me.TBKardexProducto)
-        Me.PKArdexFiltro.Controls.Add(Me.TBKardexCodigo)
         Me.PKArdexFiltro.Controls.Add(Me.Label4)
         Me.PKArdexFiltro.Controls.Add(Me.Label3)
         Me.PKArdexFiltro.Controls.Add(Me.Label2)
-        Me.PKArdexFiltro.Controls.Add(Me.Label1)
         Me.PKArdexFiltro.Dock = System.Windows.Forms.DockStyle.Top
         Me.PKArdexFiltro.Location = New System.Drawing.Point(0, 0)
         Me.PKArdexFiltro.Name = "PKArdexFiltro"
         Me.PKArdexFiltro.Size = New System.Drawing.Size(800, 99)
         Me.PKArdexFiltro.TabIndex = 0
         '
-        'PKArdexData
+        'Label1
         '
-        Me.PKArdexData.Controls.Add(Me.DataGridView1)
-        Me.PKArdexData.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PKArdexData.Location = New System.Drawing.Point(0, 99)
-        Me.PKArdexData.Name = "PKArdexData"
-        Me.PKArdexData.Size = New System.Drawing.Size(800, 305)
-        Me.PKArdexData.TabIndex = 1
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(571, 28)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(58, 19)
+        Me.Label1.TabIndex = 24
+        Me.Label1.Text = "Desde:"
         '
-        'PKArdexBotones
+        'DPTKardexTo
         '
-        Me.PKArdexBotones.BackColor = System.Drawing.Color.ForestGreen
-        Me.PKArdexBotones.Controls.Add(Me.BKardexImprimir)
-        Me.PKArdexBotones.Controls.Add(Me.BKardexCancelar)
-        Me.PKArdexBotones.Controls.Add(Me.BKardexGuardar)
-        Me.PKArdexBotones.Controls.Add(Me.BKardexExportar)
-        Me.PKArdexBotones.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PKArdexBotones.Location = New System.Drawing.Point(0, 404)
-        Me.PKArdexBotones.Name = "PKArdexBotones"
-        Me.PKArdexBotones.Size = New System.Drawing.Size(800, 62)
-        Me.PKArdexBotones.TabIndex = 2
+        Me.DPTKardexTo.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DPTKardexTo.Location = New System.Drawing.Point(645, 61)
+        Me.DPTKardexTo.Name = "DPTKardexTo"
+        Me.DPTKardexTo.Size = New System.Drawing.Size(93, 20)
+        Me.DPTKardexTo.TabIndex = 23
         '
-        'DPTKardexFecha
+        'Label5
         '
-        Me.DPTKardexFecha.Location = New System.Drawing.Point(525, 12)
-        Me.DPTKardexFecha.Name = "DPTKardexFecha"
-        Me.DPTKardexFecha.Size = New System.Drawing.Size(200, 20)
-        Me.DPTKardexFecha.TabIndex = 21
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!)
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(571, 61)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(56, 19)
+        Me.Label5.TabIndex = 22
+        Me.Label5.Text = "Hasta:"
+        '
+        'DPTKardexFrom
+        '
+        Me.DPTKardexFrom.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DPTKardexFrom.Location = New System.Drawing.Point(645, 28)
+        Me.DPTKardexFrom.Name = "DPTKardexFrom"
+        Me.DPTKardexFrom.Size = New System.Drawing.Size(93, 20)
+        Me.DPTKardexFrom.TabIndex = 21
         '
         'TBKardexLote
         '
-        Me.TBKardexLote.Location = New System.Drawing.Point(626, 60)
+        Me.TBKardexLote.Location = New System.Drawing.Point(98, 43)
         Me.TBKardexLote.Name = "TBKardexLote"
         Me.TBKardexLote.Size = New System.Drawing.Size(99, 20)
         Me.TBKardexLote.TabIndex = 20
         '
         'TBKardexProducto
         '
-        Me.TBKardexProducto.Location = New System.Drawing.Point(226, 60)
+        Me.TBKardexProducto.Location = New System.Drawing.Point(98, 8)
         Me.TBKardexProducto.Name = "TBKardexProducto"
-        Me.TBKardexProducto.Size = New System.Drawing.Size(271, 20)
+        Me.TBKardexProducto.Size = New System.Drawing.Size(378, 20)
         Me.TBKardexProducto.TabIndex = 19
-        '
-        'TBKardexCodigo
-        '
-        Me.TBKardexCodigo.Location = New System.Drawing.Point(226, 12)
-        Me.TBKardexCodigo.Name = "TBKardexCodigo"
-        Me.TBKardexCodigo.Size = New System.Drawing.Size(164, 20)
-        Me.TBKardexCodigo.TabIndex = 18
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!)
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(406, 13)
+        Me.Label4.Location = New System.Drawing.Point(521, 9)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(113, 19)
+        Me.Label4.Size = New System.Drawing.Size(54, 19)
         Me.Label4.TabIndex = 17
-        Me.Label4.Text = "F. Vencimiento"
+        Me.Label4.Text = "Fecha"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(556, 60)
+        Me.Label3.Location = New System.Drawing.Point(48, 44)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(44, 19)
         Me.Label3.TabIndex = 16
@@ -138,34 +145,32 @@ Partial Class FormKardex
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(16, 61)
+        Me.Label2.Location = New System.Drawing.Point(12, 9)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(195, 19)
+        Me.Label2.Size = New System.Drawing.Size(80, 19)
         Me.Label2.TabIndex = 15
-        Me.Label2.Text = "Descripción del Producto:"
+        Me.Label2.Text = "Producto:"
         '
-        'Label1
+        'PKArdexData
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(16, 21)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(157, 19)
-        Me.Label1.TabIndex = 14
-        Me.Label1.Text = "Codigo de Producto:"
+        Me.PKArdexData.Controls.Add(Me.ReportViewer1)
+        Me.PKArdexData.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PKArdexData.Location = New System.Drawing.Point(0, 99)
+        Me.PKArdexData.Name = "PKArdexData"
+        Me.PKArdexData.Size = New System.Drawing.Size(800, 305)
+        Me.PKArdexData.TabIndex = 1
         '
-        'BKardexImprimir
+        'PKArdexBotones
         '
-        Me.BKardexImprimir.IconChar = FontAwesome.Sharp.IconChar.Print
-        Me.BKardexImprimir.IconColor = System.Drawing.Color.Black
-        Me.BKardexImprimir.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.BKardexImprimir.IconSize = 20
-        Me.BKardexImprimir.Location = New System.Drawing.Point(134, 17)
-        Me.BKardexImprimir.Name = "BKardexImprimir"
-        Me.BKardexImprimir.Size = New System.Drawing.Size(39, 32)
-        Me.BKardexImprimir.TabIndex = 7
-        Me.BKardexImprimir.UseVisualStyleBackColor = True
+        Me.PKArdexBotones.BackColor = System.Drawing.Color.ForestGreen
+        Me.PKArdexBotones.Controls.Add(Me.BKardexCancelar)
+        Me.PKArdexBotones.Controls.Add(Me.BKardexConsultar)
+        Me.PKArdexBotones.Controls.Add(Me.BKardexExportar)
+        Me.PKArdexBotones.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PKArdexBotones.Location = New System.Drawing.Point(0, 404)
+        Me.PKArdexBotones.Name = "PKArdexBotones"
+        Me.PKArdexBotones.Size = New System.Drawing.Size(800, 62)
+        Me.PKArdexBotones.TabIndex = 2
         '
         'BKardexCancelar
         '
@@ -176,14 +181,14 @@ Partial Class FormKardex
         Me.BKardexCancelar.Text = "Cancelar"
         Me.BKardexCancelar.UseVisualStyleBackColor = True
         '
-        'BKardexGuardar
+        'BKardexConsultar
         '
-        Me.BKardexGuardar.Location = New System.Drawing.Point(697, 26)
-        Me.BKardexGuardar.Name = "BKardexGuardar"
-        Me.BKardexGuardar.Size = New System.Drawing.Size(75, 23)
-        Me.BKardexGuardar.TabIndex = 5
-        Me.BKardexGuardar.Text = "Consultar"
-        Me.BKardexGuardar.UseVisualStyleBackColor = True
+        Me.BKardexConsultar.Location = New System.Drawing.Point(697, 26)
+        Me.BKardexConsultar.Name = "BKardexConsultar"
+        Me.BKardexConsultar.Size = New System.Drawing.Size(75, 23)
+        Me.BKardexConsultar.TabIndex = 5
+        Me.BKardexConsultar.Text = "Consultar"
+        Me.BKardexConsultar.UseVisualStyleBackColor = True
         '
         'BKardexExportar
         '
@@ -194,15 +199,25 @@ Partial Class FormKardex
         Me.BKardexExportar.Text = "Exportar"
         Me.BKardexExportar.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'ReportViewer1
         '
-        Me.DataGridView1.AllowUserToOrderColumns = True
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(800, 305)
-        Me.DataGridView1.TabIndex = 0
+        Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        ReportDataSource1.Name = "Kardex"
+        ReportDataSource1.Value = Me.ReporteBindingSource
+        ReportDataSource2.Name = "DataKardex"
+        ReportDataSource2.Value = Me.ReporteBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "LaiveKardexApp.Ingresos.rdlc"
+        Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.ServerReport.BearerToken = Nothing
+        Me.ReportViewer1.Size = New System.Drawing.Size(800, 305)
+        Me.ReportViewer1.TabIndex = 0
+        '
+        'ReporteBindingSource
+        '
+        Me.ReporteBindingSource.DataSource = GetType(CapaNegocio.Reporte)
         '
         'FormKardex
         '
@@ -219,7 +234,7 @@ Partial Class FormKardex
         Me.PKArdexFiltro.PerformLayout()
         Me.PKArdexData.ResumeLayout(False)
         Me.PKArdexBotones.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ReporteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -227,17 +242,18 @@ Partial Class FormKardex
     Friend WithEvents PKArdexFiltro As Panel
     Friend WithEvents PKArdexData As Panel
     Friend WithEvents PKArdexBotones As Panel
-    Friend WithEvents DPTKardexFecha As DateTimePicker
+    Friend WithEvents DPTKardexFrom As DateTimePicker
     Friend WithEvents TBKardexLote As TextBox
     Friend WithEvents TBKardexProducto As TextBox
-    Friend WithEvents TBKardexCodigo As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents BKardexImprimir As FontAwesome.Sharp.IconButton
     Friend WithEvents BKardexCancelar As Button
-    Friend WithEvents BKardexGuardar As Button
+    Friend WithEvents BKardexConsultar As Button
     Friend WithEvents BKardexExportar As Button
+    Friend WithEvents ReporteBindingSource As BindingSource
+    Friend WithEvents Label1 As Label
+    Friend WithEvents DPTKardexTo As DateTimePicker
+    Friend WithEvents Label5 As Label
+    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
 End Class

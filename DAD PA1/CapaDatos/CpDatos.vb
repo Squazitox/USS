@@ -86,6 +86,7 @@ Public Class CpDatos
             cmd.Parameters.AddWithValue("@paisOrigen", obj.paisOrigen)
             cmd.Parameters.AddWithValue("@precio_compra", obj.precio_compra)
             cmd.Parameters.AddWithValue("@caducidad", obj.caducidad)
+            cmd.Parameters.AddWithValue("@FechaCreacion", obj.FechaCreacion)
 
             respuesta = cmd.ExecuteNonQuery()
 
@@ -100,5 +101,10 @@ Public Class CpDatos
 
     End Function
 
+    Public MustInherit Class ConnectionSQL
+        Protected Function GetConnection() As SqlConnection
+            Return New SqlConnection("Server=(local); DataBase=BD_EmpreLaive; integrated security=true")
+        End Function
+    End Class
 
 End Class
