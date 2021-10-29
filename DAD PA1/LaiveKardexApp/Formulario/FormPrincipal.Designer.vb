@@ -43,12 +43,12 @@ Partial Class FormPrincipal
         Me.IBAdmin = New FontAwesome.Sharp.IconButton()
         Me.PLogo = New System.Windows.Forms.Panel()
         Me.PBLogo = New System.Windows.Forms.PictureBox()
-        Me.IBVencimiento = New FontAwesome.Sharp.IconButton()
         Me.PTitulo = New System.Windows.Forms.Panel()
         Me.LTitulo = New System.Windows.Forms.Label()
         Me.IPTitulo = New FontAwesome.Sharp.IconPictureBox()
         Me.PNBase = New System.Windows.Forms.Panel()
         Me.PBCentral = New System.Windows.Forms.PictureBox()
+        Me.IBVencimiento = New FontAwesome.Sharp.IconButton()
         Me.PNBorde.SuspendLayout()
         Me.PnIzquierdo.SuspendLayout()
         Me.PMenu.SuspendLayout()
@@ -118,12 +118,13 @@ Partial Class FormPrincipal
         '
         'PSubMenuReportes
         '
+        Me.PSubMenuReportes.Controls.Add(Me.IBVencimiento)
         Me.PSubMenuReportes.Controls.Add(Me.IBResumen)
         Me.PSubMenuReportes.Controls.Add(Me.IBKardex)
         Me.PSubMenuReportes.Dock = System.Windows.Forms.DockStyle.Top
         Me.PSubMenuReportes.Location = New System.Drawing.Point(0, 336)
         Me.PSubMenuReportes.Name = "PSubMenuReportes"
-        Me.PSubMenuReportes.Size = New System.Drawing.Size(260, 84)
+        Me.PSubMenuReportes.Size = New System.Drawing.Size(260, 126)
         Me.PSubMenuReportes.TabIndex = 5
         '
         'IBResumen
@@ -333,21 +334,6 @@ Partial Class FormPrincipal
         Me.PBLogo.TabIndex = 0
         Me.PBLogo.TabStop = False
         '
-        'IBVencimiento
-        '
-        Me.IBVencimiento.Dock = System.Windows.Forms.DockStyle.Top
-        Me.IBVencimiento.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IBVencimiento.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.IBVencimiento.IconColor = System.Drawing.Color.Black
-        Me.IBVencimiento.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IBVencimiento.Location = New System.Drawing.Point(0, 0)
-        Me.IBVencimiento.Name = "IBVencimiento"
-        Me.IBVencimiento.Size = New System.Drawing.Size(75, 23)
-        Me.IBVencimiento.TabIndex = 0
-        Me.IBVencimiento.Text = "Vencimiento"
-        Me.IBVencimiento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IBVencimiento.UseVisualStyleBackColor = True
-        '
         'PTitulo
         '
         Me.PTitulo.Controls.Add(Me.LTitulo)
@@ -401,6 +387,20 @@ Partial Class FormPrincipal
         Me.PBCentral.TabIndex = 0
         Me.PBCentral.TabStop = False
         '
+        'IBVencimiento
+        '
+        Me.IBVencimiento.Dock = System.Windows.Forms.DockStyle.Top
+        Me.IBVencimiento.IconChar = FontAwesome.Sharp.IconChar.FileSignature
+        Me.IBVencimiento.IconColor = System.Drawing.Color.Black
+        Me.IBVencimiento.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IBVencimiento.Location = New System.Drawing.Point(0, 84)
+        Me.IBVencimiento.Name = "IBVencimiento"
+        Me.IBVencimiento.Size = New System.Drawing.Size(260, 42)
+        Me.IBVencimiento.TabIndex = 6
+        Me.IBVencimiento.Text = "Vencimiento"
+        Me.IBVencimiento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.IBVencimiento.UseVisualStyleBackColor = True
+        '
         'FormPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -444,9 +444,9 @@ Partial Class FormPrincipal
     Friend WithEvents PMenu As Panel
     Friend WithEvents PLogo As Panel
     Friend WithEvents PSubMenuReportes As Panel
+    Friend WithEvents IBResumen As FontAwesome.Sharp.IconButton
     Friend WithEvents IBKardex As FontAwesome.Sharp.IconButton
     Friend WithEvents IBReportes As FontAwesome.Sharp.IconButton
-    Friend WithEvents IBVencimiento As FontAwesome.Sharp.IconButton
     Friend WithEvents PSubMenuInventario As Panel
     Friend WithEvents IBSalida As FontAwesome.Sharp.IconButton
     Friend WithEvents IBIngreso As FontAwesome.Sharp.IconButton
@@ -464,7 +464,8 @@ Partial Class FormPrincipal
     Friend WithEvents PBCentral As PictureBox
 
     Private Sub FormPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        HideSubMenu()
+        hideSubMenu()
     End Sub
-    Friend WithEvents IBResumen As FontAwesome.Sharp.IconButton
+
+    Friend WithEvents IBVencimiento As FontAwesome.Sharp.IconButton
 End Class

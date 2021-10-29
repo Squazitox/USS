@@ -31,18 +31,18 @@ Partial Class FormAlerta
         'LAlert
         '
         Me.LAlert.AutoSize = True
-        Me.LAlert.Font = New System.Drawing.Font("Mont Demo Heavy", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LAlert.ForeColor = System.Drawing.Color.Black
+        Me.LAlert.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LAlert.ForeColor = System.Drawing.Color.White
         Me.LAlert.Location = New System.Drawing.Point(83, 9)
         Me.LAlert.Name = "LAlert"
-        Me.LAlert.Size = New System.Drawing.Size(67, 22)
+        Me.LAlert.Size = New System.Drawing.Size(55, 20)
         Me.LAlert.TabIndex = 0
         Me.LAlert.Text = "Alerta!"
         '
         'LTextAlert
         '
-        Me.LTextAlert.Font = New System.Drawing.Font("Mont Demo Heavy", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LTextAlert.ForeColor = System.Drawing.Color.Black
+        Me.LTextAlert.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LTextAlert.ForeColor = System.Drawing.Color.White
         Me.LTextAlert.Location = New System.Drawing.Point(12, 31)
         Me.LTextAlert.Name = "LTextAlert"
         Me.LTextAlert.Size = New System.Drawing.Size(210, 91)
@@ -52,23 +52,25 @@ Partial Class FormAlerta
         '
         'BAlertaSi
         '
-        Me.BAlertaSi.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BAlertaSi.BackColor = System.Drawing.Color.White
+        Me.BAlertaSi.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BAlertaSi.Location = New System.Drawing.Point(147, 120)
         Me.BAlertaSi.Name = "BAlertaSi"
         Me.BAlertaSi.Size = New System.Drawing.Size(75, 23)
         Me.BAlertaSi.TabIndex = 2
         Me.BAlertaSi.Text = "SI"
-        Me.BAlertaSi.UseVisualStyleBackColor = True
+        Me.BAlertaSi.UseVisualStyleBackColor = False
         '
         'BAlertaOmitir
         '
-        Me.BAlertaOmitir.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BAlertaOmitir.BackColor = System.Drawing.Color.White
+        Me.BAlertaOmitir.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BAlertaOmitir.Location = New System.Drawing.Point(12, 120)
         Me.BAlertaOmitir.Name = "BAlertaOmitir"
         Me.BAlertaOmitir.Size = New System.Drawing.Size(75, 23)
         Me.BAlertaOmitir.TabIndex = 3
         Me.BAlertaOmitir.Text = "Omitir"
-        Me.BAlertaOmitir.UseVisualStyleBackColor = True
+        Me.BAlertaOmitir.UseVisualStyleBackColor = False
         '
         'FormAlerta
         '

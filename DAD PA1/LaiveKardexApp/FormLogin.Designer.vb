@@ -58,13 +58,15 @@ Partial Class FormLogin
         '
         'BLogin
         '
+        Me.BLogin.BackColor = System.Drawing.Color.White
+        Me.BLogin.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.BLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BLogin.Location = New System.Drawing.Point(339, 130)
         Me.BLogin.Name = "BLogin"
         Me.BLogin.Size = New System.Drawing.Size(91, 23)
         Me.BLogin.TabIndex = 12
         Me.BLogin.Text = "iniciar Sesión"
-        Me.BLogin.UseVisualStyleBackColor = True
+        Me.BLogin.UseVisualStyleBackColor = False
         '
         'txtpass
         '
@@ -115,13 +117,15 @@ Partial Class FormLogin
         '
         'BLoginCancelar
         '
+        Me.BLoginCancelar.BackColor = System.Drawing.Color.White
+        Me.BLoginCancelar.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.BLoginCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BLoginCancelar.Location = New System.Drawing.Point(203, 130)
         Me.BLoginCancelar.Name = "BLoginCancelar"
         Me.BLoginCancelar.Size = New System.Drawing.Size(91, 23)
         Me.BLoginCancelar.TabIndex = 14
         Me.BLoginCancelar.Text = "Cerrar"
-        Me.BLoginCancelar.UseVisualStyleBackColor = True
+        Me.BLoginCancelar.UseVisualStyleBackColor = False
         '
         'FormLogin
         '
