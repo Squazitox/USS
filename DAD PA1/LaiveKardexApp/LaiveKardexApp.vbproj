@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{916F237A-D8B0-4DEF-9F8D-BBB4558BF66B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>LaiveKardexApp.My.MyApplication</StartupObject>
+    <StartupObject>LaiveKardexApp.FormLogin</StartupObject>
     <RootNamespace>LaiveKardexApp</RootNamespace>
     <AssemblyName>LaiveKardexApp</AssemblyName>
     <FileAlignment>512</FileAlignment>

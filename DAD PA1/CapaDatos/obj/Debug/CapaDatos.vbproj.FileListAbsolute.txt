@@ -57,3 +57,4 @@ D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaDatos\bin\Debug\SqlSe
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaDatos\bin\Debug\SqlServerTypes\x86\msvcr120.dll
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaDatos\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaDatos\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaDatos\obj\Debug\CapaDatos.vbproj.CopyComplete
