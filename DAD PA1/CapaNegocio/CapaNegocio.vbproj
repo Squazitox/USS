@@ -121,7 +121,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ProductosVencimiento.vb" />
     <Compile Include="Reportes.vb" />
+    <Compile Include="ReporVencimiento.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
