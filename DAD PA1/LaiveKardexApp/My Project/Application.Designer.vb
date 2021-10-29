@@ -32,7 +32,11 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
+<<<<<<< HEAD
             Me.MainForm = Global.LaiveKardexApp.FormLogin
+=======
+            Me.MainForm = Global.LaiveKardexApp.FormProVencimiento
+>>>>>>> 5215ed3fc66f188d5688c1bdd8331f14b229faa0
         End Sub
     End Class
 End Namespace

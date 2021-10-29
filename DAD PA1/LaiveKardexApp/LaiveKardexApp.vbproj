@@ -175,6 +175,12 @@
       <DependentUpon>FormLogin.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formulario\FormProVencimiento.Designer.vb">
+      <DependentUpon>FormProVencimiento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\FormProVencimiento.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formulario\FormAdvertencia.Designer.vb">
       <DependentUpon>FormAdvertencia.vb</DependentUpon>
     </Compile>
@@ -287,6 +293,9 @@
     <EmbeddedResource Include="Formulario\FormPrincipal.resx">
       <DependentUpon>FormPrincipal.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FormProVencimiento.resx">
+      <DependentUpon>FormProVencimiento.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formulario\FormResumen.resx">
       <DependentUpon>FormResumen.vb</DependentUpon>
     </EmbeddedResource>
@@ -296,6 +305,7 @@
     <EmbeddedResource Include="Formulario\FormTraspaso.resx">
       <DependentUpon>FormTraspaso.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LocalReport\VencimientoProductos.rdlc" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -309,7 +319,10 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\DataSources\CapaEntidad.CpEntidad.datasource" />
+    <None Include="My Project\DataSources\CapaNegocio.ProductosVencimiento.datasource" />
     <None Include="My Project\DataSources\CapaNegocio.Reporte.datasource" />
+    <None Include="My Project\DataSources\CapaNegocio.ReporVencimiento.datasource" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
