@@ -58,3 +58,8 @@ D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaDatos\bin\Debug\SqlSe
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaDatos\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaDatos\bin\Debug\Microsoft.SqlServer.Types.dll
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaDatos\obj\Debug\CapaDatos.vbproj.CopyComplete
+C:\Users\NB145\Documents\GitHub\USS\DAD PA1\CapaDatos\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\NB145\Documents\GitHub\USS\DAD PA1\CapaDatos\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\NB145\Documents\GitHub\USS\DAD PA1\CapaDatos\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\NB145\Documents\GitHub\USS\DAD PA1\CapaDatos\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\NB145\Documents\GitHub\USS\DAD PA1\CapaDatos\bin\Debug\Microsoft.SqlServer.Types.dll
