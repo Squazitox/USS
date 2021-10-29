@@ -145,4 +145,10 @@ Public Class FormPrincipal
         OpenForm(New FormResumen)
         LTitulo.Text = IBResumen.Text
     End Sub
+
+    Private Sub IBVen_Click(sender As Object, e As EventArgs)
+        ActivateButton(sender, PaletaRGB.Color5)
+        OpenForm(New FormProVencimiento)
+        LTitulo.Text = IBVencimiento.Text
+    End Sub
 End Class

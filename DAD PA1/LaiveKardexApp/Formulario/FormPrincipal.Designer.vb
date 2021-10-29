@@ -43,6 +43,7 @@ Partial Class FormPrincipal
         Me.IBAdmin = New FontAwesome.Sharp.IconButton()
         Me.PLogo = New System.Windows.Forms.Panel()
         Me.PBLogo = New System.Windows.Forms.PictureBox()
+        Me.IBVencimiento = New FontAwesome.Sharp.IconButton()
         Me.PTitulo = New System.Windows.Forms.Panel()
         Me.LTitulo = New System.Windows.Forms.Label()
         Me.IPTitulo = New FontAwesome.Sharp.IconPictureBox()
@@ -75,10 +76,10 @@ Partial Class FormPrincipal
         'LUsuario
         '
         Me.LUsuario.AutoSize = True
-        Me.LUsuario.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LUsuario.Location = New System.Drawing.Point(13, 7)
         Me.LUsuario.Name = "LUsuario"
-        Me.LUsuario.Size = New System.Drawing.Size(0, 15)
+        Me.LUsuario.Size = New System.Drawing.Size(0, 13)
         Me.LUsuario.TabIndex = 1
         '
         'BSalir
@@ -128,7 +129,7 @@ Partial Class FormPrincipal
         'IBResumen
         '
         Me.IBResumen.Dock = System.Windows.Forms.DockStyle.Top
-        Me.IBResumen.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IBResumen.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IBResumen.IconChar = FontAwesome.Sharp.IconChar.FileSignature
         Me.IBResumen.IconColor = System.Drawing.Color.Black
         Me.IBResumen.IconFont = FontAwesome.Sharp.IconFont.[Auto]
@@ -143,7 +144,7 @@ Partial Class FormPrincipal
         'IBKardex
         '
         Me.IBKardex.Dock = System.Windows.Forms.DockStyle.Top
-        Me.IBKardex.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IBKardex.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IBKardex.IconChar = FontAwesome.Sharp.IconChar.FileSignature
         Me.IBKardex.IconColor = System.Drawing.Color.Black
         Me.IBKardex.IconFont = FontAwesome.Sharp.IconFont.[Auto]
@@ -159,7 +160,7 @@ Partial Class FormPrincipal
         '
         Me.IBReportes.BackColor = System.Drawing.Color.ForestGreen
         Me.IBReportes.Dock = System.Windows.Forms.DockStyle.Top
-        Me.IBReportes.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IBReportes.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IBReportes.ForeColor = System.Drawing.Color.White
         Me.IBReportes.IconChar = FontAwesome.Sharp.IconChar.FolderPlus
         Me.IBReportes.IconColor = System.Drawing.Color.Black
@@ -187,7 +188,7 @@ Partial Class FormPrincipal
         '
         Me.IBSalida.Dock = System.Windows.Forms.DockStyle.Top
         Me.IBSalida.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal
-        Me.IBSalida.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IBSalida.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IBSalida.IconChar = FontAwesome.Sharp.IconChar.Dolly
         Me.IBSalida.IconColor = System.Drawing.Color.Black
         Me.IBSalida.IconFont = FontAwesome.Sharp.IconFont.[Auto]
@@ -203,7 +204,7 @@ Partial Class FormPrincipal
         'IBIngreso
         '
         Me.IBIngreso.Dock = System.Windows.Forms.DockStyle.Top
-        Me.IBIngreso.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IBIngreso.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IBIngreso.IconChar = FontAwesome.Sharp.IconChar.Dolly
         Me.IBIngreso.IconColor = System.Drawing.Color.Black
         Me.IBIngreso.IconFont = FontAwesome.Sharp.IconFont.[Auto]
@@ -248,7 +249,7 @@ Partial Class FormPrincipal
         'IBTraspaso
         '
         Me.IBTraspaso.Dock = System.Windows.Forms.DockStyle.Top
-        Me.IBTraspaso.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IBTraspaso.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IBTraspaso.IconChar = FontAwesome.Sharp.IconChar.FileAlt
         Me.IBTraspaso.IconColor = System.Drawing.Color.Black
         Me.IBTraspaso.IconFont = FontAwesome.Sharp.IconFont.[Auto]
@@ -264,7 +265,7 @@ Partial Class FormPrincipal
         'IBAjusteNeg
         '
         Me.IBAjusteNeg.Dock = System.Windows.Forms.DockStyle.Top
-        Me.IBAjusteNeg.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IBAjusteNeg.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IBAjusteNeg.IconChar = FontAwesome.Sharp.IconChar.FileAlt
         Me.IBAjusteNeg.IconColor = System.Drawing.Color.Black
         Me.IBAjusteNeg.IconFont = FontAwesome.Sharp.IconFont.[Auto]
@@ -280,7 +281,7 @@ Partial Class FormPrincipal
         'IBAjustePos
         '
         Me.IBAjustePos.Dock = System.Windows.Forms.DockStyle.Top
-        Me.IBAjustePos.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IBAjustePos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IBAjustePos.IconChar = FontAwesome.Sharp.IconChar.FileAlt
         Me.IBAjustePos.IconColor = System.Drawing.Color.Black
         Me.IBAjustePos.IconFont = FontAwesome.Sharp.IconFont.[Auto]
@@ -297,7 +298,7 @@ Partial Class FormPrincipal
         '
         Me.IBAdmin.BackColor = System.Drawing.Color.ForestGreen
         Me.IBAdmin.Dock = System.Windows.Forms.DockStyle.Top
-        Me.IBAdmin.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IBAdmin.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IBAdmin.ForeColor = System.Drawing.Color.White
         Me.IBAdmin.IconChar = FontAwesome.Sharp.IconChar.Clipboard
         Me.IBAdmin.IconColor = System.Drawing.Color.Black
@@ -332,6 +333,21 @@ Partial Class FormPrincipal
         Me.PBLogo.TabIndex = 0
         Me.PBLogo.TabStop = False
         '
+        'IBVencimiento
+        '
+        Me.IBVencimiento.Dock = System.Windows.Forms.DockStyle.Top
+        Me.IBVencimiento.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IBVencimiento.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.IBVencimiento.IconColor = System.Drawing.Color.Black
+        Me.IBVencimiento.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IBVencimiento.Location = New System.Drawing.Point(0, 0)
+        Me.IBVencimiento.Name = "IBVencimiento"
+        Me.IBVencimiento.Size = New System.Drawing.Size(75, 23)
+        Me.IBVencimiento.TabIndex = 0
+        Me.IBVencimiento.Text = "Vencimiento"
+        Me.IBVencimiento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.IBVencimiento.UseVisualStyleBackColor = True
+        '
         'PTitulo
         '
         Me.PTitulo.Controls.Add(Me.LTitulo)
@@ -345,10 +361,10 @@ Partial Class FormPrincipal
         'LTitulo
         '
         Me.LTitulo.AutoSize = True
-        Me.LTitulo.Font = New System.Drawing.Font("Mont Demo Heavy", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LTitulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LTitulo.Location = New System.Drawing.Point(65, 20)
         Me.LTitulo.Name = "LTitulo"
-        Me.LTitulo.Size = New System.Drawing.Size(0, 15)
+        Me.LTitulo.Size = New System.Drawing.Size(0, 13)
         Me.LTitulo.TabIndex = 1
         '
         'IPTitulo
@@ -428,9 +444,9 @@ Partial Class FormPrincipal
     Friend WithEvents PMenu As Panel
     Friend WithEvents PLogo As Panel
     Friend WithEvents PSubMenuReportes As Panel
-    Friend WithEvents IBResumen As FontAwesome.Sharp.IconButton
     Friend WithEvents IBKardex As FontAwesome.Sharp.IconButton
     Friend WithEvents IBReportes As FontAwesome.Sharp.IconButton
+    Friend WithEvents IBVencimiento As FontAwesome.Sharp.IconButton
     Friend WithEvents PSubMenuInventario As Panel
     Friend WithEvents IBSalida As FontAwesome.Sharp.IconButton
     Friend WithEvents IBIngreso As FontAwesome.Sharp.IconButton
@@ -448,6 +464,7 @@ Partial Class FormPrincipal
     Friend WithEvents PBCentral As PictureBox
 
     Private Sub FormPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        hideSubMenu()
+        HideSubMenu()
     End Sub
+    Friend WithEvents IBResumen As FontAwesome.Sharp.IconButton
 End Class

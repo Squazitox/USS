@@ -25,6 +25,7 @@ Partial Class FormKardex
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Me.ReporteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PKArdexFiltro = New System.Windows.Forms.Panel()
         Me.CBProdKardex = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -39,12 +40,15 @@ Partial Class FormKardex
         Me.BKardexCancelar = New System.Windows.Forms.Button()
         Me.BKardexConsultar = New System.Windows.Forms.Button()
         Me.BKardexExportar = New System.Windows.Forms.Button()
-        Me.ReporteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        CType(Me.ReporteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PKArdexFiltro.SuspendLayout()
         Me.PKArdexData.SuspendLayout()
         Me.PKArdexBotones.SuspendLayout()
-        CType(Me.ReporteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'ReporteBindingSource
+        '
+        Me.ReporteBindingSource.DataSource = GetType(CapaNegocio.Reporte)
         '
         'PKArdexFiltro
         '
@@ -196,10 +200,6 @@ Partial Class FormKardex
         Me.BKardexExportar.Text = "Exportar"
         Me.BKardexExportar.UseVisualStyleBackColor = True
         '
-        'ReporteBindingSource
-        '
-        Me.ReporteBindingSource.DataSource = GetType(CapaNegocio.Reporte)
-        '
         'FormKardex
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -211,11 +211,11 @@ Partial Class FormKardex
         Me.Controls.Add(Me.PKArdexFiltro)
         Me.Name = "FormKardex"
         Me.Text = "FormKardex"
+        CType(Me.ReporteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PKArdexFiltro.ResumeLayout(False)
         Me.PKArdexFiltro.PerformLayout()
         Me.PKArdexData.ResumeLayout(False)
         Me.PKArdexBotones.ResumeLayout(False)
-        CType(Me.ReporteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
