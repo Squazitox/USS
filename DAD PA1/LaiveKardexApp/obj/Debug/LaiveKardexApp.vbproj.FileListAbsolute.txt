@@ -186,3 +186,13 @@ D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\Debug\
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\Debug\Microsoft.ReportViewer.WebForms.dll
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\RdlCompile.cache
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\RdlCompile.compiled
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll

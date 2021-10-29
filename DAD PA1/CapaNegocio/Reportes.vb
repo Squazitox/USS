@@ -16,6 +16,7 @@ Public Class Reporte
             _reportDate = value
         End Set
     End Property
+
     Public Property StartDate As Date
         Get
             Return _startDate
@@ -24,6 +25,7 @@ Public Class Reporte
             _startDate = value
         End Set
     End Property
+
     Public Property EndDAte As Date
         Get
             Return _endDAte
@@ -32,6 +34,7 @@ Public Class Reporte
             _endDAte = value
         End Set
     End Property
+
     Public Property ListBestProducts As List(Of CpEntidad)
         Get
             Return _listBestProducts
@@ -40,25 +43,28 @@ Public Class Reporte
             _listBestProducts = value
         End Set
     End Property
+
     Public Property Total As Double
         Get
             Return _total
         End Get
-        Private Set(value As Double)
+        Set(value As Double)
             _total = value
         End Set
     End Property
     'Constructors
     'Methods
-    Public Sub GetBestSupplyReport(fromDate As DateTime, toDate As DateTime)
+    Public Sub GetBestSupplyReport(DesdeFecha As DateTime, HastaFecha As DateTime, Producto As Object)
         'implement dates
         ReportDate = Date.Now()
-        StartDate = fromDate
-        EndDAte = toDate
-        'Create list best selling products
+        StartDate = DesdeFecha
+        EndDAte = HastaFecha
         ListBestProducts = New List(Of CpEntidad)()
+
         Dim OrdenSuministro = New OrdenSuministro()
-        Dim resultTable = OrdenSuministro.GetBestSupply(fromDate, toDate)
+        Dim resultTable = OrdenSuministro.GetBestSupply(DesdeFecha, HastaFecha, Producto
+                                                        )
+
         For Each row As DataRow In resultTable.Rows
             Dim bestProductModel = New CpEntidad() With
                 {
@@ -73,6 +79,28 @@ Public Class Reporte
         Next
     End Sub
 
+    Public Sub SupplyReport(DesdeFecha As DateTime, HastaFecha As DateTime)
+        'implement dates
+        ReportDate = Date.Now()
+        StartDate = DesdeFecha
+        EndDAte = HastaFecha
+        ListBestProducts = New List(Of CpEntidad)()
 
+        Dim OrdenSuministro = New OrdenSuministro()
+        Dim resultTable = OrdenSuministro.GetBestSupply1(DesdeFecha, HastaFecha)
+
+        For Each row As DataRow In resultTable.Rows
+            Dim bestProductModel = New CpEntidad() With
+                {
+            .idProducto = Convert.ToString(row(0)),
+            .descripcion = Convert.ToString(row(1)),
+            .precio_compra = Convert.ToDouble(row(2)),
+            .cantidad = Convert.ToDouble(row(3)),
+            .Total = Convert.ToDouble(row(4))
+            }
+            ListBestProducts.Add(bestProductModel)
+            Total += Convert.ToDouble(row(4))
+        Next
+    End Sub
 
 End Class

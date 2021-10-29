@@ -1731,12 +1731,55 @@ o.idProducto, p.descripcion, o.precio_compra
 order by CantidadComprada desc
 go
 
+--------------------------------------------------------------------------------------------
+--PROCEDIMIENTO DE REPORTE
+------------------------------------------------------------------------------------------
 
-select * from tbSuministra
-execute IngresosProductos '2022-10-27 00:00:00','2022-10-27 23:00:00'
+CREATE PROCEDURE IngresosProductos 
+	-- Add the parameters for the stored procedure here
+@DesdeFecha Date,
+@HastaFecha Date,
+@producto Varchar(100)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+
+SELECT 
+o.idProducto as codigo,
+p.descripcion as Nombre,
+o.precio_compra as Precio,
+sum(o.cantidad) as CantidadComprada,
+sum(o.precio_compra*o.cantidad) as MontoTotal
+
+FROM
+tbSuministra o inner join tbProducto p on p.idProducto=o.idProducto
+where (p.descripcion = @producto) and (o.fechaCreacion between @DesdeFecha and @HastaFecha) 
+group by 
+o.idProducto, p.descripcion, o.precio_compra
+	
+END
+GO
 
 
-select 
+
+CREATE PROCEDURE sp_ReporteIngreso
+	-- Add the parameters for the stored procedure here
+@DesdeFecha Date,
+@HastaFecha Date
+
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+
+	SELECT 
 o.idProducto as codigo,
 p.descripcion as Nombre,
 o.precio_compra as Precio,
@@ -1746,10 +1789,10 @@ from
 tbSuministra o
 --inner join order_items oi on oi.order_id=o.order_id
 inner join tbProducto p on p.idProducto=o.idProducto
-where o.fechaCreacion between '2021-10-27' and '2021-10-27'
+where o.fechaCreacion between @DesdeFecha and @HastaFecha
 group by 
 o.idProducto, p.descripcion, o.precio_compra
 order by CantidadComprada desc
-
-
-select datename(m,fechaCreacion) from tbSuministra
+	
+END
+GO
