@@ -12,13 +12,13 @@
               <Width>1.49458cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.82833cm</Width>
+              <Width>3.74354cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.89958cm</Width>
+              <Width>2.49729cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.68521cm</Width>
+              <Width>5.27814cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.36229cm</Width>
@@ -41,7 +41,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Nº</Value>
-                              <Style />
+                              <Style>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -53,6 +55,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>MidnightBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -70,8 +73,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Id Suministra</Value>
-                              <Style />
+                              <Value>Id </Value>
+                              <Style>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -83,6 +88,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>MidnightBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -101,7 +107,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Nombre Producto</Value>
-                              <Style />
+                              <Style>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -113,6 +121,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>MidnightBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -130,8 +139,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Fecha Caducidad</Value>
-                              <Style />
+                              <Value>Vencimiento</Value>
+                              <Style>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -143,6 +154,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>MidnightBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -161,7 +173,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Proveedor</Value>
-                              <Style />
+                              <Style>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -173,6 +187,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>MidnightBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -191,7 +206,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>lote</Value>
-                              <Style />
+                              <Style>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -203,6 +220,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>MidnightBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -221,7 +239,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Ubicación</Value>
-                              <Style />
+                              <Style>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -233,6 +253,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>MidnightBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -256,7 +277,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=RowNumber(nothing)</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <Color>DarkBlue</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -286,7 +310,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!IdSuministra.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <Color>DarkBlue</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -316,7 +343,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Nombre_Producto.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <Color>DarkBlue</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -346,7 +376,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Fecha_Caducidad.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <Color>DarkBlue</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -376,7 +409,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Proveedor.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <Color>DarkBlue</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -406,7 +442,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!lote.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <Color>DarkBlue</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -436,7 +475,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Ubicación.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <Color>DarkBlue</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -485,7 +527,7 @@
         <Top>1.19917cm</Top>
         <Left>1.5cm</Left>
         <Height>1.2cm</Height>
-        <Width>17.60311cm</Width>
+        <Width>17.70896cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -545,7 +587,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Reporte de Vencimiento de productos</Value>
+                  <Value>Reporte de Vencimiento de productos Ingresados (Suministros)</Value>
                   <Style>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
