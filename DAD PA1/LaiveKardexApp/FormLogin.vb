@@ -4,9 +4,10 @@ Public Class FormLogin
     'Definir variables globales; estas van despues de la linea de inherits
     Dim ex, ey As Integer
     Dim Arrastre As Boolean
-
     Dim objEntidad As New CpEntidad
     Dim objNegocio As New CpNegocio
+    Public Shared TipoUsuario As String
+    Public Shared Usuario As String
 
     'Estas tres subrutinas permiten desplazar el formulario.
 
@@ -29,14 +30,19 @@ Public Class FormLogin
     Private Sub BLogin_Click(sender As Object, e As EventArgs) Handles BLogin.Click
         Dim dt As New DataTable
 
+
         objEntidad.Usuario = txtusuario.Text
         objEntidad.Password = txtpass.Text
 
         dt = objNegocio.Neg_Login(objEntidad)
         If (dt.Rows.Count > 0) Then
+            Usuario = dt.Rows(0)(1).ToString()
+            TipoUsuario = dt.Rows(0)(2).ToString()
             MessageBox.Show("Bienvenido")
-            FormAlerta.Show()
+            'FormAlerta.Show()
+            FormPrincipal.Show()
             Me.Hide()
+
 
         Else
             MessageBox.Show("Usuario o contraseña errada, por favor verificar")

@@ -75,3 +75,4 @@ C:\Users\NB145\Documents\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\SqlServerTypes
 C:\Users\NB145\Documents\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\SqlServerTypes\x86\msvcr120.dll
 C:\Users\NB145\Documents\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 C:\Users\NB145\Documents\GitHub\USS\DAD PA1\CapaNegocio\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaNegocio\obj\Debug\CapaNegocio.vbproj.CopyComplete

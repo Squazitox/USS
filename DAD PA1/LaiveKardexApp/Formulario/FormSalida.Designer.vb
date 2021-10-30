@@ -45,7 +45,6 @@ Partial Class FormSalida
         Me.PSalidaBotones = New System.Windows.Forms.Panel()
         Me.BSalidaCancelar = New System.Windows.Forms.Button()
         Me.BSalidaGuardar = New System.Windows.Forms.Button()
-        Me.BSalidaExportar = New System.Windows.Forms.Button()
         Me.PSalidaFiltros.SuspendLayout()
         Me.PSalidaData.SuspendLayout()
         CType(Me.DGVSalida, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -151,21 +150,23 @@ Partial Class FormSalida
         '
         'BSalidaEliminar
         '
+        Me.BSalidaEliminar.BackColor = System.Drawing.Color.White
         Me.BSalidaEliminar.Location = New System.Drawing.Point(612, 86)
         Me.BSalidaEliminar.Name = "BSalidaEliminar"
         Me.BSalidaEliminar.Size = New System.Drawing.Size(75, 33)
         Me.BSalidaEliminar.TabIndex = 16
         Me.BSalidaEliminar.Text = "Eliminar"
-        Me.BSalidaEliminar.UseVisualStyleBackColor = True
+        Me.BSalidaEliminar.UseVisualStyleBackColor = False
         '
         'BSalidaIngresar
         '
+        Me.BSalidaIngresar.BackColor = System.Drawing.Color.White
         Me.BSalidaIngresar.Location = New System.Drawing.Point(693, 86)
         Me.BSalidaIngresar.Name = "BSalidaIngresar"
         Me.BSalidaIngresar.Size = New System.Drawing.Size(75, 33)
         Me.BSalidaIngresar.TabIndex = 15
         Me.BSalidaIngresar.Text = "Ingresar"
-        Me.BSalidaIngresar.UseVisualStyleBackColor = True
+        Me.BSalidaIngresar.UseVisualStyleBackColor = False
         '
         'DTPSalida
         '
@@ -262,7 +263,6 @@ Partial Class FormSalida
         Me.PSalidaBotones.BackColor = System.Drawing.Color.ForestGreen
         Me.PSalidaBotones.Controls.Add(Me.BSalidaCancelar)
         Me.PSalidaBotones.Controls.Add(Me.BSalidaGuardar)
-        Me.PSalidaBotones.Controls.Add(Me.BSalidaExportar)
         Me.PSalidaBotones.Dock = System.Windows.Forms.DockStyle.Top
         Me.PSalidaBotones.Location = New System.Drawing.Point(0, 413)
         Me.PSalidaBotones.Name = "PSalidaBotones"
@@ -271,30 +271,23 @@ Partial Class FormSalida
         '
         'BSalidaCancelar
         '
+        Me.BSalidaCancelar.BackColor = System.Drawing.Color.White
         Me.BSalidaCancelar.Location = New System.Drawing.Point(583, 16)
         Me.BSalidaCancelar.Name = "BSalidaCancelar"
         Me.BSalidaCancelar.Size = New System.Drawing.Size(75, 23)
         Me.BSalidaCancelar.TabIndex = 2
         Me.BSalidaCancelar.Text = "Cancelar"
-        Me.BSalidaCancelar.UseVisualStyleBackColor = True
+        Me.BSalidaCancelar.UseVisualStyleBackColor = False
         '
         'BSalidaGuardar
         '
+        Me.BSalidaGuardar.BackColor = System.Drawing.Color.White
         Me.BSalidaGuardar.Location = New System.Drawing.Point(678, 16)
         Me.BSalidaGuardar.Name = "BSalidaGuardar"
         Me.BSalidaGuardar.Size = New System.Drawing.Size(75, 23)
         Me.BSalidaGuardar.TabIndex = 1
         Me.BSalidaGuardar.Text = "Guardar"
-        Me.BSalidaGuardar.UseVisualStyleBackColor = True
-        '
-        'BSalidaExportar
-        '
-        Me.BSalidaExportar.Location = New System.Drawing.Point(12, 16)
-        Me.BSalidaExportar.Name = "BSalidaExportar"
-        Me.BSalidaExportar.Size = New System.Drawing.Size(75, 23)
-        Me.BSalidaExportar.TabIndex = 0
-        Me.BSalidaExportar.Text = "Exportar"
-        Me.BSalidaExportar.UseVisualStyleBackColor = True
+        Me.BSalidaGuardar.UseVisualStyleBackColor = False
         '
         'FormSalida
         '
@@ -329,7 +322,6 @@ Partial Class FormSalida
     Friend WithEvents PSalidaBotones As Panel
     Friend WithEvents BSalidaCancelar As Button
     Friend WithEvents BSalidaGuardar As Button
-    Friend WithEvents BSalidaExportar As Button
     Friend WithEvents BSalidaEliminar As Button
     Friend WithEvents CBSalidaUbicacion As ComboBox
     Friend WithEvents CBSalidaCodigo As ComboBox

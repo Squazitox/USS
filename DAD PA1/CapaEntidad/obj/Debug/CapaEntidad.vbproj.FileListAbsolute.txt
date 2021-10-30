@@ -48,5 +48,4 @@ C:\Users\NB145\Documents\GitHub\USS\DAD PA1\CapaEntidad\bin\Debug\SqlServerTypes
 C:\Users\NB145\Documents\GitHub\USS\DAD PA1\CapaEntidad\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 C:\Users\NB145\Documents\GitHub\USS\DAD PA1\CapaEntidad\bin\Debug\Microsoft.SqlServer.Types.dll
 C:\Users\NB145\Documents\GitHub\USS\DAD PA1\CapaEntidad\obj\Debug\CapaEntidad.vbproj.CopyComplete
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\obj\Debug\CapaEntidad.vbproj.CopyComplete
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\CapaEntidad\obj\Debug\CapaEntidad.vbproj.AssemblyReference.cache

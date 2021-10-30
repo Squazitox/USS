@@ -81,7 +81,7 @@ Public Class FormSalida
         DGVSalida.Rows.Clear()
 
     End Sub
-    Private Sub BIngresoExportar_Click(sender As Object, e As EventArgs) Handles BSalidaExportar.Click
+    Private Sub BIngresoExportar_Click(sender As Object, e As EventArgs) 
         ExportarExcel(DGVSalida)
     End Sub
 

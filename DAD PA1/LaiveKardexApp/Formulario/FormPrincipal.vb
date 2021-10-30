@@ -9,6 +9,7 @@ Public Class FormPrincipal
         PSubMenuAdmin.Visible = False
         PSubMenuInventario.Visible = False
         PSubMenuReportes.Visible = False
+        IBResumen.Visible = False
 
     End Sub
 
