@@ -1,4 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿Imports System.Windows.Forms
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormPrincipal
     Inherits System.Windows.Forms.Form
 
@@ -464,7 +466,32 @@ Partial Class FormPrincipal
     Friend WithEvents PBCentral As PictureBox
 
     Private Sub FormPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        hideSubMenu()
+        HideSubMenu()
+
+        'soloReportes
+        If FormLogin.TipoUsuario = "USR0" Then
+            IBAdmin.Visible = False
+            IBInventario.Visible = False
+            IBReportes.Visible = True
+            HideSubMenu()
+            LUsuario.Text = FormLogin.Usuario & " - ROL: GERENCIA"
+            'total
+        ElseIf FormLogin.TipoUsuario = "USR1" Then
+            IBAdmin.Visible = True
+            IBInventario.Visible = True
+            IBReportes.Visible = True
+            HideSubMenu()
+            LUsuario.Text = FormLogin.Usuario & " - ROL: ADMINISTRATIVO"
+            'inventario
+        ElseIf FormLogin.TipoUsuario = "USR2" Then
+            IBAdmin.Visible = False
+            IBInventario.Visible = True
+            IBReportes.Visible = False
+            HideSubMenu()
+            LUsuario.Text = FormLogin.Usuario & " - ROL: OPERATIVO"
+
+        End If
+
     End Sub
 
     Friend WithEvents IBVencimiento As FontAwesome.Sharp.IconButton

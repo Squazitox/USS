@@ -50,7 +50,10 @@ Partial Class FormIngreso
         Me.PIngresoBotones = New System.Windows.Forms.Panel()
         Me.BIngresoCancelar = New System.Windows.Forms.Button()
         Me.BIngresoGuardar = New System.Windows.Forms.Button()
+<<<<<<< HEAD
         Me.BIngresoExportar = New System.Windows.Forms.Button()
+=======
+>>>>>>> f1cd03b55a843a959bc617aa314feee0b2600a22
         Me.PIngresoFiltros.SuspendLayout()
         Me.PIngresoData.SuspendLayout()
         CType(Me.dgproductos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -167,21 +170,23 @@ Partial Class FormIngreso
         '
         'BIngresoEliminar
         '
+        Me.BIngresoEliminar.BackColor = System.Drawing.Color.White
         Me.BIngresoEliminar.Location = New System.Drawing.Point(713, 49)
         Me.BIngresoEliminar.Name = "BIngresoEliminar"
         Me.BIngresoEliminar.Size = New System.Drawing.Size(75, 33)
         Me.BIngresoEliminar.TabIndex = 16
         Me.BIngresoEliminar.Text = "Eliminar"
-        Me.BIngresoEliminar.UseVisualStyleBackColor = True
+        Me.BIngresoEliminar.UseVisualStyleBackColor = False
         '
         'BIngresoIngresar
         '
+        Me.BIngresoIngresar.BackColor = System.Drawing.Color.White
         Me.BIngresoIngresar.Location = New System.Drawing.Point(713, 102)
         Me.BIngresoIngresar.Name = "BIngresoIngresar"
         Me.BIngresoIngresar.Size = New System.Drawing.Size(75, 33)
         Me.BIngresoIngresar.TabIndex = 15
         Me.BIngresoIngresar.Text = "Ingresar"
-        Me.BIngresoIngresar.UseVisualStyleBackColor = True
+        Me.BIngresoIngresar.UseVisualStyleBackColor = False
         '
         'cbpais
         '
@@ -325,7 +330,6 @@ Partial Class FormIngreso
         Me.PIngresoBotones.BackColor = System.Drawing.Color.ForestGreen
         Me.PIngresoBotones.Controls.Add(Me.BIngresoCancelar)
         Me.PIngresoBotones.Controls.Add(Me.BIngresoGuardar)
-        Me.PIngresoBotones.Controls.Add(Me.BIngresoExportar)
         Me.PIngresoBotones.Dock = System.Windows.Forms.DockStyle.Top
         Me.PIngresoBotones.Location = New System.Drawing.Point(0, 431)
         Me.PIngresoBotones.Name = "PIngresoBotones"
@@ -334,20 +338,23 @@ Partial Class FormIngreso
         '
         'BIngresoCancelar
         '
+        Me.BIngresoCancelar.BackColor = System.Drawing.Color.White
         Me.BIngresoCancelar.Location = New System.Drawing.Point(583, 16)
         Me.BIngresoCancelar.Name = "BIngresoCancelar"
         Me.BIngresoCancelar.Size = New System.Drawing.Size(75, 23)
         Me.BIngresoCancelar.TabIndex = 2
         Me.BIngresoCancelar.Text = "Cancelar"
-        Me.BIngresoCancelar.UseVisualStyleBackColor = True
+        Me.BIngresoCancelar.UseVisualStyleBackColor = False
         '
         'BIngresoGuardar
         '
+        Me.BIngresoGuardar.BackColor = System.Drawing.Color.White
         Me.BIngresoGuardar.Location = New System.Drawing.Point(678, 16)
         Me.BIngresoGuardar.Name = "BIngresoGuardar"
         Me.BIngresoGuardar.Size = New System.Drawing.Size(75, 23)
         Me.BIngresoGuardar.TabIndex = 1
         Me.BIngresoGuardar.Text = "Guardar"
+<<<<<<< HEAD
         Me.BIngresoGuardar.UseVisualStyleBackColor = True
         '
         'BIngresoExportar
@@ -358,6 +365,9 @@ Partial Class FormIngreso
         Me.BIngresoExportar.TabIndex = 0
         Me.BIngresoExportar.Text = "Exportar"
         Me.BIngresoExportar.UseVisualStyleBackColor = True
+=======
+        Me.BIngresoGuardar.UseVisualStyleBackColor = False
+>>>>>>> f1cd03b55a843a959bc617aa314feee0b2600a22
         '
         'FormIngreso
         '
@@ -397,7 +407,6 @@ Partial Class FormIngreso
     Friend WithEvents PIngresoBotones As Panel
     Friend WithEvents BIngresoCancelar As Button
     Friend WithEvents BIngresoGuardar As Button
-    Friend WithEvents BIngresoExportar As Button
     Friend WithEvents BIngresoEliminar As Button
     Friend WithEvents TBIngresoValor As TextBox
     Friend WithEvents Label8 As Label

@@ -1764,7 +1764,9 @@ o.idProducto, p.descripcion, o.precio_compra
 END
 GO
 
-
+----------------------------------------------------------------------
+--PROCEDIMIENTO PARA REPORTE DE INGRESO - MANUELVM
+---------------------------------------------------------------------
 
 CREATE PROCEDURE sp_ReporteIngreso
 	-- Add the parameters for the stored procedure here
@@ -1794,5 +1796,67 @@ group by
 o.idProducto, p.descripcion, o.precio_compra
 order by CantidadComprada desc
 	
+END
+GO
+
+----------------------------------------------------------------------
+--PROCEDIMIENTO PARA CREAR AREA - MANUELVM
+---------------------------------------------------------------------
+CREATE PROCEDURE SP_RegistrarArea
+	-- Add the parameters for the stored procedure here
+@CodArea varchar(10),
+@area varchar(25)
+
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	DECLARE @totalReg int
+	DECLARE @enlazado varchar(10)
+	SELECT @totalReg = COUNT(*) FROM tbArea
+	SET @enlazado = @CodArea +CAST(@totalReg AS varchar(6))
+	
+
+	IF EXISTS(SELECT *FROM tbArea WHERE tbArea.idArea= @enlazado)
+	BEGIN
+		PRINT 'Id ya registrado por favor haga modificacion en letras...';
+	END
+	ELSE
+	BEGIN
+		INSERT INTO  tbArea VALUES(@enlazado,@area)
+		PRINT 'Los datos  fueron registrados  en la tabla [PAIS] con exito...!'
+	END
+
+END
+GO
+
+execute SP_RegistrarArea PL,"Planta Carnicos"
+execute SP_RegistrarArea PL,"Planta UHT"
+execute SP_RegistrarArea PL,"Planta Manjar"
+execute SP_RegistrarArea PL,"Planta Quesos"
+execute SP_RegistrarArea PL,"Planta Mantequilla"
+execute SP_RegistrarArea PL,"Planta Yogurt"
+
+-- =============================================
+-- Author:		Manuel VM
+-- Create date: 30.10
+-- Description:	ListaLote
+-- =============================================
+CREATE PROCEDURE sp_ListarLote 
+	-- Add the parameters for the stored procedure here
+@idproducto varchar(10)
+
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	select lote from tbSuministra
+	WHERE tbSuministra.idProducto = @idproducto
 END
 GO

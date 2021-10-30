@@ -9,6 +9,7 @@ Public Class FormPrincipal
         PSubMenuAdmin.Visible = False
         PSubMenuInventario.Visible = False
         PSubMenuReportes.Visible = False
+        IBResumen.Visible = False
 
     End Sub
 
@@ -146,6 +147,14 @@ Public Class FormPrincipal
         LTitulo.Text = IBResumen.Text
     End Sub
 
+<<<<<<< HEAD
+=======
+    'Private Sub IBVen_Click(sender As Object, e As EventArgs)
+    '    ActivateButton(sender, PaletaRGB.Color5)
+    '    OpenForm(New FormProVencimiento)
+    '    LTitulo.Text = IBVencimiento.Text
+    'End Sub
+>>>>>>> f1cd03b55a843a959bc617aa314feee0b2600a22
 
     Private Sub IBVencimiento_Click(sender As Object, e As EventArgs) Handles IBVencimiento.Click
         ActivateButton(sender, PaletaRGB.Color5)

@@ -23,6 +23,7 @@ Partial Class FormSalida
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.PSalidaFiltros = New System.Windows.Forms.Panel()
+<<<<<<< HEAD
         Me.DTCreacion = New System.Windows.Forms.DateTimePicker()
         Me.TBSalidaLote = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -30,6 +31,9 @@ Partial Class FormSalida
         Me.Label6 = New System.Windows.Forms.Label()
         Me.CBSalidaTrabajador = New System.Windows.Forms.ComboBox()
         Me.CBSalidaUbicacion = New System.Windows.Forms.ComboBox()
+=======
+        Me.CBSalidaProveedor = New System.Windows.Forms.ComboBox()
+>>>>>>> f1cd03b55a843a959bc617aa314feee0b2600a22
         Me.CBSalidaCodigo = New System.Windows.Forms.ComboBox()
         Me.BSalidaEliminar = New System.Windows.Forms.Button()
         Me.BSalidaIngresar = New System.Windows.Forms.Button()
@@ -45,7 +49,10 @@ Partial Class FormSalida
         Me.PSalidaBotones = New System.Windows.Forms.Panel()
         Me.BSalidaCancelar = New System.Windows.Forms.Button()
         Me.BSalidaGuardar = New System.Windows.Forms.Button()
+<<<<<<< HEAD
         Me.BSalidaExportar = New System.Windows.Forms.Button()
+=======
+>>>>>>> f1cd03b55a843a959bc617aa314feee0b2600a22
         Me.PSalidaFiltros.SuspendLayout()
         Me.PSalidaData.SuspendLayout()
         CType(Me.DGVSalida, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -78,6 +85,7 @@ Partial Class FormSalida
         Me.PSalidaFiltros.Size = New System.Drawing.Size(800, 128)
         Me.PSalidaFiltros.TabIndex = 0
         '
+<<<<<<< HEAD
         'DTCreacion
         '
         Me.DTCreacion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
@@ -140,32 +148,55 @@ Partial Class FormSalida
         Me.CBSalidaUbicacion.Name = "CBSalidaUbicacion"
         Me.CBSalidaUbicacion.Size = New System.Drawing.Size(242, 21)
         Me.CBSalidaUbicacion.TabIndex = 17
+=======
+        'CBSalidaProveedor
+        '
+        Me.CBSalidaProveedor.FormattingEnabled = True
+        Me.CBSalidaProveedor.Location = New System.Drawing.Point(520, 15)
+        Me.CBSalidaProveedor.Name = "CBSalidaProveedor"
+        Me.CBSalidaProveedor.Size = New System.Drawing.Size(242, 21)
+        Me.CBSalidaProveedor.TabIndex = 17
+>>>>>>> f1cd03b55a843a959bc617aa314feee0b2600a22
         '
         'CBSalidaCodigo
         '
         Me.CBSalidaCodigo.FormattingEnabled = True
         Me.CBSalidaCodigo.Location = New System.Drawing.Point(175, 14)
         Me.CBSalidaCodigo.Name = "CBSalidaCodigo"
+<<<<<<< HEAD
         Me.CBSalidaCodigo.Size = New System.Drawing.Size(215, 21)
+=======
+        Me.CBSalidaCodigo.Size = New System.Drawing.Size(164, 21)
+>>>>>>> f1cd03b55a843a959bc617aa314feee0b2600a22
         Me.CBSalidaCodigo.TabIndex = 1
         '
         'BSalidaEliminar
         '
+<<<<<<< HEAD
         Me.BSalidaEliminar.Location = New System.Drawing.Point(612, 86)
+=======
+        Me.BSalidaEliminar.BackColor = System.Drawing.Color.White
+        Me.BSalidaEliminar.Location = New System.Drawing.Point(597, 68)
+>>>>>>> f1cd03b55a843a959bc617aa314feee0b2600a22
         Me.BSalidaEliminar.Name = "BSalidaEliminar"
         Me.BSalidaEliminar.Size = New System.Drawing.Size(75, 33)
         Me.BSalidaEliminar.TabIndex = 16
         Me.BSalidaEliminar.Text = "Eliminar"
-        Me.BSalidaEliminar.UseVisualStyleBackColor = True
+        Me.BSalidaEliminar.UseVisualStyleBackColor = False
         '
         'BSalidaIngresar
         '
+<<<<<<< HEAD
         Me.BSalidaIngresar.Location = New System.Drawing.Point(693, 86)
+=======
+        Me.BSalidaIngresar.BackColor = System.Drawing.Color.White
+        Me.BSalidaIngresar.Location = New System.Drawing.Point(678, 68)
+>>>>>>> f1cd03b55a843a959bc617aa314feee0b2600a22
         Me.BSalidaIngresar.Name = "BSalidaIngresar"
         Me.BSalidaIngresar.Size = New System.Drawing.Size(75, 33)
         Me.BSalidaIngresar.TabIndex = 15
         Me.BSalidaIngresar.Text = "Ingresar"
-        Me.BSalidaIngresar.UseVisualStyleBackColor = True
+        Me.BSalidaIngresar.UseVisualStyleBackColor = False
         '
         'DTPSalida
         '
@@ -190,7 +221,11 @@ Partial Class FormSalida
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(396, 15)
         Me.Label5.Name = "Label5"
+<<<<<<< HEAD
         Me.Label5.Size = New System.Drawing.Size(70, 17)
+=======
+        Me.Label5.Size = New System.Drawing.Size(104, 17)
+>>>>>>> f1cd03b55a843a959bc617aa314feee0b2600a22
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Ubicacion"
         '
@@ -212,7 +247,11 @@ Partial Class FormSalida
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(396, 45)
         Me.Label3.Name = "Label3"
+<<<<<<< HEAD
         Me.Label3.Size = New System.Drawing.Size(124, 17)
+=======
+        Me.Label3.Size = New System.Drawing.Size(40, 17)
+>>>>>>> f1cd03b55a843a959bc617aa314feee0b2600a22
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Planta de Destino:"
         '
@@ -262,7 +301,6 @@ Partial Class FormSalida
         Me.PSalidaBotones.BackColor = System.Drawing.Color.ForestGreen
         Me.PSalidaBotones.Controls.Add(Me.BSalidaCancelar)
         Me.PSalidaBotones.Controls.Add(Me.BSalidaGuardar)
-        Me.PSalidaBotones.Controls.Add(Me.BSalidaExportar)
         Me.PSalidaBotones.Dock = System.Windows.Forms.DockStyle.Top
         Me.PSalidaBotones.Location = New System.Drawing.Point(0, 413)
         Me.PSalidaBotones.Name = "PSalidaBotones"
@@ -271,20 +309,23 @@ Partial Class FormSalida
         '
         'BSalidaCancelar
         '
+        Me.BSalidaCancelar.BackColor = System.Drawing.Color.White
         Me.BSalidaCancelar.Location = New System.Drawing.Point(583, 16)
         Me.BSalidaCancelar.Name = "BSalidaCancelar"
         Me.BSalidaCancelar.Size = New System.Drawing.Size(75, 23)
         Me.BSalidaCancelar.TabIndex = 2
         Me.BSalidaCancelar.Text = "Cancelar"
-        Me.BSalidaCancelar.UseVisualStyleBackColor = True
+        Me.BSalidaCancelar.UseVisualStyleBackColor = False
         '
         'BSalidaGuardar
         '
+        Me.BSalidaGuardar.BackColor = System.Drawing.Color.White
         Me.BSalidaGuardar.Location = New System.Drawing.Point(678, 16)
         Me.BSalidaGuardar.Name = "BSalidaGuardar"
         Me.BSalidaGuardar.Size = New System.Drawing.Size(75, 23)
         Me.BSalidaGuardar.TabIndex = 1
         Me.BSalidaGuardar.Text = "Guardar"
+<<<<<<< HEAD
         Me.BSalidaGuardar.UseVisualStyleBackColor = True
         '
         'BSalidaExportar
@@ -295,6 +336,9 @@ Partial Class FormSalida
         Me.BSalidaExportar.TabIndex = 0
         Me.BSalidaExportar.Text = "Exportar"
         Me.BSalidaExportar.UseVisualStyleBackColor = True
+=======
+        Me.BSalidaGuardar.UseVisualStyleBackColor = False
+>>>>>>> f1cd03b55a843a959bc617aa314feee0b2600a22
         '
         'FormSalida
         '
@@ -329,7 +373,6 @@ Partial Class FormSalida
     Friend WithEvents PSalidaBotones As Panel
     Friend WithEvents BSalidaCancelar As Button
     Friend WithEvents BSalidaGuardar As Button
-    Friend WithEvents BSalidaExportar As Button
     Friend WithEvents BSalidaEliminar As Button
     Friend WithEvents CBSalidaUbicacion As ComboBox
     Friend WithEvents CBSalidaCodigo As ComboBox
