@@ -4,6 +4,8 @@
     Public Property Usuario As String
 	Public Property Password As String
 
+	Public Property TipoUsuario As String
+
 	' suministra
 	Public Property idSuministra As String
 	Public Property idProveedor As String

@@ -92,7 +92,7 @@ Public Class FormIngreso
     Private Sub BIngresoCancelar_Click(sender As Object, e As EventArgs) Handles BIngresoCancelar.Click
         dgproductos.Rows.Clear()
     End Sub
-    Private Sub BIngresoExportar_Click(sender As Object, e As EventArgs) Handles BIngresoExportar.Click
+    Private Sub BIngresoExportar_Click(sender As Object, e As EventArgs) 
         ExportarExcel(dgproductos)
     End Sub
 

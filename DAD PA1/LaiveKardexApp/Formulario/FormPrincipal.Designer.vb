@@ -1,4 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿Imports System.Windows.Forms
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormPrincipal
     Inherits System.Windows.Forms.Form
 
@@ -29,6 +31,7 @@ Partial Class FormPrincipal
         Me.PnIzquierdo = New System.Windows.Forms.Panel()
         Me.PMenu = New System.Windows.Forms.Panel()
         Me.PSubMenuReportes = New System.Windows.Forms.Panel()
+        Me.IBVencimiento = New FontAwesome.Sharp.IconButton()
         Me.IBResumen = New FontAwesome.Sharp.IconButton()
         Me.IBKardex = New FontAwesome.Sharp.IconButton()
         Me.IBReportes = New FontAwesome.Sharp.IconButton()
@@ -48,7 +51,6 @@ Partial Class FormPrincipal
         Me.IPTitulo = New FontAwesome.Sharp.IconPictureBox()
         Me.PNBase = New System.Windows.Forms.Panel()
         Me.PBCentral = New System.Windows.Forms.PictureBox()
-        Me.IBVencimiento = New FontAwesome.Sharp.IconButton()
         Me.PNBorde.SuspendLayout()
         Me.PnIzquierdo.SuspendLayout()
         Me.PMenu.SuspendLayout()
@@ -126,6 +128,20 @@ Partial Class FormPrincipal
         Me.PSubMenuReportes.Name = "PSubMenuReportes"
         Me.PSubMenuReportes.Size = New System.Drawing.Size(260, 126)
         Me.PSubMenuReportes.TabIndex = 5
+        '
+        'IBVencimiento
+        '
+        Me.IBVencimiento.Dock = System.Windows.Forms.DockStyle.Top
+        Me.IBVencimiento.IconChar = FontAwesome.Sharp.IconChar.FileSignature
+        Me.IBVencimiento.IconColor = System.Drawing.Color.Black
+        Me.IBVencimiento.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IBVencimiento.Location = New System.Drawing.Point(0, 84)
+        Me.IBVencimiento.Name = "IBVencimiento"
+        Me.IBVencimiento.Size = New System.Drawing.Size(260, 42)
+        Me.IBVencimiento.TabIndex = 6
+        Me.IBVencimiento.Text = "Vencimiento"
+        Me.IBVencimiento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.IBVencimiento.UseVisualStyleBackColor = True
         '
         'IBResumen
         '
@@ -387,20 +403,6 @@ Partial Class FormPrincipal
         Me.PBCentral.TabIndex = 0
         Me.PBCentral.TabStop = False
         '
-        'IBVencimiento
-        '
-        Me.IBVencimiento.Dock = System.Windows.Forms.DockStyle.Top
-        Me.IBVencimiento.IconChar = FontAwesome.Sharp.IconChar.FileSignature
-        Me.IBVencimiento.IconColor = System.Drawing.Color.Black
-        Me.IBVencimiento.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IBVencimiento.Location = New System.Drawing.Point(0, 84)
-        Me.IBVencimiento.Name = "IBVencimiento"
-        Me.IBVencimiento.Size = New System.Drawing.Size(260, 42)
-        Me.IBVencimiento.TabIndex = 6
-        Me.IBVencimiento.Text = "Vencimiento"
-        Me.IBVencimiento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IBVencimiento.UseVisualStyleBackColor = True
-        '
         'FormPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -464,7 +466,32 @@ Partial Class FormPrincipal
     Friend WithEvents PBCentral As PictureBox
 
     Private Sub FormPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        hideSubMenu()
+        HideSubMenu()
+
+        'soloReportes
+        If FormLogin.TipoUsuario = "USR0" Then
+            IBAdmin.Visible = False
+            IBInventario.Visible = False
+            IBReportes.Visible = True
+            HideSubMenu()
+            LUsuario.Text = FormLogin.Usuario & " - ROL: GERENCIA"
+            'total
+        ElseIf FormLogin.TipoUsuario = "USR1" Then
+            IBAdmin.Visible = True
+            IBInventario.Visible = True
+            IBReportes.Visible = True
+            HideSubMenu()
+            LUsuario.Text = FormLogin.Usuario & " - ROL: ADMINISTRATIVO"
+            'inventario
+        ElseIf FormLogin.TipoUsuario = "USR2" Then
+            IBAdmin.Visible = False
+            IBInventario.Visible = True
+            IBReportes.Visible = False
+            HideSubMenu()
+            LUsuario.Text = FormLogin.Usuario & " - ROL: OPERATIVO"
+
+        End If
+
     End Sub
 
     Friend WithEvents IBVencimiento As FontAwesome.Sharp.IconButton
