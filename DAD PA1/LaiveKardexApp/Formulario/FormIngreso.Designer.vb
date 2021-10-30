@@ -25,7 +25,7 @@ Partial Class FormIngreso
         Me.PIngresoFiltros = New System.Windows.Forms.Panel()
         Me.DTCreacion = New System.Windows.Forms.DateTimePicker()
         Me.cbubicacion = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BINuevoPro = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.cbproveedor = New System.Windows.Forms.ComboBox()
         Me.cbcodproducto = New System.Windows.Forms.ComboBox()
@@ -61,7 +61,7 @@ Partial Class FormIngreso
         Me.PIngresoFiltros.BackColor = System.Drawing.Color.ForestGreen
         Me.PIngresoFiltros.Controls.Add(Me.DTCreacion)
         Me.PIngresoFiltros.Controls.Add(Me.cbubicacion)
-        Me.PIngresoFiltros.Controls.Add(Me.Button1)
+        Me.PIngresoFiltros.Controls.Add(Me.BINuevoPro)
         Me.PIngresoFiltros.Controls.Add(Me.Label10)
         Me.PIngresoFiltros.Controls.Add(Me.cbproveedor)
         Me.PIngresoFiltros.Controls.Add(Me.cbcodproducto)
@@ -107,15 +107,15 @@ Partial Class FormIngreso
         Me.cbubicacion.Size = New System.Drawing.Size(153, 21)
         Me.cbubicacion.TabIndex = 24
         '
-        'Button1
+        'BINuevoPro
         '
-        Me.Button1.BackColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(117, 33)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(107, 23)
-        Me.Button1.TabIndex = 23
-        Me.Button1.Text = "Nuevo Producto"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.BINuevoPro.BackColor = System.Drawing.Color.White
+        Me.BINuevoPro.Location = New System.Drawing.Point(117, 33)
+        Me.BINuevoPro.Name = "BINuevoPro"
+        Me.BINuevoPro.Size = New System.Drawing.Size(107, 23)
+        Me.BINuevoPro.TabIndex = 23
+        Me.BINuevoPro.Text = "Nuevo Producto"
+        Me.BINuevoPro.UseVisualStyleBackColor = False
         '
         'Label10
         '
@@ -315,6 +315,7 @@ Partial Class FormIngreso
         'dgproductos
         '
         Me.dgproductos.AllowUserToAddRows = False
+        Me.dgproductos.AllowUserToOrderColumns = True
         Me.dgproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgproductos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgproductos.Location = New System.Drawing.Point(0, 0)
@@ -397,7 +398,7 @@ Partial Class FormIngreso
     Friend WithEvents cbproveedor As ComboBox
     Friend WithEvents cbcodproducto As ComboBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BINuevoPro As Button
     Friend WithEvents cbubicacion As ComboBox
     Friend WithEvents DTCreacion As DateTimePicker
 End Class
