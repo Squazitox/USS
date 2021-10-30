@@ -8,24 +8,11 @@ Public Class ProxVencerDAO
             connection.Open()
             Using command = New SqlCommand()
                 command.Connection = connection
-                command.CommandText = "select 
-                                        s.IdSuministra,
-                                        p.descripcion as[Nombre_Producto],
-                                        s.caducidad as[Fecha_Caducidad],
-                                        pr.razonSocial as[Proveedor],
-                                        s.lote,
-                                        u.seccion as[Ubicación]
-                                        from 
-                                        tbSuministra s 
-                                        inner join tbProducto p on p.idProducto = s.idProducto 
-                                        inner join tbProveedor pr on pr.idProveedor = s.idProveedor
-                                        inner join tbUbicacion u on u.idUbicacion = s.idUbicacion
-                                        where s.caducidad between @starDate and @endDate
-                                        order by s.caducidad desc "
+                command.CommandText = "SP_ProductoVencimientoSuministro"
 
-                command.Parameters.Add("@starDate", SqlDbType.Date).Value = fromDate
-                command.Parameters.Add("@endDate", SqlDbType.Date).Value = toDate
-                command.CommandType = CommandType.Text
+                command.Parameters.AddWithValue("@starDate", fromDate)
+                command.Parameters.AddWithValue("@endDate", toDate)
+                command.CommandType = CommandType.StoredProcedure
                 Dim reader = command.ExecuteReader()
                 Dim table = New DataTable()
                 table.Load(reader)

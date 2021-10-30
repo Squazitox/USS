@@ -16,8 +16,6 @@
 	Public Property precio_compra As Double
 	Public Property caducidad As DateTime
 
-
-
 	'Referencias para el reporte
 	Public Property descripcion As String
 	Public Property Total As Double

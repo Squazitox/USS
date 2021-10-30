@@ -66,8 +66,40 @@ Public Class CpDatos
         Return dt
 
     End Function
+    Public Function ListarTrabajador() As DataTable
+        Dim cmd As New SqlCommand("[sp_ListarTrabajador]", conexion)
+        conexion.Open()
+        cmd.CommandType = CommandType.StoredProcedure
+        Dim dt As New DataTable
+        Dim da As New SqlDataAdapter(cmd)
+        da.Fill(dt)
+        conexion.Close()
+        Return dt
 
+    End Function
 
+    Public Function ListarArea() As DataTable
+        Dim cmd As New SqlCommand("[sp_ListarArea]", conexion)
+        conexion.Open()
+        cmd.CommandType = CommandType.StoredProcedure
+        Dim dt As New DataTable
+        Dim da As New SqlDataAdapter(cmd)
+        da.Fill(dt)
+        conexion.Close()
+        Return dt
+
+    End Function
+    Public Function ListarProductosSuministro() As DataTable
+        Dim cmd As New SqlCommand("[sp_ListarProductosSuministro]", conexion)
+        conexion.Open()
+        cmd.CommandType = CommandType.StoredProcedure
+        Dim dt As New DataTable
+        Dim da As New SqlDataAdapter(cmd)
+        da.Fill(dt)
+        conexion.Close()
+        Return dt
+
+    End Function
     Public Function registrarSuministra(obj As CpEntidad) As Integer
 
         Dim cmd As New SqlCommand("[SP_RegistraSuministra]", conexion)
@@ -100,6 +132,40 @@ Public Class CpDatos
         Return respuesta
 
     End Function
+
+    Public Function registrarDespacha(obj As CpEntidadDespacha) As Integer
+
+        Dim cmd As New SqlCommand("[sp_RegistrarDespacha]", conexion)
+        Dim respuesta As Integer
+
+        Try
+            conexion.Open()
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@codDespacha ", "DP")
+            cmd.Parameters.AddWithValue("@idTrabajador", obj.idTrabajador)
+            cmd.Parameters.AddWithValue("@idProducto", obj.idProducto)
+            cmd.Parameters.AddWithValue("@idUbicacion", obj.idUbicacion)
+            cmd.Parameters.AddWithValue("@idArea", obj.idArea)
+            cmd.Parameters.AddWithValue("@cantidad", obj.cantidad)
+            cmd.Parameters.AddWithValue("@lote", obj.lote)
+            cmd.Parameters.AddWithValue("@caducidad", obj.caducidad)
+            cmd.Parameters.AddWithValue("@FechaCreacion", obj.fechaCreacion)
+
+
+            respuesta = cmd.ExecuteNonQuery()
+
+            conexion.Close()
+        Catch ex As Exception
+
+            Console.WriteLine(ex.Message)
+
+        End Try
+
+        Return respuesta
+
+    End Function
+
+
 
     Public MustInherit Class ConnectionSQL
         Protected Function GetConnection() As SqlConnection

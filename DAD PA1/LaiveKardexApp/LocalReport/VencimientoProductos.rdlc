@@ -538,7 +538,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>ProductosVencimiento2</DataSetName>
-        <Top>1.19917cm</Top>
+        <Top>0.67cm</Top>
         <Left>1.5cm</Left>
         <Height>1.2cm</Height>
         <Width>18cm</Width>
@@ -549,13 +549,13 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>12cm</Height>
+    <Height>10.22729cm</Height>
     <Style />
   </Body>
   <Width>21cm</Width>
   <Page>
     <PageHeader>
-      <Height>3.87808cm</Height>
+      <Height>2.74037cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -571,6 +571,7 @@
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                     <Format>dddd, d' de 'MMMM' de 'yyyy</Format>
+                    <Color>White</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -580,7 +581,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>0.52599cm</Top>
+          <Top>0.26141cm</Top>
           <Left>10.70353cm</Left>
           <Height>0.6cm</Height>
           <Width>8.79647cm</Width>
@@ -605,6 +606,7 @@
                   <Style>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
+                    <Color>White</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -614,7 +616,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Top>1.30238cm</Top>
+          <Top>1.00252cm</Top>
           <Left>6.36833cm</Left>
           <Height>0.6cm</Height>
           <Width>13.13167cm</Width>
@@ -633,7 +635,7 @@
           <Source>Embedded</Source>
           <Value>LaiveLogo</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.94932cm</Top>
+          <Top>0.65828cm</Top>
           <Left>1.5cm</Left>
           <Height>1.5cm</Height>
           <Width>2.99458cm</Width>
@@ -644,6 +646,42 @@
             </Border>
           </Style>
         </Image>
+        <Textbox Name="Textbox4">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>="Desde "+First(Fields!StarDate.Value, "ProductosVencimiento01")+" Hasta "+First(Fields!EndDate.Value, "ProductosVencimiento01")</Value>
+                  <Style>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>White</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>1.84932cm</Top>
+          <Left>6.36833cm</Left>
+          <Height>0.6cm</Height>
+          <Width>13.13167cm</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
       </ReportItems>
       <Style>
         <Border>
@@ -656,6 +694,37 @@
       <Height>2.54cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox8">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Chuque Díaz, Elbir Diluvid</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox8</rd:DefaultName>
+          <Top>0.84041cm</Top>
+          <Left>15.21837cm</Left>
+          <Height>0.6cm</Height>
+          <Width>4.28163cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
       <Style>
         <Border>
           <Style>None</Style>

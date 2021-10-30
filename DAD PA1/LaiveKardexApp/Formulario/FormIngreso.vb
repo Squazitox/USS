@@ -4,7 +4,9 @@ Imports System.IO
 
 Public Class FormIngreso
     Dim objEntidad As New CpEntidad
+
     Dim objNegocio As New CpNegocio
+
     Dim dt As DataTable
 
 
@@ -38,7 +40,7 @@ Public Class FormIngreso
         cbproveedor.ValueMember = "idProveedor"
         cbproveedor.DisplayMember = "razonSocial"
 
-        'Mostrara datos en cbproveedor
+        'Mostrara datos en cbpais
 
         dt = objNegocio.Neg_ListarPais
 
@@ -60,8 +62,6 @@ Public Class FormIngreso
     End Sub
 
     Private Sub BIngresoIngresar_Click(sender As Object, e As EventArgs) Handles BIngresoIngresar.Click
-
-
 
         dgproductos.Rows.Add(cbcodproducto.SelectedValue, TBIngresoCantidad.Text, TBIngresoValor.Text, TBIngresoLote.Text, DTPIngreso.Value, cbproveedor.SelectedValue, TBIngresoFactura.Text, cbpais.SelectedValue, cbubicacion.SelectedValue, DTCreacion.Value)
         cbcodproducto.Text = ""
@@ -146,6 +146,14 @@ Public Class FormIngreso
     End Sub
 
     Private Sub dgproductos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgproductos.CellContentClick
+
+    End Sub
+
+    Private Sub cbcodproducto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbcodproducto.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub DTCreacion_ValueChanged(sender As Object, e As EventArgs) Handles DTCreacion.ValueChanged
 
     End Sub
 End Class

@@ -32,8 +32,25 @@ Public Class CpNegocio
     Public Function Neg_RegistrarSuministra(obj As CpEntidad) As Integer
 
         Return objDatos.registrarSuministra(obj)
+    End Function
 
+    Public Function Neg_ListarTrabajador() As DataTable
+        Return objDatos.ListarTrabajador()
 
+    End Function
+
+    Public Function Neg_ListarAreaDestino() As DataTable
+        Return objDatos.ListarArea()
+
+    End Function
+
+    Public Function Neg_ListarProductosSuministro() As DataTable
+        Return objDatos.ListarProductosSuministro()
+
+    End Function
+
+    Public Function Neg_RegistrarDespacha(objd As CpEntidadDespacha) As Integer
+        Return objDatos.registrarDespacha(objd)
     End Function
 
 End Class

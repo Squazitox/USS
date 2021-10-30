@@ -23,6 +23,7 @@ Partial Class FormIngreso
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.PIngresoFiltros = New System.Windows.Forms.Panel()
+        Me.DTCreacion = New System.Windows.Forms.DateTimePicker()
         Me.cbubicacion = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -50,7 +51,6 @@ Partial Class FormIngreso
         Me.BIngresoCancelar = New System.Windows.Forms.Button()
         Me.BIngresoGuardar = New System.Windows.Forms.Button()
         Me.BIngresoExportar = New System.Windows.Forms.Button()
-        Me.DTCreacion = New System.Windows.Forms.DateTimePicker()
         Me.PIngresoFiltros.SuspendLayout()
         Me.PIngresoData.SuspendLayout()
         CType(Me.dgproductos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,6 +87,16 @@ Partial Class FormIngreso
         Me.PIngresoFiltros.Name = "PIngresoFiltros"
         Me.PIngresoFiltros.Size = New System.Drawing.Size(800, 146)
         Me.PIngresoFiltros.TabIndex = 0
+        '
+        'DTCreacion
+        '
+        Me.DTCreacion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTCreacion.Location = New System.Drawing.Point(15, 36)
+        Me.DTCreacion.MinDate = New Date(2021, 10, 1, 0, 0, 0, 0)
+        Me.DTCreacion.Name = "DTCreacion"
+        Me.DTCreacion.Size = New System.Drawing.Size(78, 20)
+        Me.DTCreacion.TabIndex = 25
+        Me.DTCreacion.Visible = False
         '
         'cbubicacion
         '
@@ -303,7 +313,6 @@ Partial Class FormIngreso
         'dgproductos
         '
         Me.dgproductos.AllowUserToAddRows = False
-        Me.dgproductos.AllowUserToOrderColumns = True
         Me.dgproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgproductos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgproductos.Location = New System.Drawing.Point(0, 0)
@@ -349,16 +358,6 @@ Partial Class FormIngreso
         Me.BIngresoExportar.TabIndex = 0
         Me.BIngresoExportar.Text = "Exportar"
         Me.BIngresoExportar.UseVisualStyleBackColor = True
-        '
-        'DTCreacion
-        '
-        Me.DTCreacion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTCreacion.Location = New System.Drawing.Point(15, 36)
-        Me.DTCreacion.MinDate = New Date(2021, 10, 1, 0, 0, 0, 0)
-        Me.DTCreacion.Name = "DTCreacion"
-        Me.DTCreacion.Size = New System.Drawing.Size(78, 20)
-        Me.DTCreacion.TabIndex = 25
-        Me.DTCreacion.Visible = False
         '
         'FormIngreso
         '

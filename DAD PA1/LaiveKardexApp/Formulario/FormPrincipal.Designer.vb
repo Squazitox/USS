@@ -29,6 +29,7 @@ Partial Class FormPrincipal
         Me.PnIzquierdo = New System.Windows.Forms.Panel()
         Me.PMenu = New System.Windows.Forms.Panel()
         Me.PSubMenuReportes = New System.Windows.Forms.Panel()
+        Me.IBVencimiento = New FontAwesome.Sharp.IconButton()
         Me.IBResumen = New FontAwesome.Sharp.IconButton()
         Me.IBKardex = New FontAwesome.Sharp.IconButton()
         Me.IBReportes = New FontAwesome.Sharp.IconButton()
@@ -48,7 +49,6 @@ Partial Class FormPrincipal
         Me.IPTitulo = New FontAwesome.Sharp.IconPictureBox()
         Me.PNBase = New System.Windows.Forms.Panel()
         Me.PBCentral = New System.Windows.Forms.PictureBox()
-        Me.IBVencimiento = New FontAwesome.Sharp.IconButton()
         Me.PNBorde.SuspendLayout()
         Me.PnIzquierdo.SuspendLayout()
         Me.PMenu.SuspendLayout()
@@ -126,6 +126,20 @@ Partial Class FormPrincipal
         Me.PSubMenuReportes.Name = "PSubMenuReportes"
         Me.PSubMenuReportes.Size = New System.Drawing.Size(260, 126)
         Me.PSubMenuReportes.TabIndex = 5
+        '
+        'IBVencimiento
+        '
+        Me.IBVencimiento.Dock = System.Windows.Forms.DockStyle.Top
+        Me.IBVencimiento.IconChar = FontAwesome.Sharp.IconChar.FileSignature
+        Me.IBVencimiento.IconColor = System.Drawing.Color.Black
+        Me.IBVencimiento.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IBVencimiento.Location = New System.Drawing.Point(0, 84)
+        Me.IBVencimiento.Name = "IBVencimiento"
+        Me.IBVencimiento.Size = New System.Drawing.Size(260, 42)
+        Me.IBVencimiento.TabIndex = 6
+        Me.IBVencimiento.Text = "Vencimiento"
+        Me.IBVencimiento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.IBVencimiento.UseVisualStyleBackColor = True
         '
         'IBResumen
         '
@@ -386,20 +400,6 @@ Partial Class FormPrincipal
         Me.PBCentral.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PBCentral.TabIndex = 0
         Me.PBCentral.TabStop = False
-        '
-        'IBVencimiento
-        '
-        Me.IBVencimiento.Dock = System.Windows.Forms.DockStyle.Top
-        Me.IBVencimiento.IconChar = FontAwesome.Sharp.IconChar.FileSignature
-        Me.IBVencimiento.IconColor = System.Drawing.Color.Black
-        Me.IBVencimiento.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IBVencimiento.Location = New System.Drawing.Point(0, 84)
-        Me.IBVencimiento.Name = "IBVencimiento"
-        Me.IBVencimiento.Size = New System.Drawing.Size(260, 42)
-        Me.IBVencimiento.TabIndex = 6
-        Me.IBVencimiento.Text = "Vencimiento"
-        Me.IBVencimiento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IBVencimiento.UseVisualStyleBackColor = True
         '
         'FormPrincipal
         '
