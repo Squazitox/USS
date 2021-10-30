@@ -65,7 +65,7 @@ Partial Class FormLogin
         Me.BLogin.Name = "BLogin"
         Me.BLogin.Size = New System.Drawing.Size(91, 23)
         Me.BLogin.TabIndex = 12
-        Me.BLogin.Text = "Iniciar Sesión"
+        Me.BLogin.Text = "iniciar Sesión"
         Me.BLogin.UseVisualStyleBackColor = False
         '
         'txtpass
