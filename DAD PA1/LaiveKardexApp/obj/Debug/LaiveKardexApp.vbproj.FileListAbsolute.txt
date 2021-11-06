@@ -18,7 +18,6 @@ D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\Debug\
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\Debug\Microsoft.ReportViewer.Design.dll
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\Debug\Microsoft.ReportViewer.WebForms.dll
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\Debug\Microsoft.SqlServer.Types.dll
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\bin\Debug\SkiaSharp.dll
@@ -104,8 +103,6 @@ D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\LaiveKardexApp.FormTraspaso.resources
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\LaiveKardexApp.Resources.resources
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\LaiveKardexApp.vbproj.GenerateResource.cache
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\RdlCompile.cache
-D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\RdlCompile.compiled
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\LaiveKardexApp.vbproj.CoreCompileInputs.cache
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\LaiveKardexApp.vbproj.CopyComplete
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\LaiveKardexApp.exe
@@ -224,3 +221,4 @@ C:\Users\NB145\Documents\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\LaiveKardex
 C:\Users\NB145\Documents\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\LaiveKardexApp.exe
 C:\Users\NB145\Documents\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\LaiveKardexApp.xml
 C:\Users\NB145\Documents\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\LaiveKardexApp.pdb
+D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD PA1\LaiveKardexApp\obj\Debug\LaiveKardexApp.vbproj.SuggestedBindingRedirects.cache
