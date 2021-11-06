@@ -29,6 +29,16 @@ Public Class CpNegocio
 
     End Function
 
+    Public Function Neg_ListarUbicacion1(idProducto As Object) As DataTable
+        Return objDatos.ListarUbicacion1(idProducto)
+
+    End Function
+
+    Public Function Neg_ListarLote(idProducto As Object, idubicacion As Object) As DataTable
+        Return objDatos.ListarLote(idProducto, idubicacion)
+
+    End Function
+
     Public Function Neg_RegistrarSuministra(obj As CpEntidad) As Integer
 
         Return objDatos.registrarSuministra(obj)

@@ -1860,3 +1860,58 @@ BEGIN
 	WHERE tbSuministra.idProducto = @idproducto
 END
 GO
+
+
+CREATE PROCEDURE sp_ListarProductosSuministro 
+	-- Add the parameters for the stored procedure here
+
+
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	SELECT
+			s.idProducto,
+			p.descripcion
+			from tbProducto p inner join tbSuministra s on s.idProducto = p.idProducto
+END
+GO
+
+CREATE PROCEDURE sp_sp_ListarTrabajador 
+	-- Add the parameters for the stored procedure here
+
+
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	SELECT
+			t.idTrabajador,
+			p.perApellidos
+			
+			from tbTrabajador t inner join tbPersona p on t.idPersona =p.idPersona
+END
+GO
+
+
+CREATE PROCEDURE sp_ListarArea
+	-- Add the parameters for the stored procedure here
+
+
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	select * from tbArea
+	
+END
+GO

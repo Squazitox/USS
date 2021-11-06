@@ -24,7 +24,6 @@ Partial Class FormSalida
     Private Sub InitializeComponent()
         Me.PSalidaFiltros = New System.Windows.Forms.Panel()
         Me.DTCreacion = New System.Windows.Forms.DateTimePicker()
-        Me.TBSalidaLote = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.CBSalidaArea = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -45,6 +44,7 @@ Partial Class FormSalida
         Me.PSalidaBotones = New System.Windows.Forms.Panel()
         Me.BSalidaCancelar = New System.Windows.Forms.Button()
         Me.BSalidaGuardar = New System.Windows.Forms.Button()
+        Me.CBSalidaLote = New System.Windows.Forms.ComboBox()
         Me.PSalidaFiltros.SuspendLayout()
         Me.PSalidaData.SuspendLayout()
         CType(Me.DGVSalida, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,8 +54,8 @@ Partial Class FormSalida
         'PSalidaFiltros
         '
         Me.PSalidaFiltros.BackColor = System.Drawing.Color.ForestGreen
+        Me.PSalidaFiltros.Controls.Add(Me.CBSalidaLote)
         Me.PSalidaFiltros.Controls.Add(Me.DTCreacion)
-        Me.PSalidaFiltros.Controls.Add(Me.TBSalidaLote)
         Me.PSalidaFiltros.Controls.Add(Me.Label7)
         Me.PSalidaFiltros.Controls.Add(Me.CBSalidaArea)
         Me.PSalidaFiltros.Controls.Add(Me.Label6)
@@ -80,19 +80,12 @@ Partial Class FormSalida
         'DTCreacion
         '
         Me.DTCreacion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTCreacion.Location = New System.Drawing.Point(507, 98)
+        Me.DTCreacion.Location = New System.Drawing.Point(689, 13)
         Me.DTCreacion.MinDate = New Date(2021, 10, 1, 0, 0, 0, 0)
         Me.DTCreacion.Name = "DTCreacion"
         Me.DTCreacion.Size = New System.Drawing.Size(99, 20)
         Me.DTCreacion.TabIndex = 26
         Me.DTCreacion.Visible = False
-        '
-        'TBSalidaLote
-        '
-        Me.TBSalidaLote.Location = New System.Drawing.Point(526, 70)
-        Me.TBSalidaLote.Name = "TBSalidaLote"
-        Me.TBSalidaLote.Size = New System.Drawing.Size(80, 20)
-        Me.TBSalidaLote.TabIndex = 22
         '
         'Label7
         '
@@ -108,9 +101,9 @@ Partial Class FormSalida
         'CBSalidaArea
         '
         Me.CBSalidaArea.FormattingEnabled = True
-        Me.CBSalidaArea.Location = New System.Drawing.Point(526, 44)
+        Me.CBSalidaArea.Location = New System.Drawing.Point(526, 45)
         Me.CBSalidaArea.Name = "CBSalidaArea"
-        Me.CBSalidaArea.Size = New System.Drawing.Size(242, 21)
+        Me.CBSalidaArea.Size = New System.Drawing.Size(161, 21)
         Me.CBSalidaArea.TabIndex = 20
         '
         'Label6
@@ -127,9 +120,9 @@ Partial Class FormSalida
         'CBSalidaTrabajador
         '
         Me.CBSalidaTrabajador.FormattingEnabled = True
-        Me.CBSalidaTrabajador.Location = New System.Drawing.Point(175, 41)
+        Me.CBSalidaTrabajador.Location = New System.Drawing.Point(96, 41)
         Me.CBSalidaTrabajador.Name = "CBSalidaTrabajador"
-        Me.CBSalidaTrabajador.Size = New System.Drawing.Size(215, 21)
+        Me.CBSalidaTrabajador.Size = New System.Drawing.Size(263, 21)
         Me.CBSalidaTrabajador.TabIndex = 18
         '
         'CBSalidaUbicacion
@@ -137,21 +130,21 @@ Partial Class FormSalida
         Me.CBSalidaUbicacion.FormattingEnabled = True
         Me.CBSalidaUbicacion.Location = New System.Drawing.Point(526, 13)
         Me.CBSalidaUbicacion.Name = "CBSalidaUbicacion"
-        Me.CBSalidaUbicacion.Size = New System.Drawing.Size(242, 21)
+        Me.CBSalidaUbicacion.Size = New System.Drawing.Size(106, 21)
         Me.CBSalidaUbicacion.TabIndex = 17
         '
         'CBSalidaCodigo
         '
         Me.CBSalidaCodigo.FormattingEnabled = True
-        Me.CBSalidaCodigo.Location = New System.Drawing.Point(175, 14)
+        Me.CBSalidaCodigo.Location = New System.Drawing.Point(96, 15)
         Me.CBSalidaCodigo.Name = "CBSalidaCodigo"
-        Me.CBSalidaCodigo.Size = New System.Drawing.Size(215, 21)
+        Me.CBSalidaCodigo.Size = New System.Drawing.Size(263, 21)
         Me.CBSalidaCodigo.TabIndex = 1
         '
         'BSalidaEliminar
         '
         Me.BSalidaEliminar.BackColor = System.Drawing.Color.White
-        Me.BSalidaEliminar.Location = New System.Drawing.Point(612, 86)
+        Me.BSalidaEliminar.Location = New System.Drawing.Point(632, 86)
         Me.BSalidaEliminar.Name = "BSalidaEliminar"
         Me.BSalidaEliminar.Size = New System.Drawing.Size(75, 33)
         Me.BSalidaEliminar.TabIndex = 16
@@ -161,7 +154,7 @@ Partial Class FormSalida
         'BSalidaIngresar
         '
         Me.BSalidaIngresar.BackColor = System.Drawing.Color.White
-        Me.BSalidaIngresar.Location = New System.Drawing.Point(693, 86)
+        Me.BSalidaIngresar.Location = New System.Drawing.Point(713, 86)
         Me.BSalidaIngresar.Name = "BSalidaIngresar"
         Me.BSalidaIngresar.Size = New System.Drawing.Size(75, 33)
         Me.BSalidaIngresar.TabIndex = 15
@@ -171,7 +164,7 @@ Partial Class FormSalida
         'DTPSalida
         '
         Me.DTPSalida.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTPSalida.Location = New System.Drawing.Point(175, 102)
+        Me.DTPSalida.Location = New System.Drawing.Point(130, 99)
         Me.DTPSalida.MinDate = New Date(2010, 1, 1, 0, 0, 0, 0)
         Me.DTPSalida.Name = "DTPSalida"
         Me.DTPSalida.Size = New System.Drawing.Size(96, 20)
@@ -179,9 +172,9 @@ Partial Class FormSalida
         '
         'TBSalidaCantidad
         '
-        Me.TBSalidaCantidad.Location = New System.Drawing.Point(175, 68)
+        Me.TBSalidaCantidad.Location = New System.Drawing.Point(96, 68)
         Me.TBSalidaCantidad.Name = "TBSalidaCantidad"
-        Me.TBSalidaCantidad.Size = New System.Drawing.Size(164, 20)
+        Me.TBSalidaCantidad.Size = New System.Drawing.Size(83, 20)
         Me.TBSalidaCantidad.TabIndex = 8
         '
         'Label5
@@ -191,9 +184,9 @@ Partial Class FormSalida
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(396, 15)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(70, 17)
+        Me.Label5.Size = New System.Drawing.Size(74, 17)
         Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Ubicacion"
+        Me.Label5.Text = "Ubicacion:"
         '
         'Label4
         '
@@ -202,9 +195,9 @@ Partial Class FormSalida
         Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(12, 102)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(101, 17)
+        Me.Label4.Size = New System.Drawing.Size(105, 17)
         Me.Label4.TabIndex = 3
-        Me.Label4.Text = "F. Vencimiento"
+        Me.Label4.Text = "F. Vencimiento:"
         '
         'Label3
         '
@@ -235,9 +228,9 @@ Partial Class FormSalida
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(12, 13)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(137, 17)
+        Me.Label1.Size = New System.Drawing.Size(69, 17)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Codigo de Producto:"
+        Me.Label1.Text = "Producto:"
         '
         'PSalidaData
         '
@@ -289,6 +282,14 @@ Partial Class FormSalida
         Me.BSalidaGuardar.Text = "Guardar"
         Me.BSalidaGuardar.UseVisualStyleBackColor = False
         '
+        'CBSalidaLote
+        '
+        Me.CBSalidaLote.FormattingEnabled = True
+        Me.CBSalidaLote.Location = New System.Drawing.Point(442, 71)
+        Me.CBSalidaLote.Name = "CBSalidaLote"
+        Me.CBSalidaLote.Size = New System.Drawing.Size(134, 21)
+        Me.CBSalidaLote.TabIndex = 27
+        '
         'FormSalida
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -298,7 +299,7 @@ Partial Class FormSalida
         Me.Controls.Add(Me.PSalidaData)
         Me.Controls.Add(Me.PSalidaFiltros)
         Me.Name = "FormSalida"
-        Me.Text = "FormIngreso"
+        Me.Text = "FormSalida"
         Me.PSalidaFiltros.ResumeLayout(False)
         Me.PSalidaFiltros.PerformLayout()
         Me.PSalidaData.ResumeLayout(False)
@@ -325,10 +326,10 @@ Partial Class FormSalida
     Friend WithEvents BSalidaEliminar As Button
     Friend WithEvents CBSalidaUbicacion As ComboBox
     Friend WithEvents CBSalidaCodigo As ComboBox
-    Friend WithEvents TBSalidaLote As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents CBSalidaArea As ComboBox
     Friend WithEvents Label6 As Label
     Friend WithEvents CBSalidaTrabajador As ComboBox
     Friend WithEvents DTCreacion As DateTimePicker
+    Friend WithEvents CBSalidaLote As ComboBox
 End Class

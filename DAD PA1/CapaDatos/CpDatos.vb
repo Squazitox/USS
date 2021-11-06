@@ -66,6 +66,33 @@ Public Class CpDatos
         Return dt
 
     End Function
+
+    Public Function ListarUbicacion1(idproducto As Object) As DataTable
+        Dim cmd As New SqlCommand("[sp_ListarUbicacionSuministro]", conexion)
+        conexion.Open()
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.Parameters.AddWithValue("@idProducto", idproducto)
+        Dim dt As New DataTable
+        Dim da As New SqlDataAdapter(cmd)
+        da.Fill(dt)
+        conexion.Close()
+        Return dt
+
+    End Function
+
+    Public Function ListarLote(idproducto As Object, idubicacion As Object) As DataTable
+        Dim cmd As New SqlCommand("[sp_ListarLoteSuministro]", conexion)
+        conexion.Open()
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.Parameters.AddWithValue("@idProducto", idproducto)
+        cmd.Parameters.AddWithValue("@idubicacion", idubicacion)
+        Dim dt As New DataTable
+        Dim da As New SqlDataAdapter(cmd)
+        da.Fill(dt)
+        conexion.Close()
+        Return dt
+
+    End Function
     Public Function ListarTrabajador() As DataTable
         Dim cmd As New SqlCommand("[sp_ListarTrabajador]", conexion)
         conexion.Open()
@@ -149,7 +176,7 @@ Public Class CpDatos
             cmd.Parameters.AddWithValue("@cantidad", obj.cantidad)
             cmd.Parameters.AddWithValue("@lote", obj.lote)
             cmd.Parameters.AddWithValue("@caducidad", obj.caducidad)
-            cmd.Parameters.AddWithValue("@FechaCreacion", obj.fechaCreacion)
+            cmd.Parameters.AddWithValue("@fechaCreacion", obj.fechaCreacion)
 
 
             respuesta = cmd.ExecuteNonQuery()
