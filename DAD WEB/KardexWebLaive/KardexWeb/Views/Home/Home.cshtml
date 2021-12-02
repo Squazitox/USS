@@ -1,0 +1,36 @@
+﻿@{
+    /**/
+
+    ViewBag.Title = "Home Page";
+}
+
+
+<main>
+    <nav class="navbar navbar-dark bg-dark">
+        <div style="padding-left: 1000px">
+            <div class="container-fluid">
+                <div class="jumbotron">
+                    <style type="text/css">
+                        h1, h2, h4 {
+                            color: white
+                        }
+                    </style>
+                    <h1>BIENVENIDO</h1>
+                    <div style="padding-left: 50px">
+                        <a href=""><img src="@Url.Content("~/Imagenes/logo_white.png")" alt="logo" height="50"></a>
+
+                    </div>
+
+                    
+                    @section scripts{
+                        <script src="@Url.Content("~/Scripts/Views/Home_Index.js")" type="text/javascript"></script>
+                    }
+
+
+
+                </div>
+            </div>
+    </nav>
+</main>
+
+
