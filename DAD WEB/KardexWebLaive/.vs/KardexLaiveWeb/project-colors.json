@@ -15,7 +15,17 @@
       "ProjectGuid": "b848c46a-3f7b-4c41-a7b9-b1219a205bb6",
       "DisplayName": "CapaNegocio",
       "ColorIndex": 1
+    },
+    "af114377-3ab3-455c-923f-66993dcb9235": {
+      "ProjectGuid": "af114377-3ab3-455c-923f-66993dcb9235",
+      "DisplayName": "CapaDatos",
+      "ColorIndex": 2
+    },
+    "7e595a57-bc8c-470d-9ea1-287a9547f592": {
+      "ProjectGuid": "7e595a57-bc8c-470d-9ea1-287a9547f592",
+      "DisplayName": "CapaEntidad",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 4
 }
