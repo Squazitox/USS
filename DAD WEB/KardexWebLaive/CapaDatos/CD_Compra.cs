@@ -88,27 +88,27 @@ namespace CapaDatos
                                                         TotalCosto = Convert.ToDecimal(dato.Element("TotalCosto").Value,new CultureInfo("es-PE")),
                                                         FechaCompra = dato.Element("FechaCompra").Value
                                                     }).FirstOrDefault();
-                                rptDetalleCompra.oProveedor = (from dato in doc.Element("DETALLE_COMPRA").Elements("DETALLE_PROVEEDOR")
-                                                               select new Proveedor()
-                                                               {
-                                                                   Ruc = dato.Element("RUC").Value,
-                                                                   RazonSocial = dato.Element("RazonSocial").Value,
-                                                               }).FirstOrDefault();
-                                rptDetalleCompra.oTienda = (from dato in doc.Element("DETALLE_COMPRA").Elements("DETALLE_TIENDA")
-                                                            select new Tienda()
-                                                            {
-                                                                RUC = dato.Element("RUC").Value,
-                                                                Nombre = dato.Element("Nombre").Value,
-                                                                Direccion = dato.Element("Direccion").Value
-                                                            }).FirstOrDefault();
-                                rptDetalleCompra.oListaDetalleCompra = (from producto in doc.Element("DETALLE_COMPRA").Element("DETALLE_PRODUCTO").Elements("PRODUCTO")
-                                                                        select new DetalleCompra()
-                                                                        {
-                                                                            Cantidad = int.Parse(producto.Element("Cantidad").Value),
-                                                                            oProducto = new Producto() { Nombre = producto.Element("NombreProducto").Value },
-                                                                            PrecioUnitarioCompra = Convert.ToDecimal(producto.Element("PrecioUnitarioCompra").Value, new CultureInfo("es-PE")),
-                                                                            TotalCosto = Convert.ToDecimal(producto.Element("TotalCosto").Value, new CultureInfo("es-PE"))
-                                                                        }).ToList();
+                                //rptDetalleCompra.oProveedor = (from dato in doc.Element("DETALLE_COMPRA").Elements("DETALLE_PROVEEDOR")
+                                //                               select new Proveedor()
+                                //                               {
+                                //                                   Ruc = dato.Element("RUC").Value,
+                                //                                   RazonSocial = dato.Element("RazonSocial").Value,
+                                //                               }).FirstOrDefault();
+                                //rptDetalleCompra.oTienda = (from dato in doc.Element("DETALLE_COMPRA").Elements("DETALLE_TIENDA")
+                                //                            select new Tienda()
+                                //                            {
+                                //                                RUC = dato.Element("RUC").Value,
+                                //                                Nombre = dato.Element("Nombre").Value,
+                                //                                Direccion = dato.Element("Direccion").Value
+                                //                            }).FirstOrDefault();
+                                //rptDetalleCompra.oListaDetalleCompra = (from producto in doc.Element("DETALLE_COMPRA").Element("DETALLE_PRODUCTO").Elements("PRODUCTO")
+                                //                                        select new DetalleCompra()
+                                //                                        {
+                                //                                            Cantidad = int.Parse(producto.Element("Cantidad").Value),
+                                //                                            oProducto = new Producto() { Nombre = producto.Element("NombreProducto").Value },
+                                //                                            PrecioUnitarioCompra = Convert.ToDecimal(producto.Element("PrecioUnitarioCompra").Value, new CultureInfo("es-PE")),
+                                //                                            TotalCosto = Convert.ToDecimal(producto.Element("TotalCosto").Value, new CultureInfo("es-PE"))
+                                //                                        }).ToList();
                             }
                             else
                             {
@@ -156,8 +156,8 @@ namespace CapaDatos
                         {
                             IdCompra = Convert.ToInt32(dr["IdCompra"].ToString()),
                             NumeroCompra = dr["NumeroCompra"].ToString(),
-                            oProveedor = new Proveedor() { RazonSocial = dr["RazonSocial"].ToString() },
-                            oTienda = new Tienda() { Nombre = dr["Nombre"].ToString() },
+                            //oProveedor = new Proveedor() { RazonSocial = dr["RazonSocial"].ToString() },
+                            //oTienda = new Tienda() { Nombre = dr["Nombre"].ToString() },
                             FechaCompra = dr["FechaCompra"].ToString(),
                             TotalCosto = Convert.ToDecimal(dr["TotalCosto"].ToString(), new CultureInfo("es-PE"))
                         });

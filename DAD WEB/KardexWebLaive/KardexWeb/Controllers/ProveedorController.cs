@@ -23,32 +23,33 @@ namespace KardexLaiveWeb.Controllers
             return Json(new { data = olista }, JsonRequestBehavior.AllowGet);
         }
 
-        [HttpPost]
-        public JsonResult Guardar(Proveedor objeto)
-        {
-            bool respuesta = false;
+               
+        //[HttpPost]
+        //public JsonResult Guardar(Proveedor objeto)
+        //{
+        //    bool respuesta = false;
 
-            if (objeto.IdProveedor == 0)
-            {
+        //    if (objeto.IdProveedor == 0)
+        //    {
 
-                respuesta = CD_Proveedor.Instancia.RegistrarProveedor(objeto);
-            }
-            else
-            {
-                respuesta = CD_Proveedor.Instancia.ModificarProveedor(objeto);
-            }
+        //        respuesta = CD_Proveedor.Instancia.RegistrarProveedor(objeto);
+        //    }
+        //    else
+        //    {
+        //        respuesta = CD_Proveedor.Instancia.ModificarProveedor(objeto);
+        //    }
 
 
-            return Json(new { resultado = respuesta }, JsonRequestBehavior.AllowGet);
-        }
+        //    return Json(new { resultado = respuesta }, JsonRequestBehavior.AllowGet);
+        //}
 
-        [HttpGet]
-        public JsonResult Eliminar(int id = 0)
-        {
-            bool respuesta = CD_Proveedor.Instancia.EliminarProveedor(id);
+        //[HttpGet]
+        //public JsonResult Eliminar(int id = 0)
+        //{
+        //    bool respuesta = CD_Proveedor.Instancia.EliminarProveedor(id);
 
-            return Json(new { resultado = respuesta }, JsonRequestBehavior.AllowGet);
-        }
+        //    return Json(new { resultado = respuesta }, JsonRequestBehavior.AllowGet);
+        //}
 
     }
 }

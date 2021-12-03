@@ -25,7 +25,12 @@
       "ProjectGuid": "7e595a57-bc8c-470d-9ea1-287a9547f592",
       "DisplayName": "CapaEntidad",
       "ColorIndex": 3
+    },
+    "919fd655-f067-4ba2-b932-d926e85dd6b4": {
+      "ProjectGuid": "919fd655-f067-4ba2-b932-d926e85dd6b4",
+      "DisplayName": "Documentos de script",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 5
 }

@@ -18,16 +18,18 @@ namespace KardexLaiveWeb.Controllers
 
         public JsonResult Obtener()
         {
-            List<Tienda> lista = CD_Tienda.Instancia.ObtenerTiendas();
+            List<Tienda> lista = CD_Tienda.Instancia.ObtenerArea();
             return Json(new { data = lista }, JsonRequestBehavior.AllowGet);
         }
-    
+
+
         [HttpPost]
+
         public JsonResult Guardar(Tienda objeto)
         {
             bool respuesta = false;
 
-            if (objeto.IdTienda == 0)
+            if (objeto.idArea == "0")
             {
 
                 respuesta = CD_Tienda.Instancia.RegistrarTienda(objeto);
@@ -44,7 +46,7 @@ namespace KardexLaiveWeb.Controllers
         [HttpGet]
         public JsonResult Eliminar(int id = 0)
         {
-            bool respuesta = CD_Tienda.Instancia.EliminarTienda (id);
+            bool respuesta = CD_Tienda.Instancia.EliminarTienda(id);
 
             return Json(new { resultado = respuesta }, JsonRequestBehavior.AllowGet);
         }

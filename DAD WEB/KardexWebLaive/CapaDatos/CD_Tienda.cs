@@ -30,12 +30,12 @@ namespace CapaDatos
             }
         }
 
-        public List<Tienda> ObtenerTiendas()
+        public List<Tienda> ObtenerArea()
         {
             List<Tienda> rptListaUsuario = new List<Tienda>();
             using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
             {
-                SqlCommand cmd = new SqlCommand("usp_ObtenerTienda", oConexion);
+                SqlCommand cmd = new SqlCommand("sp_ListarArea", oConexion);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 try
@@ -47,12 +47,12 @@ namespace CapaDatos
                     {
                         rptListaUsuario.Add(new Tienda()
                         {
-                            IdTienda = Convert.ToInt32(dr["IdTienda"].ToString()),
-                            Nombre = dr["Nombre"].ToString(),
-                            RUC = dr["RUC"].ToString(),
-                            Direccion = dr["Direccion"].ToString(),
-                            Telefono = dr["Telefono"].ToString(),
-                            Activo = Convert.ToBoolean(dr["Activo"].ToString())
+                            idArea = dr["idArea"].ToString(),
+                            nombreArea = dr["nombreArea"].ToString()
+                            //RUC = dr["RUC"].ToString(),
+                            //Direccion = dr["Direccion"].ToString(),
+                            //Telefono = dr["Telefono"].ToString(),
+                            //Activo = Convert.ToBoolean(dr["Activo"].ToString())
 
                         });
                     }
@@ -69,6 +69,44 @@ namespace CapaDatos
             }
         }
 
+        public List<Ubicacion> ObtenerUbicacion()
+        {
+            List<Ubicacion> rptListaUsuario = new List<Ubicacion>();
+            using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
+            {
+                SqlCommand cmd = new SqlCommand("sp_ListarUbicacion", oConexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                try
+                {
+                    oConexion.Open();
+                    SqlDataReader dr = cmd.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+                        rptListaUsuario.Add(new Ubicacion()
+                        {
+                            idUbicacion = dr["idUbicacion"].ToString(),
+                            seccion = dr["seccion"].ToString()
+                            //RUC = dr["RUC"].ToString(),
+                            //Direccion = dr["Direccion"].ToString(),
+                            //Telefono = dr["Telefono"].ToString(),
+                            //Activo = Convert.ToBoolean(dr["Activo"].ToString())
+
+                        });
+                    }
+                    dr.Close();
+
+                    return rptListaUsuario;
+
+                }
+                catch (Exception ex)
+                {
+                    rptListaUsuario = null;
+                    return rptListaUsuario;
+                }
+            }
+        }
         public bool RegistrarTienda(Tienda oTienda)
         {
             bool respuesta = true;
@@ -77,10 +115,10 @@ namespace CapaDatos
                 try
                 {
                     SqlCommand cmd = new SqlCommand("usp_RegistrarTienda", oConexion);
-                    cmd.Parameters.AddWithValue("Nombre", oTienda.Nombre);
-                    cmd.Parameters.AddWithValue("Ruc", oTienda.RUC);
-                    cmd.Parameters.AddWithValue("Direccion", oTienda.Direccion);
-                    cmd.Parameters.AddWithValue("Telefono", oTienda.Telefono);
+                    //cmd.Parameters.AddWithValue("Nombre", oTienda.Nombre);
+                    //cmd.Parameters.AddWithValue("Ruc", oTienda.RUC);
+                    //cmd.Parameters.AddWithValue("Direccion", oTienda.Direccion);
+                    //cmd.Parameters.AddWithValue("Telefono", oTienda.Telefono);
                     cmd.Parameters.Add("Resultado", SqlDbType.Bit).Direction = ParameterDirection.Output;
 
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -112,12 +150,12 @@ namespace CapaDatos
                 try
                 {
                     SqlCommand cmd = new SqlCommand("usp_ModificarTienda", oConexion);
-                    cmd.Parameters.AddWithValue("IdTienda", oTienda.IdTienda);
-                    cmd.Parameters.AddWithValue("Nombre", oTienda.Nombre);
-                    cmd.Parameters.AddWithValue("Ruc", oTienda.RUC);
-                    cmd.Parameters.AddWithValue("Direccion", oTienda.Direccion);
-                    cmd.Parameters.AddWithValue("Telefono", oTienda.Telefono);
-                    cmd.Parameters.AddWithValue("Activo", oTienda.Activo);
+                    //cmd.Parameters.AddWithValue("IdTienda", oTienda.IdTienda);
+                    //cmd.Parameters.AddWithValue("Nombre", oTienda.Nombre);
+                    //cmd.Parameters.AddWithValue("Ruc", oTienda.RUC);
+                    //cmd.Parameters.AddWithValue("Direccion", oTienda.Direccion);
+                    //cmd.Parameters.AddWithValue("Telefono", oTienda.Telefono);
+                    //cmd.Parameters.AddWithValue("Activo", oTienda.Activo);
                     cmd.Parameters.Add("Resultado", SqlDbType.Bit).Direction = ParameterDirection.Output;
 
                     cmd.CommandType = CommandType.StoredProcedure;

@@ -47,13 +47,15 @@ namespace CapaDatos
                     {
                         rptListaProveedor.Add(new Proveedor()
                         {
-                            IdProveedor = Convert.ToInt32(dr["IdProveedor"].ToString()),
-                            Ruc = dr["Ruc"].ToString(),
-                            RazonSocial = dr["RazonSocial"].ToString(),
-                            Telefono = dr["Telefono"].ToString(),
-                            Correo = dr["Correo"].ToString(),
-                            Direccion = dr["Direccion"].ToString(),
-                            Activo = Convert.ToBoolean(dr["Activo"].ToString())
+                            idProveedor = dr["idProveedor"].ToString(),
+                            idPais = dr["idPais"].ToString(),
+                            razonSocial = dr["razonSocial"].ToString(),
+                            codigoPostal = dr["codigoPostal"].ToString(),
+                            rucProveedor = dr["rucProveedor"].ToString(),
+                            fonoProveedor = dr["fonoProveedor"].ToString(),
+                            emailProveedor = dr["emailProveedor"].ToString(),
+                            direccion = dr["direccion"].ToString(),
+                            pais = dr["pais"].ToString()
 
                         });
                     }
@@ -78,11 +80,11 @@ namespace CapaDatos
                 try
                 {
                     SqlCommand cmd = new SqlCommand("usp_RegistrarProveedor", oConexion);
-                    cmd.Parameters.AddWithValue("Ruc", oProveedor.Ruc);
-                    cmd.Parameters.AddWithValue("RazonSocial", oProveedor.RazonSocial);
-                    cmd.Parameters.AddWithValue("Telefono", oProveedor.Telefono);
-                    cmd.Parameters.AddWithValue("Correo", oProveedor.Correo);
-                    cmd.Parameters.AddWithValue("Direccion", oProveedor.Direccion);
+                    //cmd.Parameters.AddWithValue("Ruc", oProveedor.Ruc);
+                    //cmd.Parameters.AddWithValue("RazonSocial", oProveedor.RazonSocial);
+                    //cmd.Parameters.AddWithValue("Telefono", oProveedor.Telefono);
+                    //cmd.Parameters.AddWithValue("Correo", oProveedor.Correo);
+                    //cmd.Parameters.AddWithValue("Direccion", oProveedor.Direccion);
                     cmd.Parameters.Add("Resultado", SqlDbType.Bit).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -110,13 +112,13 @@ namespace CapaDatos
                 try
                 {
                     SqlCommand cmd = new SqlCommand("usp_ModificarProveedor", oConexion);
-                    cmd.Parameters.AddWithValue("IdProveedor", oProveedor.IdProveedor);
-                    cmd.Parameters.AddWithValue("Ruc", oProveedor.Ruc);
-                    cmd.Parameters.AddWithValue("RazonSocial", oProveedor.RazonSocial);
-                    cmd.Parameters.AddWithValue("Telefono", oProveedor.Telefono);
-                    cmd.Parameters.AddWithValue("Correo", oProveedor.Correo);
-                    cmd.Parameters.AddWithValue("Direccion", oProveedor.Direccion);
-                    cmd.Parameters.AddWithValue("Activo", oProveedor.Activo);
+                    //cmd.Parameters.AddWithValue("IdProveedor", oProveedor.IdProveedor);
+                    //cmd.Parameters.AddWithValue("Ruc", oProveedor.Ruc);
+                    //cmd.Parameters.AddWithValue("RazonSocial", oProveedor.RazonSocial);
+                    //cmd.Parameters.AddWithValue("Telefono", oProveedor.Telefono);
+                    //cmd.Parameters.AddWithValue("Correo", oProveedor.Correo);
+                    //cmd.Parameters.AddWithValue("Direccion", oProveedor.Direccion);
+                    //cmd.Parameters.AddWithValue("Activo", oProveedor.Activo);
                     cmd.Parameters.Add("Resultado", SqlDbType.Bit).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
 

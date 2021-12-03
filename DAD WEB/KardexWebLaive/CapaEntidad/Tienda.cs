@@ -9,12 +9,27 @@ namespace CapaEntidad
 
     public class Tienda
     {
-        public int IdTienda { get; set; }
-        public string Nombre { get; set; }
-        public string RUC { get; set; }
-        public string Direccion { get; set; }
-        public string Telefono { get; set; }
-        public bool Activo { get; set; }
-        public DateTime FechaRegistro { get; set; }
+        //public int IdTienda { get; set; }
+        //public string Nombre { get; set; }
+        //public string RUC { get; set; }
+        //public string Direccion { get; set; }
+        //public string Telefono { get; set; }
+        //public bool Activo { get; set; }
+        //public DateTime FechaRegistro { get; set; }
+        public string idArea { get; set; }
+        public string nombreArea { get; set; }
+    }
+
+    public class Ubicacion
+    {
+        //public int IdTienda { get; set; }
+        //public string Nombre { get; set; }
+        //public string RUC { get; set; }
+        //public string Direccion { get; set; }
+        //public string Telefono { get; set; }
+        //public bool Activo { get; set; }
+        //public DateTime FechaRegistro { get; set; }
+        public string idUbicacion { get; set; }
+        public string seccion { get; set; }
     }
 }

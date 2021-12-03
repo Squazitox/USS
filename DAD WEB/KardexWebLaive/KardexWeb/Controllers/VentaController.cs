@@ -79,15 +79,15 @@ namespace KardexLaiveWeb.Controllers
             return Json(rptUsuario, JsonRequestBehavior.AllowGet);
         }
 
-        public JsonResult ObtenerProductoPorTienda(int IdTienda)
-        {
+        //public JsonResult ObtenerProductoPorTienda(int IdTienda)
+        //{
 
-            List<ProductoTienda> oListaProductoTienda = CD_ProductoTienda.Instancia.ObtenerProductoTienda();
-            oListaProductoTienda = oListaProductoTienda.Where(x => x.oTienda.IdTienda == IdTienda && x.Stock > 0).ToList();
+        //    List<ProductoTienda> oListaProductoTienda = CD_ProductoTienda.Instancia.ObtenerProductoTienda();
+        //    oListaProductoTienda = oListaProductoTienda.Where(x => x.oTienda.IdTienda == IdTienda && x.Stock > 0).ToList();
 
 
-            return Json(new { data = oListaProductoTienda }, JsonRequestBehavior.AllowGet);
-        }
+        //    return Json(new { data = oListaProductoTienda }, JsonRequestBehavior.AllowGet);
+        //}
 
         [HttpPost]
         public JsonResult ControlarStock(int idproducto, int idtienda, int cantidad, bool restar)

@@ -44,11 +44,11 @@ namespace KardexLaiveWeb.Controllers
 
 
         [HttpPost]
-        public JsonResult Guardar(string xml)
+        public JsonResult Guardar(string datatotal)
         {
-            xml = xml.Replace("!idusuario¡", SesionUsuario.IdUsuario.ToString());
+            //xml = xml.Replace("!idusuario¡", SesionUsuario.IdUsuario.ToString());
 
-            bool respuesta  = CD_Compra.Instancia.RegistrarCompra(xml);
+            bool respuesta  = CD_Compra.Instancia.RegistrarCompra(datatotal);
 
             return Json(new { resultado = respuesta }, JsonRequestBehavior.AllowGet);
         }

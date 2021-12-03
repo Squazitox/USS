@@ -30,21 +30,22 @@ namespace KardexLaiveWeb.Controllers
             return Json(new { data = lista }, JsonRequestBehavior.AllowGet);
         }
 
-        public JsonResult ObtenerPorTienda(int IdTienda)
+        [HttpGet]
+        public JsonResult ObtenerPorTienda()
         {
 
             List<Producto> oListaProducto = CD_Producto.Instancia.ObtenerProducto();
-            List<ProductoTienda> oListaProductoTienda = CD_ProductoTienda.Instancia.ObtenerProductoTienda();
+            //List<ProductoTienda> oListaProductoTienda = CD_ProductoTienda.Instancia.ObtenerProductoTienda();
 
-            oListaProducto = oListaProducto.Where(x => x.Activo == true).ToList();
-            if (IdTienda != 0)
-            {
-                oListaProductoTienda = oListaProductoTienda.Where(x => x.oTienda.IdTienda == IdTienda).ToList();
-                oListaProducto = (from producto in oListaProducto
-                                  join productotienda in oListaProductoTienda on producto.IdProducto equals productotienda.oProducto.IdProducto
-                                  where productotienda.oTienda.IdTienda == IdTienda
-                                  select producto).ToList();
-            }
+            oListaProducto = oListaProducto.ToList();
+            //if (IdTienda != 0)
+            //{
+            //    oListaProductoTienda = oListaProductoTienda.Where(x => x.oTienda.IdTienda == IdTienda).ToList();
+            //    oListaProducto = (from producto in oListaProducto
+            //                      join productotienda in oListaProductoTienda on producto.IdProducto equals productotienda.oProducto.IdProducto
+            //                      where productotienda.oTienda.IdTienda == IdTienda
+            //                      select producto).ToList();
+            //}
 
             return Json(new { data = oListaProducto }, JsonRequestBehavior.AllowGet);
         }
@@ -54,7 +55,7 @@ namespace KardexLaiveWeb.Controllers
         {
             bool respuesta = false;
 
-            if (objeto.IdProducto == 0)
+            if (objeto.idProducto == "0")
             {
 
                 respuesta = CD_Producto.Instancia.RegistrarProducto(objeto);

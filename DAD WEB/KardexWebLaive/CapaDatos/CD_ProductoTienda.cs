@@ -49,19 +49,19 @@ namespace CapaDatos
                         rptListaProductoTienda.Add(new ProductoTienda()
                         {
                             IdProductoTienda = Convert.ToInt32(dr["IdProductoTienda"].ToString()),
-                            oProducto = new Producto()
-                            {
-                                IdProducto = Convert.ToInt32(dr["IdProducto"].ToString()),
-                                Codigo = dr["CodigoProducto"].ToString(),
-                                Nombre = dr["NombreProducto"].ToString(),
-                                Descripcion = dr["DescripcionProducto"].ToString(),
-                            },
+                            //oProducto = new Producto()
+                            //{
+                            //    IdProducto = Convert.ToInt32(dr["IdProducto"].ToString()),
+                            //    Codigo = dr["CodigoProducto"].ToString(),
+                            //    Nombre = dr["NombreProducto"].ToString(),
+                            //    Descripcion = dr["DescripcionProducto"].ToString(),
+                            //},
                             oTienda = new Tienda()
                             {
-                                IdTienda = Convert.ToInt32(dr["IdTienda"].ToString()),
-                                RUC = dr["RUC"].ToString(),
-                                Nombre = dr["NombreTienda"].ToString(),
-                                Direccion = dr["DireccionTienda"].ToString(),
+                                //IdTienda = Convert.ToInt32(dr["IdTienda"].ToString()),
+                                //RUC = dr["RUC"].ToString(),
+                                //Nombre = dr["NombreTienda"].ToString(),
+                                //Direccion = dr["DireccionTienda"].ToString(),
                             },
                             PrecioUnidadCompra = Convert.ToDecimal(dr["PrecioUnidadCompra"].ToString(), new CultureInfo("es-PE")),
                             PrecioUnidadVenta = Convert.ToDecimal(dr["PrecioUnidadVenta"].ToString(), new CultureInfo("es-PE")),
@@ -90,8 +90,8 @@ namespace CapaDatos
                 try
                 {
                     SqlCommand cmd = new SqlCommand("usp_RegistrarProductoTienda", oConexion);
-                    cmd.Parameters.AddWithValue("IdProducto", oProductoTienda.oProducto.IdProducto);
-                    cmd.Parameters.AddWithValue("IdTienda", oProductoTienda.oTienda.IdTienda);
+                    //cmd.Parameters.AddWithValue("IdProducto", oProductoTienda.oProducto.IdProducto);
+                    //cmd.Parameters.AddWithValue("IdTienda", oProductoTienda.oTienda.IdTienda);
                     cmd.Parameters.Add("Resultado", SqlDbType.Bit).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -119,8 +119,8 @@ namespace CapaDatos
                 {
                     SqlCommand cmd = new SqlCommand("usp_ModificarProductoTienda", oConexion);
                     cmd.Parameters.AddWithValue("IdProductoTienda", oProductoTienda.IdProductoTienda);
-                    cmd.Parameters.AddWithValue("IdProducto", oProductoTienda.oProducto.IdProducto);
-                    cmd.Parameters.AddWithValue("IdTienda", oProductoTienda.oTienda.IdTienda);
+                    //cmd.Parameters.AddWithValue("IdProducto", oProductoTienda.oProducto.IdProducto);
+                    //cmd.Parameters.AddWithValue("IdTienda", oProductoTienda.oTienda.IdTienda);
                     cmd.Parameters.Add("Resultado", SqlDbType.Bit).Direction = ParameterDirection.Output;
 
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -172,7 +172,6 @@ namespace CapaDatos
             return respuesta;
 
         }
-
         public bool ControlarStock(int IdProducto, int IdTienda, int Cantidad, bool Restar)
         {
             bool respuesta = true;
@@ -204,3 +203,4 @@ namespace CapaDatos
         }
     }
 }
+

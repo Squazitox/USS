@@ -1,8 +1,10 @@
 ﻿
+
 var tabladata;
 var tablaproveedor;
-var tablatienda;
+var tablaPlanta;
 var tablaproducto;
+var tablaUbicacion;
 
 
 $(document).ready(function () {
@@ -17,17 +19,18 @@ $(document).ready(function () {
         },
         "columns": [
             {
-                "data": "IdProveedor", "render": function (data, type, row, meta) {
+                "data": "idProveedor", "render": function (data, type, row, meta) {
                     return "<button class='btn btn-sm btn-primary ml-2' type='button' onclick='proveedorSelect(" + JSON.stringify(row) + ")'><i class='fas fa-check'></i></button>"
                 },
                 "orderable": false,
                 "searchable": false,
                 "width": "90px"
             },
-            { "data": "Ruc" },
-            { "data": "RazonSocial" },
-            { "data": "Direccion" }
-
+            { "data": "rucProveedor" },
+            { "data": "razonSocial" },
+            { "data": "pais" },
+            { "data": "direccion" }
+            
         ],
         "language": {
             "url": $.MisUrls.url.Url_datatable_spanish
@@ -36,24 +39,51 @@ $(document).ready(function () {
     });
 
     //OBTENER TIENDAS
-    tablatienda = $('#tbTienda').DataTable({
+    tablaPlanta = $('#tbPlanta').DataTable({
         "ajax": {
-            "url": $.MisUrls.url._ObtenerTiendas,
+            "url": $.MisUrls.url._ObtenerPlanta,
             "type": "GET",
             "datatype": "json"
         },
         "columns": [
             {
-                "data": "IdTienda", "render": function (data, type, row, meta) {
+                "data": "idArea", "render": function (data, type, row, meta) {
                     return "<button class='btn btn-sm btn-primary ml-2' type='button' onclick='tiendaSelect(" + JSON.stringify(row) + ")'><i class='fas fa-check'></i></button>" 
                 },
                 "orderable": false,
                 "searchable": false,
                 "width": "90px"
             },
-            { "data": "RUC" },
-            { "data": "Nombre" },
-            { "data": "Direccion" }
+            { "data": "idArea" },
+            { "data": "nombreArea" },
+            //{ "data": "Direccion" }
+
+        ],
+        "language": {
+            "url": $.MisUrls.url.Url_datatable_spanish
+        },
+        responsive: true
+    });
+
+    //OBTENER UBICACION
+    tablaUbicacion = $('#tbUbicacion').DataTable({
+        "ajax": {
+            "url": $.MisUrls.url._ObtenerUbicacion,
+            "type": "GET",
+            "datatype": "json"
+        },
+        "columns": [
+            {
+                "data": "idUbicacion", "render": function (data, type, row, meta) {
+                    return "<button class='btn btn-sm btn-primary ml-2' type='button' onclick='UbicacionSelect(" + JSON.stringify(row) + ")'><i class='fas fa-check'></i></button>"
+                },
+                "orderable": false,
+                "searchable": false,
+                "width": "90px"
+            },
+            { "data": "idUbicacion" },
+            { "data": "seccion" },
+            //{ "data": "Direccion" }
 
         ],
         "language": {
@@ -65,27 +95,28 @@ $(document).ready(function () {
     //OBTENER PRODUCTOS
     tablaproducto = $('#tbProducto').DataTable({
         "ajax": {
-            "url": $.MisUrls.url._ObtenerProductosPorTienda + "?IdTienda=0",
+            /*"url": $.MisUrls.url._ObtenerProductosPorTienda + "?IdTienda=0",*/
+            "url": $.MisUrls.url._ObtenerProductosPorTienda,
             "type": "GET",
             "datatype": "json"
         },
         "columns": [
             {
-                "data": "IdProducto", "render": function (data, type, row, meta) {
+                "data": "idProducto", "render": function (data, type, row, meta) {
                     return "<button class='btn btn-sm btn-primary ml-2' type='button' onclick='productoSelect(" + JSON.stringify(row) + ")'><i class='fas fa-check'></i></button>"
                 },
                 "orderable": false,
                 "searchable": false,
                 "width": "90px"
             },
-            { "data": "Codigo" },
-            { "data": "Nombre" },
-            { "data": "Descripcion" },
-            {
-                "data": "oCategoria", render: function (data) {
-                    return data.Descripcion
-                }
-            }
+            { "data": "idProducto" },
+            { "data": "descripcion" },
+            //{ "data": "Descripcion" },
+            //{
+            //    "data": "oCategoria", render: function (data) {
+            //        return data.Descripcion
+            //    }
+            //}
 
         ],
         "language": {
@@ -97,47 +128,65 @@ $(document).ready(function () {
 })
 
 function buscarProveedor() {
+    /*alert(1);*/
     tablaproveedor.ajax.reload();
     $('#modalProveedor').modal('show');
 }
 
 
-function buscarTienda() {
-    tablatienda.ajax.reload();
+function buscarPlanta() {
+    tablaPlanta.ajax.reload();
     $('#modalTienda').modal('show');
 }
 
+function buscarUbicacion() {
+    tablaUbicacion.ajax.reload();
+    $('#modalUbicacion').modal('show');
+}
+
 function buscarProducto() {
-    if (parseInt($("#txtIdTienda").val()) == 0) {
-        swal("Mensaje", "Debe seleccionar una tienda primero", "warning")
-        return;
-    }
-    tablaproducto.ajax.url($.MisUrls.url._ObtenerProductosPorTienda + "?IdTienda=" + $("#txtIdTienda").val()).load();
+
+    //alert(1);
+    //if (parseInt($("#txtIdTienda").val()) == 0) {
+    //    swal("Mensaje", "Debe seleccionar una tienda primero", "warning")
+    //    return;
+    //}
+    /*tablaproducto.ajax.url($.MisUrls.url._ObtenerProductosPorTienda + "?IdTienda=" + $("#txtIdTienda").val()).load();*/
+    tablaproducto.ajax.reload();
 
     $('#modalProducto').modal('show');
 }
 
 function proveedorSelect(json) {
 
-    $("#txtIdProveedor").val(json.IdProveedor);
-    $("#txtRucProveedor").val(json.Ruc);
-    $("#txtRazonSocialProveedor").val(json.RazonSocial);
+    $("#txtIdProveedor").val(json.idProveedor);
+    $("#txtRucProveedor").val(json.rucProveedor);
+    $("#txtRazonSocialProveedor").val(json.razonSocial);
+    $("#txtOrigenProveedor").val(json.pais);
 
     $('#modalProveedor').modal('hide');
 }
 
 function tiendaSelect(json) {
-    $("#txtIdTienda").val(json.IdTienda);
-    $("#txtRucTienda").val(json.RUC);
-    $("#txtNombreTienda").val(json.Nombre);
+    //$("#txtIdTienda").val(json.IdTienda);
+    $("#txtNombrePlanta").val(json.nombreArea);
+    //$("#txtNombreTienda").val(json.Nombre);
 
     $('#modalTienda').modal('hide');
 }
 
+function UbicacionSelect(json) {
+    //$("#txtIdTienda").val(json.IdTienda);
+    $("#txtUbicacion").val(json.seccion);
+    //$("#txtNombreTienda").val(json.Nombre);
+
+    $('#modalUbicacion').modal('hide');
+}
+
 function productoSelect(json) {
-    $("#txtIdProducto").val(json.IdProducto);
-    $("#txtCodigoProducto").val(json.Codigo);
-    $("#txtNombreProducto").val(json.Nombre);
+    $("#txtIdProducto").val(json.idProducto);
+    $("#txtCodigoProducto").val(json.idProducto);
+    $("#txtNombreProducto").val(json.descripcion);
 
     $('#modalProducto').modal('hide');
 }
@@ -221,12 +270,18 @@ $('#btnAgregarCompra').on('click', function () {
 
     var existe_codigo = false;
     if (
-        parseInt($("#txtIdProveedor").val()) == 0 ||
-        parseInt($("#txtIdTienda").val()) == 0 ||
-        parseInt($("#txtIdProducto").val()) == 0 ||
+        parseInt($("#txtRucProveedor").val()) == 0 ||
+        parseInt($("#txtOrigenProveedor").val()) == 0 ||
+        parseInt($("#txtNombrePlanta").val()) == 0 ||
+        parseInt($("#txtCodigoProducto").val()) == 0 ||
+        parseInt($("#txtNombreProducto").val()) == 0 ||
         parseFloat($("#txtCantidadProducto").val()) == 0 ||
-        parseFloat($("#txtPrecioCompraProducto").val()) == 0 ||
-        parseFloat($("#txtPrecioVentaProducto").val()) == 0
+        parseFloat($("#txtPrecioProducto").val()) == 0 ||
+        parseFloat($("#txtFactura").val()) == 0 ||
+        parseFloat($("#txtLote").val()) == 0 ||
+        parseFloat($("#txtFechaVencimiento").val()) == 0 ||
+        parseFloat($("#txtUbicacion").val()) == 0 
+        
     ) {
         swal("Mensaje", "Debe completar todos los campos", "warning")
         return;
@@ -248,21 +303,33 @@ $('#btnAgregarCompra').on('click', function () {
             $("<td>").append(
                 $("<button>").addClass("btn btn-danger btn-sm").text("Eliminar")
             ),
-            $("<td>").append($("#txtRucProveedor").val()),
-            $("<td>").append($("#txtRucTienda").val()),
+            $("<td>").addClass("Razon Social").append($("#txtRazonSocialProveedor").val()),
+            $("<td>").addClass("Origen").append($("#txtOrigenProveedor").val()),
+            $("<td>").addClass("planta").append($("#txtNombrePlanta").val()),
             $("<td>").addClass("codigoproducto").data("idproducto", $("#txtIdProducto").val()).append($("#txtCodigoProducto").val()),
-            $("<td>").append($("#txtNombreProducto").val()),
+            $("<td>").addClass("producto").append($("#txtNombreProducto").val()),
             $("<td>").addClass("cantidad").append($("#txtCantidadProducto").val()),
-            $("<td>").addClass("preciocompra").append($("#txtPrecioCompraProducto").val()),
-            $("<td>").addClass("precioventa").append($("#txtPrecioVentaProducto").val()),
-        ).appendTo("#tbCompra tbody");
+            $("<td>").addClass("precio").append($("#txtPrecioProducto").val()),
+            $("<td>").addClass("Factura").append($("#txtFactura").val()),
+            $("<td>").addClass("Lote").append($("#txtLote").val()),
+            $("<td>").addClass("fechavencimiento").append($("#txtFechaVencimiento").val()),
+            $("<td>").addClass("ubicacion").append($("#txtUbicacion").val()),
 
-        $("#txtIdProducto").val("0");
-        $("#txtCodigoProducto").val("");
-        $("#txtNombreProducto").val("");
-        $("#txtCantidadProducto").val("0");
-        $("#txtPrecioCompraProducto").val("0");
-        $("#txtPrecioVentaProducto").val("0");
+
+
+        ).appendTo("#tbCompra tbody");
+        $("#txtRucProveedor").val("")
+        $("#txtRazonSocialProveedor").val("")
+        $("#txtOrigenProveedor").val("")
+        $("#txtNombrePlanta").val("")
+        $("#txtCodigoProducto").val("")
+        $("#txtNombreProducto").val("")
+        $("#txtCantidadProducto").val("")
+        $("#txtPrecioProducto").val("")
+        $("#txtFactura").val("")
+        $("#txtLote").val("")
+        $("#txtFechaVencimiento").val("")
+        $("#txtUbicacion").val("")
 
     } else {
         swal("Mensaje", "El producto ya existe en la compra", "warning")
@@ -283,20 +350,23 @@ $('#btnTerminarGuardarCompra').on('click', function () {
         return;
     }
 
-    var $xml = "";
-    var compra = "";
-    var detallecompra = ""
+    //var $xml = "";
+    //var compra = "";
+    //var detallecompra = ""
     var detalle = "";
-    var totalcostocompra = 0;
+    //var totalcostocompra = 0;
 
-    $xml = "<DETALLE>";
-    compra = "<COMPRA>" +
-        "<IdUsuario>!idusuario¡</IdUsuario>" +
-        "<IdProveedor>" + $("#txtIdProveedor").val() + "</IdProveedor>" +
-        "<IdTienda>" + $("#txtIdTienda").val() + "</IdTienda>" +
-        "<TotalCosto>!totalcosto¡</TotalCosto>" +
-        "</COMPRA>";
-    detallecompra = "<DETALLE_COMPRA>"
+    //$xml = "<DETALLE>";
+    //compra = "<COMPRA>" +
+    //    "<IdUsuario>!idusuario¡</IdUsuario>" +
+    //    "<IdProveedor>" + $("#txtIdProveedor").val() + "</IdProveedor>" +
+    //    "<IdTienda>" + $("#txtIdTienda").val() + "</IdTienda>" +
+    //    "<TotalCosto>!totalcosto¡</TotalCosto>" +
+    //    "</COMPRA>";
+    //detallecompra = "<DETALLE_COMPRA>"
+
+    var data = Object();
+    var dataAll = [];
 
     $('#tbCompra > tbody  > tr').each(function (index, tr) {
 
@@ -307,29 +377,44 @@ $('#btnTerminarGuardarCompra').on('click', function () {
         var precioventa = parseFloat($(fila).find("td.precioventa").text());
         var totalcosto = parseFloat(cantidad) * parseFloat(preciocompra);
 
-        detalle = detalle + "<DETALLE>" +
-            "<IdCompra>0</IdCompra>" +
-            "<IdProducto>" + idproducto + "</IdProducto>" +
-            "<Cantidad>" + cantidad + "</Cantidad>" +
-            "<PrecioUnidadCompra>" + preciocompra + "</PrecioUnidadCompra>" +
-            "<PrecioUnidadVenta>" + precioventa + "</PrecioUnidadVenta>" +
-            "<TotalCosto>" + totalcosto.toString() + "</TotalCosto>" +
-            "</DETALLE>";
-        totalcostocompra = totalcostocompra + totalcosto;
+        data.ruc = $(fila).find("td.ruc").text();
+
+        console.log(data);
+
+        dataAll.push(data);
+
+        console.log(dataAll);
+
+        //detalle = detalle + "<DETALLE>" +
+        //    "<IdCompra>0</IdCompra>" +
+        //    "<IdProducto>" + idproducto + "</IdProducto>" +
+        //    "<Cantidad>" + cantidad + "</Cantidad>" +
+        //    "<PrecioUnidadCompra>" + preciocompra + "</PrecioUnidadCompra>" +
+        //    "<PrecioUnidadVenta>" + precioventa + "</PrecioUnidadVenta>" +
+        //    "<TotalCosto>" + totalcosto.toString() + "</TotalCosto>" +
+        //    "</DETALLE>";
+        //totalcostocompra = totalcostocompra + totalcosto;
+   
 
     });
 
-    compra = compra.replace("!totalcosto¡", totalcostocompra.toString());
-    $xml = $xml + compra + detallecompra + detalle + "</DETALLE_COMPRA></DETALLE>";
+    console.log(detalle);
 
-    var request = { xml: $xml };
+    //compra = compra.replace("!totalcosto¡", totalcostocompra.toString());
+    //$xml = $xml + compra + detallecompra + detalle + "</DETALLE_COMPRA></DETALLE>";
+
+    //var request = { xml: $xml };
+
+
 
 
 
     jQuery.ajax({
         url: $.MisUrls.url._GuardarCompra,
         type: "POST",
-        data: JSON.stringify(request),
+        data: {
+            datatotal: JSON.stringify(dataAll)
+        },
         dataType: "json",
         contentType: "application/json; charset=utf-8",
         success: function (data) {
@@ -341,6 +426,7 @@ $('#btnTerminarGuardarCompra').on('click', function () {
                 $("#txtIdProveedor").val("0");
                 $("#txtRucProveedor").val("");
                 $("#txtRazonSocialProveedor").val("");
+                $("#txtOrigenProveedor").val("");
 
                 //TIENDA
                 $("#txtIdTienda").val("0");

@@ -35,7 +35,7 @@ namespace CapaDatos
             List<Producto> rptListaProducto = new List<Producto>();
             using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
             {
-                SqlCommand cmd = new SqlCommand("usp_ObtenerProductos", oConexion);
+                SqlCommand cmd = new SqlCommand("sp_ListarProducto", oConexion);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 try
@@ -47,14 +47,10 @@ namespace CapaDatos
                     {
                         rptListaProducto.Add(new Producto()
                         {
-                            IdProducto = Convert.ToInt32(dr["IdProducto"].ToString()),
-                            Codigo = dr["Codigo"].ToString(),
-                            ValorCodigo = Convert.ToInt32(dr["ValorCodigo"].ToString()),
-                            Nombre = dr["Nombre"].ToString(),
-                            Descripcion = dr["DescripcionProducto"].ToString(),
-                            IdCategoria = Convert.ToInt32(dr["IdCategoria"].ToString()),
-                            oCategoria = new Categoria() { Descripcion = dr["DescripcionCategoria"].ToString() },
-                            Activo = Convert.ToBoolean(dr["Activo"].ToString())
+                            idProducto = dr["idProducto"].ToString(),
+                            idTipoProducto = dr["idTipoProducto"].ToString(),
+                            idUnidadMedida = dr["idUnidadMedida"].ToString(),
+                            descripcion = dr["descripcion"].ToString(),
                         });
                     }
                     dr.Close();
@@ -78,9 +74,9 @@ namespace CapaDatos
                 try
                 {
                     SqlCommand cmd = new SqlCommand("usp_RegistrarProducto", oConexion);
-                    cmd.Parameters.AddWithValue("Nombre", oProducto.Nombre);
-                    cmd.Parameters.AddWithValue("Descripcion", oProducto.Descripcion);
-                    cmd.Parameters.AddWithValue("IdCategoria", oProducto.IdCategoria);
+                    //cmd.Parameters.AddWithValue("Nombre", oProducto.Nombre);
+                    //cmd.Parameters.AddWithValue("Descripcion", oProducto.Descripcion);
+                    //cmd.Parameters.AddWithValue("IdCategoria", oProducto.IdCategoria);
                     cmd.Parameters.Add("Resultado", SqlDbType.Bit).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -107,11 +103,11 @@ namespace CapaDatos
                 try
                 {
                     SqlCommand cmd = new SqlCommand("usp_ModificarProducto", oConexion);
-                    cmd.Parameters.AddWithValue("IdProducto", oProducto.IdProducto);
-                    cmd.Parameters.AddWithValue("Nombre", oProducto.Nombre);
-                    cmd.Parameters.AddWithValue("Descripcion", oProducto.Descripcion);
-                    cmd.Parameters.AddWithValue("IdCategoria", oProducto.IdCategoria);
-                    cmd.Parameters.AddWithValue("Activo", oProducto.Activo);
+                    //cmd.Parameters.AddWithValue("IdProducto", oProducto.IdProducto);
+                    //cmd.Parameters.AddWithValue("Nombre", oProducto.Nombre);
+                    //cmd.Parameters.AddWithValue("Descripcion", oProducto.Descripcion);
+                    //cmd.Parameters.AddWithValue("IdCategoria", oProducto.IdCategoria);
+                    //cmd.Parameters.AddWithValue("Activo", oProducto.Activo);
                     cmd.Parameters.Add("Resultado", SqlDbType.Bit).Direction = ParameterDirection.Output;
 
                     cmd.CommandType = CommandType.StoredProcedure;

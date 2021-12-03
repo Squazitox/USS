@@ -100,13 +100,13 @@ namespace CapaDatos
                                                                 Nombres = dato.Element("Nombres").Value,
                                                                 Apellidos = dato.Element("Apellidos").Value,
                                                             }).FirstOrDefault();
-                                rptDetalleVenta.oTienda = (from dato in doc.Element("DETALLE_VENTA").Elements("DETALLE_TIENDA")
-                                                           select new Tienda()
-                                                           {
-                                                               RUC = dato.Element("RUC").Value,
-                                                               Nombre = dato.Element("Nombre").Value,
-                                                               Direccion = dato.Element("Direccion").Value
-                                                           }).FirstOrDefault();
+                                //rptDetalleVenta.oTienda = (from dato in doc.Element("DETALLE_VENTA").Elements("DETALLE_TIENDA")
+                                //                           select new Tienda()
+                                //                           {
+                                //                               RUC = dato.Element("RUC").Value,
+                                //                               Nombre = dato.Element("Nombre").Value,
+                                //                               Direccion = dato.Element("Direccion").Value
+                                //                           }).FirstOrDefault();
                                 rptDetalleVenta.oCliente = (from dato in doc.Element("DETALLE_VENTA").Elements("DETALLE_CLIENTE")
                                                             select new Cliente()
                                                             {

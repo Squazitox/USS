@@ -153,6 +153,7 @@
     <Compile Include="Controllers\ProveedorController.cs" />
     <Compile Include="Controllers\ReporteController.cs" />
     <Compile Include="Controllers\RolController.cs" />
+    <Compile Include="Controllers\UbicacionController.cs" />
     <Compile Include="Controllers\TiendaController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Controllers\VentaController.cs" />
