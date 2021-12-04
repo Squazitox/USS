@@ -303,7 +303,7 @@ $('#btnAgregarCompra').on('click', function () {
             $("<td>").append(
                 $("<button>").addClass("btn btn-danger btn-sm").text("Eliminar")
             ),
-            $("<td>").addClass("Razon Social").append($("#txtRazonSocialProveedor").val()),
+            $("<td>").addClass("RazonSocial").append($("#txtRazonSocialProveedor").val()),
             $("<td>").addClass("Origen").append($("#txtOrigenProveedor").val()),
             $("<td>").addClass("planta").append($("#txtNombrePlanta").val()),
             $("<td>").addClass("codigoproducto").data("idproducto", $("#txtIdProducto").val()).append($("#txtCodigoProducto").val()),
@@ -332,7 +332,7 @@ $('#btnAgregarCompra').on('click', function () {
         $("#txtUbicacion").val("")
 
     } else {
-        swal("Mensaje", "El producto ya existe en la compra", "warning")
+        swal("Mensaje", "El producto ya existe en ingresos", "warning")
     }
 })
 
@@ -371,13 +371,25 @@ $('#btnTerminarGuardarCompra').on('click', function () {
     $('#tbCompra > tbody  > tr').each(function (index, tr) {
 
         var fila = tr;
-        var idproducto = parseFloat($(fila).find("td.codigoproducto").data("idproducto"));
-        var cantidad = parseFloat($(fila).find("td.cantidad").text());
-        var preciocompra = parseFloat($(fila).find("td.preciocompra").text());
-        var precioventa = parseFloat($(fila).find("td.precioventa").text());
-        var totalcosto = parseFloat(cantidad) * parseFloat(preciocompra);
+        //var idproducto = parseFloat($(fila).find("td.codigoproducto").data("idproducto"));
+        //var cantidad = parseFloat($(fila).find("td.cantidad").text());
+        //var preciocompra = parseFloat($(fila).find("td.preciocompra").text());
+        //var precioventa = parseFloat($(fila).find("td.precioventa").text());
+        //var totalcosto = parseFloat(cantidad) * parseFloat(preciocompra);
 
-        data.ruc = $(fila).find("td.ruc").text();
+        data.razonsocial = $(fila).find("td.RazonSocial").text();
+        data.Origen = $(fila).find("td.Origen").text();
+        data.planta = $(fila).find("td.planta").text();
+        data.codigoproducto = $(fila).find("td.codigoproducto").text();
+        data.producto = $(fila).find("td.producto").text();
+        data.cantidad = $(fila).find("td.cantidad").text();
+        data.precio = $(fila).find("td.precio").text();
+        data.Factura = $(fila).find("td.Factura").text();
+        data.Lote = $(fila).find("td.Lote").text();
+        data.fechavencimiento = $(fila).find("td.fechavencimiento").text();
+        data.ubicacion = $(fila).find("td.ubicacion").text();
+
+              
 
         console.log(data);
 

@@ -40,7 +40,7 @@ namespace CapaDatos
             {
                 try
                 {
-                    SqlCommand cmd = new SqlCommand("usp_RegistrarCompra", oConexion);
+                    SqlCommand cmd = new SqlCommand("SP_RegistraSuministra", oConexion);
                     cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;
                     cmd.Parameters.Add("Resultado", SqlDbType.Bit).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
