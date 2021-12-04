@@ -43,14 +43,15 @@ namespace CapaDatos
                     SqlCommand cmd = new SqlCommand("SP_RegistraSuministra", oConexion);
                     cmd.Parameters.AddWithValue("@razonsocial", entity.razonsocial);
                     cmd.Parameters.AddWithValue("@codProducto",entity.idProducto );
-                    cmd.Parameters.AddWithValue("@idUbicacion", entity.ubicacion);
+                    cmd.Parameters.AddWithValue("@Ubicacion", entity.Ubicacion);
                     cmd.Parameters.AddWithValue("@lote", entity.lote);
                     cmd.Parameters.AddWithValue("@cantidad", entity.cantidad);
                     cmd.Parameters.AddWithValue("@numFactura", entity.numFactura);
-                    cmd.Parameters.AddWithValue("@codProducto", entity.idProducto);
-                    cmd.Parameters.AddWithValue("@codProducto", entity.idProducto);
-
-                    cmd.Parameters.AddWithValue("@codProducto", entity.idProducto);
+                    cmd.Parameters.AddWithValue("@pais", entity.paisOrigen);
+                    cmd.Parameters.AddWithValue("@precio_compra", entity.precio_compra);
+                    cmd.Parameters.AddWithValue("@caducidad", entity.caducidad);
+                    cmd.Parameters.AddWithValue("@fechacreacion", entity.fechaCreacion);
+                    
                     //cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;
                     //cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;
                     //cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;

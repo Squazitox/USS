@@ -34,7 +34,7 @@ namespace CapaEntidad
         public DateTime fechaCreacion { get; set; }
         public string razonsocial { get; set; }
         public string planta { get; set; }
-        public string ubicacion { get; set; }
+        public string Ubicacion { get; set; }
 
 
 

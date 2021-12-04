@@ -389,7 +389,8 @@ $('#btnTerminarGuardarCompra').on('click', function () {
         data.numFactura = $(fila).find("td.Factura").text();
         data.lote = $(fila).find("td.Lote").text();
         data.caducidad = $(fila).find("td.fechavencimiento").text();
-        data.ubicacion = $(fila).find("td.ubicacion").text();
+        data.Ubicacion = $(fila).find("td.ubicacion").text();
+        /*data.fechaCreacion = $(fila).find("td.ubicacion").text();*/
 
               
 
