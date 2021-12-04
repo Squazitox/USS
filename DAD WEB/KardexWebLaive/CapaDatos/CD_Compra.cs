@@ -41,6 +41,7 @@ namespace CapaDatos
                 try
                 {
                     SqlCommand cmd = new SqlCommand("SP_RegistraSuministra", oConexion);
+                    cmd.Parameters.AddWithValue("@codSuministra", "RS");
                     cmd.Parameters.AddWithValue("@razonsocial", entity.razonsocial);
                     cmd.Parameters.AddWithValue("@codProducto",entity.idProducto );
                     cmd.Parameters.AddWithValue("@Ubicacion", entity.Ubicacion);
@@ -50,30 +51,32 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("@pais", entity.paisOrigen);
                     cmd.Parameters.AddWithValue("@precio_compra", entity.precio_compra);
                     cmd.Parameters.AddWithValue("@caducidad", entity.caducidad);
-                    cmd.Parameters.AddWithValue("@fechacreacion", entity.fechaCreacion);
-                    
+                    //cmd.Parameters.AddWithValue("@fechacreacion", entity.fechaCreacion);
+
                     //cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;
                     //cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;
                     //cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;
                     //cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;
                     //cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;
                     //cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;
-                    //cmd.Parameters.Add("Resultado", SqlDbType.Bit).Direction = ParameterDirection.Output;
+                    //cmd.Parameters.Add("Resultado", SqlDbType.st).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     oConexion.Open();
 
                     cmd.ExecuteNonQuery();
 
-                    respuesta = Convert.ToBoolean(cmd.Parameters["Resultado"].Value);
-
+                    respuesta = true;
+                    
                 }
                 catch (Exception ex)
                 {
                     respuesta = false;
                 }
             }
+
             return respuesta;
+
         }
 
 
