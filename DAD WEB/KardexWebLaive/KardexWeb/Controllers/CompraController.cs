@@ -14,6 +14,8 @@ namespace KardexLaiveWeb.Controllers
     {
         private static Usuario SesionUsuario;
         // GET: Compra
+
+        
         public ActionResult Crear()
         {
             SesionUsuario = (Usuario)Session["Usuario"];
@@ -75,11 +77,13 @@ namespace KardexLaiveWeb.Controllers
 
                 return Json(new { resultado = false }, JsonRequestBehavior.AllowGet);
             }
-            
-                
+
+           
         }
-
-
+        
+    
 
     }
+    
+    
 }
