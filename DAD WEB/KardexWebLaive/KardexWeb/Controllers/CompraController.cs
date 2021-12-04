@@ -3,8 +3,10 @@ using CapaEntidad;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Transactions;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 
 namespace KardexLaiveWeb.Controllers
 {
@@ -44,13 +46,37 @@ namespace KardexLaiveWeb.Controllers
 
 
         [HttpPost]
-        public JsonResult Guardar(string datatotal)
+        public JsonResult Guardar(string dataAll)
         {
             //xml = xml.Replace("!idusuario¡", SesionUsuario.IdUsuario.ToString());
+            try
+            {
+                using (TransactionScope scope = new TransactionScope())
+                {
 
-            bool respuesta  = CD_Compra.Instancia.RegistrarCompra(datatotal);
+                    var data = new JavaScriptSerializer().Deserialize<List<Compra>>(dataAll);
 
-            return Json(new { resultado = respuesta }, JsonRequestBehavior.AllowGet);
+                    foreach (var item in data)
+                    {
+                        CD_Compra.Instancia.RegistrarCompra(item);
+                    }
+
+                    scope.Complete();
+
+                    //bool respuesta = CD_Compra.Instancia.RegistrarCompra(dataAll);
+                    //bool respuesta  = true;
+
+                    return Json(new { resultado = true }, JsonRequestBehavior.AllowGet);
+
+                }
+            }
+            catch (Exception)
+            {
+
+                return Json(new { resultado = false }, JsonRequestBehavior.AllowGet);
+            }
+            
+                
         }
 
 

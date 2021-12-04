@@ -33,7 +33,7 @@ namespace CapaDatos
             }
         }
 
-        public bool RegistrarCompra(string Detalle)
+        public bool RegistrarCompra(Compra entity)
         {
             bool respuesta = true;
             using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
@@ -41,8 +41,23 @@ namespace CapaDatos
                 try
                 {
                     SqlCommand cmd = new SqlCommand("SP_RegistraSuministra", oConexion);
-                    cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;
-                    cmd.Parameters.Add("Resultado", SqlDbType.Bit).Direction = ParameterDirection.Output;
+                    cmd.Parameters.AddWithValue("@razonsocial", entity.razonsocial);
+                    cmd.Parameters.AddWithValue("@codProducto",entity.idProducto );
+                    cmd.Parameters.AddWithValue("@idUbicacion", entity.ubicacion);
+                    cmd.Parameters.AddWithValue("@lote", entity.lote);
+                    cmd.Parameters.AddWithValue("@cantidad", entity.cantidad);
+                    cmd.Parameters.AddWithValue("@numFactura", entity.numFactura);
+                    cmd.Parameters.AddWithValue("@codProducto", entity.idProducto);
+                    cmd.Parameters.AddWithValue("@codProducto", entity.idProducto);
+
+                    cmd.Parameters.AddWithValue("@codProducto", entity.idProducto);
+                    //cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;
+                    //cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;
+                    //cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;
+                    //cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;
+                    //cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;
+                    //cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;
+                    //cmd.Parameters.Add("Resultado", SqlDbType.Bit).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     oConexion.Open();
@@ -84,9 +99,9 @@ namespace CapaDatos
                                 rptDetalleCompra = (from dato in doc.Elements("DETALLE_COMPRA")
                                                     select new Compra()
                                                     {
-                                                        Codigo = dato.Element("Codigo").Value,
-                                                        TotalCosto = Convert.ToDecimal(dato.Element("TotalCosto").Value,new CultureInfo("es-PE")),
-                                                        FechaCompra = dato.Element("FechaCompra").Value
+                                                        //Codigo = dato.Element("Codigo").Value,
+                                                        //TotalCosto = Convert.ToDecimal(dato.Element("TotalCosto").Value,new CultureInfo("es-PE")),
+                                                        //FechaCompra = dato.Element("FechaCompra").Value
                                                     }).FirstOrDefault();
                                 //rptDetalleCompra.oProveedor = (from dato in doc.Element("DETALLE_COMPRA").Elements("DETALLE_PROVEEDOR")
                                 //                               select new Proveedor()
@@ -154,12 +169,12 @@ namespace CapaDatos
                     {
                         rptListaCompra.Add(new Compra()
                         {
-                            IdCompra = Convert.ToInt32(dr["IdCompra"].ToString()),
-                            NumeroCompra = dr["NumeroCompra"].ToString(),
-                            //oProveedor = new Proveedor() { RazonSocial = dr["RazonSocial"].ToString() },
-                            //oTienda = new Tienda() { Nombre = dr["Nombre"].ToString() },
-                            FechaCompra = dr["FechaCompra"].ToString(),
-                            TotalCosto = Convert.ToDecimal(dr["TotalCosto"].ToString(), new CultureInfo("es-PE"))
+                            //IdCompra = Convert.ToInt32(dr["IdCompra"].ToString()),
+                            //NumeroCompra = dr["NumeroCompra"].ToString(),
+                            ////oProveedor = new Proveedor() { RazonSocial = dr["RazonSocial"].ToString() },
+                            ////oTienda = new Tienda() { Nombre = dr["Nombre"].ToString() },
+                            //FechaCompra = dr["FechaCompra"].ToString(),
+                            //TotalCosto = Convert.ToDecimal(dr["TotalCosto"].ToString(), new CultureInfo("es-PE"))
                         });
                     }
                     dr.Close();

@@ -10,6 +10,8 @@ var tablaUbicacion;
 $(document).ready(function () {
     activarMenu("Compras");
 
+
+    
     //OBTENER PROVEEDORES
     tablaproveedor = $('#tbProveedor').DataTable({
         "ajax": {
@@ -378,24 +380,24 @@ $('#btnTerminarGuardarCompra').on('click', function () {
         //var totalcosto = parseFloat(cantidad) * parseFloat(preciocompra);
 
         data.razonsocial = $(fila).find("td.RazonSocial").text();
-        data.Origen = $(fila).find("td.Origen").text();
+        data.paisOrigen = $(fila).find("td.Origen").text();
         data.planta = $(fila).find("td.planta").text();
-        data.codigoproducto = $(fila).find("td.codigoproducto").text();
-        data.producto = $(fila).find("td.producto").text();
+        data.idProducto = $(fila).find("td.codigoproducto").text();
+        //data.producto = $(fila).find("td.producto").text();
         data.cantidad = $(fila).find("td.cantidad").text();
-        data.precio = $(fila).find("td.precio").text();
-        data.Factura = $(fila).find("td.Factura").text();
-        data.Lote = $(fila).find("td.Lote").text();
-        data.fechavencimiento = $(fila).find("td.fechavencimiento").text();
+        data.precio_compra = $(fila).find("td.precio").text();
+        data.numFactura = $(fila).find("td.Factura").text();
+        data.lote = $(fila).find("td.Lote").text();
+        data.caducidad = $(fila).find("td.fechavencimiento").text();
         data.ubicacion = $(fila).find("td.ubicacion").text();
 
               
 
-        console.log(data);
+        //console.log(data);
 
         dataAll.push(data);
 
-        console.log(dataAll);
+        //console.log(dataAll);
 
         //detalle = detalle + "<DETALLE>" +
         //    "<IdCompra>0</IdCompra>" +
@@ -410,23 +412,22 @@ $('#btnTerminarGuardarCompra').on('click', function () {
 
     });
 
-    console.log(detalle);
+    //console.log(detalle);
 
     //compra = compra.replace("!totalcosto¡", totalcostocompra.toString());
     //$xml = $xml + compra + detallecompra + detalle + "</DETALLE_COMPRA></DETALLE>";
 
     //var request = { xml: $xml };
 
+    //alert($.MisUrls.url._GuardarCompra);
 
-
-
+    console.log($.MisUrls.url._GuardarCompra + "?dataAll=" + JSON.stringify(dataAll));
 
     jQuery.ajax({
-        url: $.MisUrls.url._GuardarCompra,
+        url: $.MisUrls.url._GuardarCompra + "?dataAll=" + JSON.stringify(dataAll),
+        //url: $.MisUrls.url._GuardarCompra,
         type: "POST",
-        data: {
-            datatotal: JSON.stringify(dataAll)
-        },
+        //data: JSON.stringify(datall),
         dataType: "json",
         contentType: "application/json; charset=utf-8",
         success: function (data) {
