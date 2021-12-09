@@ -4,8 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Transactions;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 
 namespace KardexLaiveWeb.Controllers
 {
@@ -25,40 +27,40 @@ namespace KardexLaiveWeb.Controllers
             return View();
         }
 
-        public ActionResult Documento(int IdVenta = 0)
-        {
+        //public ActionResult Documento(int IdVenta = 0)
+        //{
 
-            Venta oVenta = CD_Venta.Instancia.ObtenerDetalleVenta(IdVenta);
-
-
-
-            NumberFormatInfo formato = new CultureInfo("es-PE").NumberFormat;
-            formato.CurrencyGroupSeparator = ".";
+        //    Venta oVenta = CD_Venta.Instancia.ObtenerDetalleVenta(IdVenta);
 
 
-            if (oVenta == null)
-                oVenta = new Venta();
-            else {
 
-                oVenta.oListaDetalleVenta = (from dv in oVenta.oListaDetalleVenta
-                                             select new DetalleVenta()
-                                             {
-                                                 Cantidad = dv.Cantidad,
-                                                 NombreProducto = dv.NombreProducto,
-                                                 PrecioUnidad = dv.PrecioUnidad,
-                                                 TextoPrecioUnidad = dv.PrecioUnidad.ToString("N", formato), //numero.ToString("C", formato)
-                                                 ImporteTotal = dv.ImporteTotal,
-                                                 TextoImporteTotal = dv.ImporteTotal.ToString("N", formato)
-                                             }).ToList();
+        //    NumberFormatInfo formato = new CultureInfo("es-PE").NumberFormat;
+        //    formato.CurrencyGroupSeparator = ".";
 
-                oVenta.TextoImporteRecibido = oVenta.ImporteRecibido.ToString("N", formato);
-                oVenta.TextoImporteCambio = oVenta.ImporteCambio.ToString("N", formato);
-                oVenta.TextoTotalCosto = oVenta.TotalCosto.ToString("N", formato);
-            }
+
+        //    if (oVenta == null)
+        //        oVenta = new Venta();
+        //    else {
+
+        //        //oVenta.oListaDetalleVenta = (from dv in oVenta.oListaDetalleVenta
+        //                                     //select new DetalleVenta()
+        //                                     //{
+        //                                     //    Cantidad = dv.Cantidad,
+        //                                     //    NombreProducto = dv.NombreProducto,
+        //                                     //    PrecioUnidad = dv.PrecioUnidad,
+        //                                     //    TextoPrecioUnidad = dv.PrecioUnidad.ToString("N", formato), //numero.ToString("C", formato)
+        //                                     //    ImporteTotal = dv.ImporteTotal,
+        //                                     //    TextoImporteTotal = dv.ImporteTotal.ToString("N", formato)
+        //                                     //}).ToList();
+
+        //    //    oVenta.TextoImporteRecibido = oVenta.ImporteRecibido.ToString("N", formato);
+        //    //    oVenta.TextoImporteCambio = oVenta.ImporteCambio.ToString("N", formato);
+        //    //    oVenta.TextoTotalCosto = oVenta.TotalCosto.ToString("N", formato);
+        //    //}
                
 
-            return View(oVenta);
-        }
+        //    return View(oVenta);
+        //}
 
 
         public JsonResult Obtener(string codigo, string fechainicio, string fechafin, string numerodocumento, string nombres)
@@ -96,16 +98,50 @@ namespace KardexLaiveWeb.Controllers
             return Json(new { resultado = respuesta }, JsonRequestBehavior.AllowGet);
         }
 
+        //[HttpPost]
+        //public JsonResult Guardar(string xml)
+        //{
+        //    xml = xml.Replace("!idusuario¡", SesionUsuario.IdUsuario.ToString());
+        //    int Respuesta = 0;
+        //    Respuesta = CD_Venta.Instancia.RegistrarVenta(xml);
+        //    if (Respuesta != 0)
+        //        return Json(new { estado = true, valor = Respuesta.ToString() }, JsonRequestBehavior.AllowGet);
+        //    else
+        //        return Json(new { estado = false, valor = "" }, JsonRequestBehavior.AllowGet);
+        //}
+
         [HttpPost]
-        public JsonResult Guardar(string xml)
+        public JsonResult Guardar(string dataAll)
         {
-            xml = xml.Replace("!idusuario¡", SesionUsuario.IdUsuario.ToString());
-            int Respuesta = 0;
-            Respuesta = CD_Venta.Instancia.RegistrarVenta(xml);
-            if (Respuesta != 0)
-                return Json(new { estado = true, valor = Respuesta.ToString() }, JsonRequestBehavior.AllowGet);
-            else
-                return Json(new { estado = false, valor = "" }, JsonRequestBehavior.AllowGet);
+            //xml = xml.Replace("!idusuario¡", SesionUsuario.IdUsuario.ToString());
+            try
+            {
+                using (TransactionScope scope = new TransactionScope())
+                {
+
+                    var data = new JavaScriptSerializer().Deserialize<List<Venta>>(dataAll);
+
+                    foreach (var item in data)
+                    {
+                        CD_Venta.Instancia.RegistrarVenta(item);
+                    }
+
+                    scope.Complete();
+
+                    //bool respuesta = CD_Compra.Instancia.RegistrarCompra(dataAll);
+                    //bool respuesta  = true;
+
+                    return Json(new { resultado = true }, JsonRequestBehavior.AllowGet);
+
+                }
+            }
+            catch (Exception)
+            {
+
+                return Json(new { resultado = false }, JsonRequestBehavior.AllowGet);
+            }
+
+
         }
 
     }

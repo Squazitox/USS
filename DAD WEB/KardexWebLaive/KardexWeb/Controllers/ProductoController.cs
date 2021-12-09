@@ -50,6 +50,26 @@ namespace KardexLaiveWeb.Controllers
             return Json(new { data = oListaProducto }, JsonRequestBehavior.AllowGet);
         }
 
+        [HttpGet]
+        public JsonResult ObtenerPorArea()
+        {
+
+            List<ProductoDespacho> oListaProducto = CD_Producto.Instancia.ObtenerProductoArea();
+            //List<ProductoTienda> oListaProductoTienda = CD_ProductoTienda.Instancia.ObtenerProductoTienda();
+
+            oListaProducto = oListaProducto.ToList();
+            //if (IdTienda != 0)
+            //{
+            //    oListaProductoTienda = oListaProductoTienda.Where(x => x.oTienda.IdTienda == IdTienda).ToList();
+            //    oListaProducto = (from producto in oListaProducto
+            //                      join productotienda in oListaProductoTienda on producto.IdProducto equals productotienda.oProducto.IdProducto
+            //                      where productotienda.oTienda.IdTienda == IdTienda
+            //                      select producto).ToList();
+            //}
+
+            return Json(new { data = oListaProducto }, JsonRequestBehavior.AllowGet);
+        }
+
         [HttpPost]
         public JsonResult Guardar(Producto objeto)
         {

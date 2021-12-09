@@ -66,6 +66,46 @@ namespace CapaDatos
             }
         }
 
+        public List<ProductoDespacho> ObtenerProductoArea()
+        {
+            List<ProductoDespacho> rptListaProductoDespacho = new List<ProductoDespacho>();
+            using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
+            {
+                SqlCommand cmd = new SqlCommand("sp_ListarProductosSuministro", oConexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                try
+                {
+                    oConexion.Open();
+                    SqlDataReader dr = cmd.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+                        rptListaProductoDespacho.Add(new ProductoDespacho()
+                        {
+                            idProducto = dr["idProducto"].ToString(),
+                            descripcion = dr["descripcion"].ToString(),
+                            seccion = dr["seccion"].ToString(),
+                            lote = dr["lote"].ToString(),
+                            
+                            //caducidad = Convert.ToDateTime(dr["caducidad"].ToString()),
+                            
+
+                        });
+                    }
+                    dr.Close();
+
+                    return rptListaProductoDespacho;
+
+                }
+                catch (Exception ex)
+                {
+                    rptListaProductoDespacho = null;
+                    return rptListaProductoDespacho;
+                }
+            }
+        }
+
         public bool RegistrarProducto(Producto oProducto)
         {
             bool respuesta = true;

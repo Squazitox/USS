@@ -34,33 +34,75 @@ namespace CapaDatos
             }
         }
 
-        public int RegistrarVenta(string Detalle)
+        public bool RegistrarVenta(Venta entity)
         {
-            int respuesta = 0;
+            bool respuesta = true;
             using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
             {
                 try
                 {
-                    SqlCommand cmd = new SqlCommand("usp_RegistrarVenta", oConexion);
-                    cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;
-                    cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
+                    SqlCommand cmd = new SqlCommand("sp_RegistrarDespacha", oConexion);
+                    cmd.Parameters.AddWithValue("@codDespacha", "RD");
+                    
+
+                    //cmd.Parameters.AddWithValue("@idtrabajador", entity.idTrabajador);
+                    cmd.Parameters.AddWithValue("@idProducto", entity.idProducto);
+                    cmd.Parameters.AddWithValue("@Ubicacion", entity.Ubicacion);
+                    cmd.Parameters.AddWithValue("@Area", entity.planta);
+                    cmd.Parameters.AddWithValue("@cantidad", entity.cantidad);
+                    cmd.Parameters.AddWithValue("@lote", entity.lote);
+                    //cmd.Parameters.AddWithValue("@numFactura", entity.numFactura);
+                    //cmd.Parameters.AddWithValue("@pais", entity.paisOrigen);
+                    //cmd.Parameters.AddWithValue("@precio_compra", entity.precio_compra);
+                    //cmd.Parameters.AddWithValue("@caducidad", entity.caducidad);
+                    //cmd.Parameters.AddWithValue("@fechacreacion", entity.fechaCreacion);
+
+                    //cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;
+                    //cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;
+                    //cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;
+                    //cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;
+                    //cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;
+                    //cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;
+                    //cmd.Parameters.Add("Resultado", SqlDbType.st).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     oConexion.Open();
 
                     cmd.ExecuteNonQuery();
 
-                    respuesta = Convert.ToInt32(cmd.Parameters["Resultado"].Value);
+                    respuesta = true;
 
                 }
                 catch (Exception ex)
                 {
-                    respuesta = 0;
-                }
-            }
-            return respuesta;
-        }
+                    respuesta = false;
+                    //}
+                    //try
+                    //{
+                    //    SqlCommand cmd = new SqlCommand("usp_RegistrarVenta", oConexion);
+                    //    cmd.Parameters.Add("Detalle", SqlDbType.Xml).Value = Detalle;
+                    //    cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
+                    //    cmd.CommandType = CommandType.StoredProcedure;
 
+                    //    oConexion.Open();
+
+                    //    cmd.ExecuteNonQuery();
+
+                    //    respuesta = Convert.ToInt32(cmd.Parameters["Resultado"].Value);
+
+                    //}
+                    //catch (Exception ex)
+                    //{
+                    //    respuesta = 0;
+                    //}
+                    //}
+                }
+
+            }
+           return respuesta;
+
+            
+        }
 
 
 
@@ -84,45 +126,45 @@ namespace CapaDatos
                             XDocument doc = XDocument.Load(dr);
                             if (doc.Element("DETALLE_VENTA") != null)
                             {
-                                rptDetalleVenta = (from dato in doc.Elements("DETALLE_VENTA")
-                                                   select new Venta()
-                                                   {
-                                                       TipoDocumento = dato.Element("TipoDocumento").Value,
-                                                       Codigo = dato.Element("Codigo").Value,
-                                                       TotalCosto = float.Parse(dato.Element("TotalCosto").Value, NuevaCultura),
-                                                       ImporteRecibido = float.Parse(dato.Element("ImporteRecibido").Value, NuevaCultura),
-                                                       ImporteCambio = float.Parse(dato.Element("ImporteCambio").Value, NuevaCultura),
-                                                       FechaRegistro = dato.Element("FechaRegistro").Value
-                                                   }).FirstOrDefault();
-                                rptDetalleVenta.oUsuario = (from dato in doc.Element("DETALLE_VENTA").Elements("DETALLE_USUARIO")
-                                                            select new Usuario()
-                                                            {
-                                                                Nombres = dato.Element("Nombres").Value,
-                                                                Apellidos = dato.Element("Apellidos").Value,
-                                                            }).FirstOrDefault();
-                                //rptDetalleVenta.oTienda = (from dato in doc.Element("DETALLE_VENTA").Elements("DETALLE_TIENDA")
-                                //                           select new Tienda()
-                                //                           {
-                                //                               RUC = dato.Element("RUC").Value,
-                                //                               Nombre = dato.Element("Nombre").Value,
-                                //                               Direccion = dato.Element("Direccion").Value
-                                //                           }).FirstOrDefault();
-                                rptDetalleVenta.oCliente = (from dato in doc.Element("DETALLE_VENTA").Elements("DETALLE_CLIENTE")
-                                                            select new Cliente()
-                                                            {
-                                                                Nombre = dato.Element("Nombre").Value,
-                                                                Direccion = dato.Element("Direccion").Value,
-                                                                NumeroDocumento = dato.Element("NumeroDocumento").Value,
-                                                                Telefono = dato.Element("Telefono").Value
-                                                            }).FirstOrDefault();
-                                rptDetalleVenta.oListaDetalleVenta = (from producto in doc.Element("DETALLE_VENTA").Element("DETALLE_PRODUCTO").Elements("PRODUCTO")
-                                                                      select new DetalleVenta()
-                                                                      {
-                                                                          Cantidad = int.Parse(producto.Element("Cantidad").Value),
-                                                                          NombreProducto = producto.Element("NombreProducto").Value,
-                                                                          PrecioUnidad = float.Parse(producto.Element("PrecioUnidad").Value, NuevaCultura),
-                                                                          ImporteTotal = float.Parse(producto.Element("ImporteTotal").Value, NuevaCultura)
-                                                                      }).ToList();
+                                //rptDetalleVenta = (from dato in doc.Elements("DETALLE_VENTA")
+                                //                   select new Venta()
+                                //                   {
+                                //                       //TipoDocumento = dato.Element("TipoDocumento").Value,
+                                //                       //Codigo = dato.Element("Codigo").Value,
+                                //                       //TotalCosto = float.Parse(dato.Element("TotalCosto").Value, NuevaCultura),
+                                //                       //ImporteRecibido = float.Parse(dato.Element("ImporteRecibido").Value, NuevaCultura),
+                                //                       //ImporteCambio = float.Parse(dato.Element("ImporteCambio").Value, NuevaCultura),
+                                //                       //FechaRegistro = dato.Element("FechaRegistro").Value
+                                //                   }).FirstOrDefault();
+                                //rptDetalleVenta.oUsuario = (from dato in doc.Element("DETALLE_VENTA").Elements("DETALLE_USUARIO")
+                                                            //select new Usuario()
+                                                            //{
+                                                            //    Nombres = dato.Element("Nombres").Value,
+                                                            //    Apellidos = dato.Element("Apellidos").Value,
+                                                            //}).FirstOrDefault();
+                                ////rptDetalleVenta.oTienda = (from dato in doc.Element("DETALLE_VENTA").Elements("DETALLE_TIENDA")
+                                ////                           select new Tienda()
+                                ////                           {
+                                ////                               RUC = dato.Element("RUC").Value,
+                                ////                               Nombre = dato.Element("Nombre").Value,
+                                ////                               Direccion = dato.Element("Direccion").Value
+                                ////                           }).FirstOrDefault();
+                                //rptDetalleVenta.oCliente = (from dato in doc.Element("DETALLE_VENTA").Elements("DETALLE_CLIENTE")
+                                //                            select new Cliente()
+                                //                            {
+                                //                                Nombre = dato.Element("Nombre").Value,
+                                //                                Direccion = dato.Element("Direccion").Value,
+                                //                                NumeroDocumento = dato.Element("NumeroDocumento").Value,
+                                //                                Telefono = dato.Element("Telefono").Value
+                                //                            }).FirstOrDefault();
+                                //rptDetalleVenta.oListaDetalleVenta = (from producto in doc.Element("DETALLE_VENTA").Element("DETALLE_PRODUCTO").Elements("PRODUCTO")
+                                //                                      select new DetalleVenta()
+                                //                                      {
+                                //                                          Cantidad = int.Parse(producto.Element("Cantidad").Value),
+                                //                                          NombreProducto = producto.Element("NombreProducto").Value,
+                                //                                          PrecioUnidad = float.Parse(producto.Element("PrecioUnidad").Value, NuevaCultura),
+                                //                                          ImporteTotal = float.Parse(producto.Element("ImporteTotal").Value, NuevaCultura)
+                                //                                      }).ToList();
                             }
                             else
                             {
@@ -162,20 +204,20 @@ namespace CapaDatos
                     oConexion.Open();
                     SqlDataReader dr = cmd.ExecuteReader();
 
-                    while (dr.Read())
-                    {
-                        rptListaVenta.Add(new Venta()
-                        {
-                            IdVenta = Convert.ToInt32(dr["IdVenta"].ToString()),
-                            TipoDocumento = dr["TipoDocumento"].ToString(),
-                            Codigo = dr["Codigo"].ToString(),
-                            FechaRegistro = Convert.ToDateTime(dr["FechaRegistro"].ToString()).ToString("dd/MM/yyyy"),
-                            VFechaRegistro = Convert.ToDateTime(dr["FechaRegistro"].ToString()),
-                            oCliente = new Cliente() { NumeroDocumento = dr["NumeroDocumento"].ToString(), Nombre = dr["Nombre"].ToString() },
-                            TotalCosto = float.Parse(dr["TotalCosto"].ToString())
-                        });
-                    }
-                    dr.Close();
+                    //while (dr.Read())
+                    //{
+                    //    rptListaVenta.Add(new Venta()
+                    //    //{
+                    //    //    IdVenta = Convert.ToInt32(dr["IdVenta"].ToString()),
+                    //    //    TipoDocumento = dr["TipoDocumento"].ToString(),
+                    //    //    Codigo = dr["Codigo"].ToString(),
+                    //    //    FechaRegistro = Convert.ToDateTime(dr["FechaRegistro"].ToString()).ToString("dd/MM/yyyy"),
+                    //    //    VFechaRegistro = Convert.ToDateTime(dr["FechaRegistro"].ToString()),
+                    //    //    oCliente = new Cliente() { NumeroDocumento = dr["NumeroDocumento"].ToString(), Nombre = dr["Nombre"].ToString() },
+                    //    //    TotalCosto = float.Parse(dr["TotalCosto"].ToString())
+                    //    //});
+                    //}
+                    //dr.Close();
 
                     return rptListaVenta;
 

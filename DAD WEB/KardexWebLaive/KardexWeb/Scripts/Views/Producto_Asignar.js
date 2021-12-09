@@ -80,6 +80,37 @@ $(document).ready(function () {
         responsive: true
     });
 
+    tablaproducto = $('#tbProductoArea').DataTable({
+        "ajax": {
+            "url": $.MisUrls.url._ObtenerProductosArea,
+            "type": "GET",
+            "datatype": "json"
+        },
+        "columns": [
+            {
+                "data": "IdProducto", "render": function (data, type, row, meta) {
+                    return "<button class='btn btn-sm btn-primary ml-2' type='button' onclick='productoSelectArea(" + JSON.stringify(row) + ")'><i class='fas fa-check'></i></button>"
+                },
+                "orderable": false,
+                "searchable": false,
+                "width": "90px"
+            },
+            { "data": "idProducto" },
+            { "data": "descripcion" },
+            { "data": "seccion" },
+            { "data": "lote" },
+            {
+                "data": "oCategoria", render: function (data) {
+                    return data.Descripcion
+                }
+            }
+
+        ],
+        "language": {
+            "url": $.MisUrls.url.Url_datatable_spanish
+        },
+        responsive: true
+    });
 
     tabladata = $('#tbdata').DataTable({
         "ajax": {
