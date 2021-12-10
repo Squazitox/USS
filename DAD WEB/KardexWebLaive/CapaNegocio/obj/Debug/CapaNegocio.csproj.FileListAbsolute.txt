@@ -48,3 +48,14 @@ D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD WEB\KardexWebLaive\CapaNegoci
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD WEB\KardexWebLaive\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD WEB\KardexWebLaive\CapaNegocio\obj\Debug\CapaNegocio.dll
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD WEB\KardexWebLaive\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\NB145\Documents\GitHub\USS\DAD WEB\KardexWebLaive\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\NB145\Documents\GitHub\USS\DAD WEB\KardexWebLaive\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\NB145\Documents\GitHub\USS\DAD WEB\KardexWebLaive\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\NB145\Documents\GitHub\USS\DAD WEB\KardexWebLaive\CapaNegocio\bin\Debug\CapaEntidad.dll
+C:\Users\NB145\Documents\GitHub\USS\DAD WEB\KardexWebLaive\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\NB145\Documents\GitHub\USS\DAD WEB\KardexWebLaive\CapaNegocio\bin\Debug\CapaEntidad.pdb
+C:\Users\NB145\Documents\GitHub\USS\DAD WEB\KardexWebLaive\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+C:\Users\NB145\Documents\GitHub\USS\DAD WEB\KardexWebLaive\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\NB145\Documents\GitHub\USS\DAD WEB\KardexWebLaive\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+C:\Users\NB145\Documents\GitHub\USS\DAD WEB\KardexWebLaive\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\NB145\Documents\GitHub\USS\DAD WEB\KardexWebLaive\CapaNegocio\obj\Debug\CapaNegocio.pdb

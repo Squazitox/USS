@@ -126,5 +126,52 @@ namespace CapaDatos
             return lista;
 
         }
+
+
+        public List<ReporteVencimiento> ReporteVencimiento(DateTime FechaInicio, DateTime FechaFin)
+        {
+            List<ReporteVencimiento> lista = new List<ReporteVencimiento>();
+
+            NumberFormatInfo formato = new CultureInfo("es-PE").NumberFormat;
+            formato.CurrencyGroupSeparator = ".";
+
+            using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
+            {
+                SqlCommand cmd = new SqlCommand("sp_ProductosVencimiento", oConexion);
+                cmd.Parameters.AddWithValue("@DesdeFecha", FechaInicio);
+                cmd.Parameters.AddWithValue("@HastaFecha", FechaFin);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                try
+                {
+                    oConexion.Open();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            lista.Add(new ReporteVencimiento()
+                            {
+                                codigo = dr["codigo"].ToString(),
+                                Nombre = dr["Nombre"].ToString(),
+                                Ubicacion = dr["Ubicacion"].ToString(),
+                                Caducidad = dr["Caducidad"].ToString(),
+                                Cantidad = dr["Cantidad"].ToString(),
+                            });
+                            
+                        }
+
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    lista = new List<ReporteVencimiento>();
+                }
+            }
+
+            return lista;
+
+        }
     }
 }

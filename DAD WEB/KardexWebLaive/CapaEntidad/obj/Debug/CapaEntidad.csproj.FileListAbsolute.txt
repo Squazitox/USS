@@ -14,3 +14,9 @@ D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD WEB\KardexWebLaive\CapaEntida
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD WEB\KardexWebLaive\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD WEB\KardexWebLaive\CapaEntidad\obj\Debug\CapaEntidad.dll
 D:\Documentos\-Manuel-\Estudios\USS\GitHub\USS\DAD WEB\KardexWebLaive\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\NB145\Documents\GitHub\USS\DAD WEB\KardexWebLaive\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\NB145\Documents\GitHub\USS\DAD WEB\KardexWebLaive\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\NB145\Documents\GitHub\USS\DAD WEB\KardexWebLaive\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\NB145\Documents\GitHub\USS\DAD WEB\KardexWebLaive\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\NB145\Documents\GitHub\USS\DAD WEB\KardexWebLaive\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\NB145\Documents\GitHub\USS\DAD WEB\KardexWebLaive\CapaEntidad\obj\Debug\CapaEntidad.pdb

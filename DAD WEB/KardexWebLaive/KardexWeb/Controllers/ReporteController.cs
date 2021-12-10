@@ -23,6 +23,12 @@ namespace KardexLaiveWeb.Controllers
             return View();
         }
 
+        // GET: Reporte
+        public ActionResult Vencimiento()
+        {
+            return View();
+        }
+
         public JsonResult ObtenerProducto(int idtienda, string codigoproducto)
         {
             List<ReporteProducto> lista = CD_Reportes.Instancia.ReporteProductoTienda(idtienda, codigoproducto);
@@ -39,5 +45,11 @@ namespace KardexLaiveWeb.Controllers
         }
 
 
+        public JsonResult ObtenerVencimiento(string fechainicio, string fechafin)
+        {
+
+            List<ReporteVencimiento> lista = CD_Reportes.Instancia.ReporteVencimiento(Convert.ToDateTime(fechainicio), Convert.ToDateTime(fechafin));
+            return Json(lista, JsonRequestBehavior.AllowGet);
+        }
     }
 }
