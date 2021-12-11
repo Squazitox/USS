@@ -2115,6 +2115,7 @@
     <Content Include="Scripts\Views\Categoria_Crear.js" />
     <Content Include="Scripts\Views\Reporte_Vencimiento.js" />
     <Content Include="Scripts\Views\Reporte_Producto.js" />
+    <Content Include="Scripts\Views\Reporte_Kardex.js" />
     <Content Include="Scripts\Views\Reporte_Venta.js" />
     <Content Include="Scripts\Views\Tienda_Crear.js" />
     <Content Include="Scripts\Views\Proveedor_Crear.js" />
@@ -2154,7 +2155,7 @@
     <Content Include="Views\Producto\Asignar.cshtml" />
     <Content Include="Views\Proveedor\Crear.cshtml" />
     <Content Include="Views\Reporte\Producto.cshtml" />
-    <Content Include="Views\Reporte\Ventas.cshtml" />
+    <Content Include="Views\Reporte\Kardex.cshtml" />
     <Content Include="Views\Rol\Crear.cshtml" />
     <Content Include="Views\Tienda\Crear.cshtml" />
     <Content Include="Views\Usuario\Crear.cshtml" />

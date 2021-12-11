@@ -55,6 +55,7 @@
     <Compile Include="Proveedor.cs" />
     <Compile Include="ReporteProducto.cs" />
     <Compile Include="ReporteVencimiento.cs" />
+    <Compile Include="ReporteKardex.cs" />
     <Compile Include="ReporteVenta.cs" />
     <Compile Include="Respuesta.cs" />
     <Compile Include="Rol.cs" />

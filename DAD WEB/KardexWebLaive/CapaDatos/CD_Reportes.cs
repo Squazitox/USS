@@ -127,7 +127,61 @@ namespace CapaDatos
 
         }
 
+        public List<ReporteKardex> ReporteKardex(string idProducto)
+        {
+            List<ReporteKardex> lista = new List<ReporteKardex>();
 
+            NumberFormatInfo formato = new CultureInfo("es-PE").NumberFormat;
+            formato.CurrencyGroupSeparator = ".";
+
+            using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
+            {
+                SqlCommand cmd = new SqlCommand("usp_rptVenta", oConexion);
+                //cmd.Parameters.AddWithValue("@FechaInicio", FechaInicio);
+                //cmd.Parameters.AddWithValue("@FechaFin", FechaFin);
+                cmd.Parameters.AddWithValue("@idProducto", idProducto);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                try
+                {
+                    oConexion.Open();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            lista.Add(new ReporteKardex()
+                            {
+                                //FechaVenta = dr["Fecha Venta"].ToString(),
+                                //NumeroDocumento = dr["Numero Documento"].ToString(),
+                                //TipoDocumento = dr["Tipo Documento"].ToString(),
+                                //NombreTienda = dr["Nombre Tienda"].ToString(),
+                                //RucTienda = dr["Ruc Tienda"].ToString(),
+                                //NombreEmpleado = dr["Nombre Empleado"].ToString(),
+                                //CantidadUnidadesVendidas = dr["Cantidad Unidades Vendidas"].ToString(),
+                                //CantidadProductos = dr["Cantidad Productos"].ToString(),
+                                //TotalVenta = Convert.ToDecimal(dr["Total Venta"].ToString(), new CultureInfo("es-PE")).ToString("N", formato)
+
+                                idProducto = dr["idProducto"].ToString(),
+                                descripcion = dr["descripcion"].ToString(),
+                                ingresos = Convert.ToDecimal(dr["ingresos"]),
+                                salidas = Convert.ToDecimal(dr["salidas"]),
+                                stock = Convert.ToDecimal(dr["stock"]),
+                            });
+                        }
+
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    lista = new List<ReporteKardex>();
+                }
+            }
+
+            return lista;
+
+        }
         public List<ReporteVencimiento> ReporteVencimiento(DateTime FechaInicio, DateTime FechaFin)
         {
             List<ReporteVencimiento> lista = new List<ReporteVencimiento>();
