@@ -1,9 +1,0 @@
-CREATE PROCEDURE sp_ListarProductoCod
-@codProducto varchar(10)
-AS
-	BEGIN TRANSACTION 
-		BEGIN
-			SELECT * FROM tbProducto WHERE tbProducto.idProducto = @codProducto
-		END
-	COMMIT
-GO
